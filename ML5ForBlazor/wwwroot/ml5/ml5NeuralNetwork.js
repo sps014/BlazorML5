@@ -76,9 +76,78 @@ function classifyML5(hash, dotnet, inputs)
 }
 function ml5classify(err, result)
 {
-    console.log(result);
     this.invokeMethodAsync("NNCBCF", err, result);
 }
+
+
+
+
+
+
+
+
+function loadML5(hash, dotnet, path, options)
+{
+    if (options != null)
+    {
+        NeuralNetworks[hash].load(options, ml5Load.bind(dotnet));
+    }
+    else 
+    {
+        NeuralNetworks[hash].load(path, ml5Load.bind(dotnet));
+    }
+}
+function ml5Load()
+{
+    this.invokeMethodAsync("NNCBMLS","__ModelLoad__");
+}
+
+function saveML5(hash, dotnet, path)
+{
+    if (path != null)
+        NeuralNetworks[hash].save(path, ml5Save.bind(dotnet));
+    else 
+        NeuralNetworks[hash].save(ml5Save.bind(dotnet));
+
+}
+function ml5Save()
+{
+    this.invokeMethodAsync("NNCBMS", "__ModelSave__");
+}
+function loadDataML5(hash, dotnet, path)
+{
+    NeuralNetworks[hash].save(path, ml5Save.bind(dotnet));
+}
+function ml5loadData()
+{
+    this.invokeMethodAsync("NNCBDL","__DataLoad__");
+}
+function saveDataML5(hash, dotnet, path)
+{
+    if (path != null)
+        NeuralNetworks[hash].saveData(path, ml5SaveData.bind(dotnet));
+    else
+        NeuralNetworks[hash].saveData(ml5SaveData.bind(dotnet));
+
+}
+function ml5SaveData()
+{
+    this.invokeMethodAsync("NNCBDS", "__DataSave__");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

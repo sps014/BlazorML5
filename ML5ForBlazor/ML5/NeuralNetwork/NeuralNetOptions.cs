@@ -22,7 +22,13 @@ namespace ML5
         public object modelOptimizer { get; set; }
         public int batchSize { get; set; } = 64;
         public int epochs { get; set; } = 32;
-
+        public Layer[] layers { get; set; }
+        public class Layer
+        {
+            public string type {get;set;}
+            public int units { get; set; }
+            public string activation { get; set; }
+        }
         public enum Task
         {
             regression,
@@ -43,5 +49,12 @@ namespace ML5
     {
         public double confidence { get; set; }
         public string label { get; set; }
+    }
+    public class ModelOptions
+    {
+        public string model { get; set; }
+        public string metadata { get; set; }
+        public string weights { get; set; }
+
     }
 }

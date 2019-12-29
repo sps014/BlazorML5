@@ -95,6 +95,27 @@ namespace ML5
         {
             await Runtime.InvokeVoidAsync("classifyML5", Hash, DotNet, inputs);
         }
+        public async void SaveData(string path=null)
+        {
+            await Runtime.InvokeVoidAsync("saveDataML5", Hash, DotNet,path);
+        }
+        public async void LoadData(string path = null)
+        {
+            await Runtime.InvokeVoidAsync("loadDataML5", Hash, DotNet, path);
+        }
+        public async void Save(string path = null)
+        {
+            await Runtime.InvokeVoidAsync("saveML5", Hash, DotNet, path);
+        }
+        public async void Load(string path = null)
+        {
+            await Runtime.InvokeVoidAsync("loadML5", Hash, DotNet, path);
+        }
+        public async void Load(ModelOptions options)
+        {
+            await Runtime.InvokeVoidAsync("loadML5", Hash, DotNet, null,options);
+
+        }
 
         //NeuralNet CallBack Model Load,While Train,Done Training
         [JSInvokable("NNCBML")]
@@ -126,16 +147,48 @@ namespace ML5
         {
             OnClassification?.Invoke(error, result);
         }
+        [JSInvokable("NNCBMS")]
+        public async Task __ModelSave__()
+        {
+            OnSave?.Invoke();
+        }
+        [JSInvokable("NNCBMLS")]
+        public async Task __ModelLoad__()
+        {
+            OnLoad?.Invoke();
+        }
+        [JSInvokable("NNCBDS")]
+        public async Task __DataSave__()
+        {
+            OnDataSave?.Invoke();
+        }
+        [JSInvokable("NNCBDL")]
+        public async Task __DataLoad__()
+        {
+            OnDataLoad?.Invoke();
+        }
 
         public delegate void ModelLoadedHandler();
         public event ModelLoadedHandler OnModelLoaded;
+
         public delegate void DoneTrainingHandler();
         public event DoneTrainingHandler OnTrainingComplete;
+
         public delegate void WhileTrainingHandler(int epoch,double loss);
         public event WhileTrainingHandler WhileTraining;
+
+
         public delegate void OnPredictHandler(string error, Result[] result);
         public event OnPredictHandler OnPredict;
         public delegate void OnClassifyHandler(string error, CResult[] result);
         public event OnClassifyHandler OnClassification;
+
+
+        public delegate void LoadSaveHandler();
+        public event LoadSaveHandler OnLoad;
+        public event LoadSaveHandler OnSave;
+        public event LoadSaveHandler OnDataLoad;
+        public event LoadSaveHandler OnDataSave;
+
     }
 }
