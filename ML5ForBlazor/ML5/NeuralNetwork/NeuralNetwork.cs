@@ -10,6 +10,13 @@ namespace ML5
     {
         public IJSRuntime Runtime { get; set; }
         public string Hash { get; private set; }
+        public Task<Layer[]> Layers
+        {
+            get
+            {
+                return GetLayers();
+            }
+        }
         public DotNetObjectReference<NeuralNetwork> DotNet { get; private set; }
 
         public NeuralNetwork(IJSRuntime jSRuntime,int inputs,int outputs)
@@ -18,6 +25,20 @@ namespace ML5
             Hash = Helper.UIDGenerator();
             Init(inputs, outputs);
 
+        }
+        private async Task<Layer[]> GetLayers()
+        {
+            int layerCount = await GetLayersInfo();
+            List<Layer> layers = new List<Layer>();
+            for (int i = 0; i < layerCount; i++)
+            {
+                layers.Add(new Layer(Runtime, Hash, i));
+            }
+            return layers.ToArray();
+        }
+        private async Task<int> GetLayersInfo()
+        {
+            return await Runtime.InvokeAsync<int>("getLayersInfoML5", Hash);
         }
         public NeuralNetwork(IJSRuntime jSRuntime, NeuralNetworkOptions options)
         {
@@ -69,6 +90,14 @@ namespace ML5
         public async void Predict(object inputs)
         {
             await Runtime.InvokeVoidAsync("predictML5", Hash, DotNet, inputs);
+        }
+        public async Task<object> GetWeights(int layerNo)
+        {
+            return await Runtime.InvokeAsync<object>("predictML5", Hash, layerNo);
+        }
+        public async Task<int> GetLayerCount()
+        {
+            return await Runtime.InvokeAsync<int>("predictML5", Hash, DotNet);
         }
 
         //NeuralNet CallBack Model Load,While Train,Done Training

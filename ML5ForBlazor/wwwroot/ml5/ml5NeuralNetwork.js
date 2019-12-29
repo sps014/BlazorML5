@@ -68,6 +68,51 @@ function predictML5(hash,dotnet,inputs)
 }
 function ml5Predict(err, result)
 {
-    console.log(result);
     this.invokeMethodAsync("NNCBPD", err, result);
+}
+function getLayersInfoML5(hash)
+{
+    return NeuralNetworks[hash].model.layers.length;
+
+}
+function getWeightsML5(hash, layerNo)
+{
+    let wts = NeuralNetworks[hash].model.layers[layerNo].getWeights()[0];
+
+    let wtVal = [];
+    let tData = wts.dataSync();
+    for (var i = 0; i < tData.length; i++)
+    {
+        wtVal.push(tData[i]);
+    }
+    let payload =
+    {
+        Data: wtVal,
+        Shape:wts.shape
+    }
+
+    return payload;
+}
+function getBiasML5(hash, layerNo)
+{
+    let wts = NeuralNetworks[hash].model.layers[layerNo].getWeights()[1];
+
+    let wtVal = [];
+    let tData = wts.dataSync();
+    for (var i = 0; i < tData.length; i++) {
+        wtVal.push(tData[i]);
+    }
+    let payload =
+    {
+        Data: wtVal,
+        Shape: [wts.shape[0],1]
+    }
+    console.log(payload);
+
+    return payload;
+}
+function setWeightsML5(hash, layerNo, array,r,c,bias)
+{
+    NeuralNetworks[hash].model.layers[layerNo].setWeights([ml5.tf.tensor2d(array, shape = [r, c]), ml5.tf.tensor1d(bias)]);
+    NeuralNetworks[hash].model.layers[layerNo].getWeights()[0].print();
 }
