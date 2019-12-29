@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML5ForBlazor", "ML5ForBlazor\ML5ForBlazor.csproj", "{DFF4D59D-64CF-4F14-910C-45064E690D10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA03B1FB-9895-4CD7-B17C-0E95889DA9FE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+﻿@page "/"
+@inject IJSRuntime runtime
+@using ML5
+
+<h1>@done</h1>
+
+@code
+{    
+    string done { get; set; }
+    protected override void OnInitialized()
+    {
+        NeuralNetworkOptions option = new NeuralNetworkOptions()
+        {
+            inputs =1,
+            outputs = 1,
+            task="regression",
+            activationHidden="sigmoid",
+            activationOutput="linear",
+            hiddenUnits=3,
+            debug=true
+
+        };
+        NeuralNetwork net = new NeuralNetwork(runtime,option);
+
+        for (int i = 0; i < 100; i++)
+        {
+            net.AddData(new double[] { i/100.0 }, new double[] { (i/100.0)*2 });
+        }
+        net.OnTrainingComplete+=()=>
+        {
+            done = "Done".ToString();
+            StateHasChanged();
+            net.Predict(new double[] { 0.4 });
+        };
+        net.OnPredict+=(err,res)=>
+        {
+            done = res[0].value.ToString();
+            StateHasChanged();
+        };
+        net.NormalizeData();
+        net.Train(new TrainingOptions() {epochs=120 },false);
+
+    }
+}
