@@ -91,13 +91,9 @@ namespace ML5
         {
             await Runtime.InvokeVoidAsync("predictML5", Hash, DotNet, inputs);
         }
-        public async Task<object> GetWeights(int layerNo)
+        public async void Classify(object inputs)
         {
-            return await Runtime.InvokeAsync<object>("predictML5", Hash, layerNo);
-        }
-        public async Task<int> GetLayerCount()
-        {
-            return await Runtime.InvokeAsync<int>("predictML5", Hash, DotNet);
+            await Runtime.InvokeVoidAsync("classifyML5", Hash, DotNet, inputs);
         }
 
         //NeuralNet CallBack Model Load,While Train,Done Training
@@ -125,6 +121,11 @@ namespace ML5
         {
             OnPredict?.Invoke(error,result);
         }
+        [JSInvokable("NNCBCF")]
+        public async Task __Classify__(string error, CResult[] result)
+        {
+            OnClassification?.Invoke(error, result);
+        }
 
         public delegate void ModelLoadedHandler();
         public event ModelLoadedHandler OnModelLoaded;
@@ -134,5 +135,7 @@ namespace ML5
         public event WhileTrainingHandler WhileTraining;
         public delegate void OnPredictHandler(string error, Result[] result);
         public event OnPredictHandler OnPredict;
+        public delegate void OnClassifyHandler(string error, CResult[] result);
+        public event OnClassifyHandler OnClassification;
     }
 }

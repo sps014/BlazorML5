@@ -39,4 +39,9 @@ namespace ML5
         public double value { get; set; }
         public string label { get; set; }
     }
+    public class CResult
+    {
+        public double confidence { get; set; }
+        public string label { get; set; }
+    }
 }

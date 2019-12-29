@@ -18,12 +18,9 @@
     {
         NeuralNetworkOptions option = new NeuralNetworkOptions()
         {
-            inputs =2,
-            outputs = 1,
-            task="regression",
-            activationHidden="sigmoid",
-            activationOutput="linear",
-            hiddenUnits=3,
+            inputs =1,
+            outputs = 2,
+            task= "classification",
             debug=true
 
         };
@@ -31,30 +28,24 @@
 
         for (int i = 0; i < 100; i++)
         {
-            net.AddData(new double[] { i/100.0,i/200.0 }, new double[] { (i/100.0)*2 });
+            net.AddData(new double[] { i/100.0}, new string[] { (i/100.0)>0.5?"large":"small" });
         }
 
         net.NormalizeData();
-        net.Train(new TrainingOptions() {epochs=60 },false);
+        net.Train(new TrainingOptions() { epochs = 50 },false);
 
         net.OnTrainingComplete += async() =>
         {
-            var Layers = await net.Layers;
-            done.Clear();
-
-            var wt = await Layers[0].GetWeights();
-            var bias = await Layers[0].GetBias();
-
-            for (var i=0;i<wt.Rows;i++)
-            {
-                for (var j = 0; j < wt.Columns; j++)
-                {
-                    done.Add(wt[i,j].ToString());
-                }
-            }
-            wt=wt.Map((v) => { return v + 100; });
-            Layers[0].SetWeights(wt,bias);
+            done.Add("training done");
             StateHasChanged();
+
+            net.OnClassification += async (error, Result) =>
+            {
+                done.Add(Result[0].label + "->" + Result[0].confidence.ToString());
+                StateHasChanged();
+            };
+            net.Classify(new double[] { 0.1 });
+
         };
     }
 }

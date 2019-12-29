@@ -70,6 +70,18 @@ function ml5Predict(err, result)
 {
     this.invokeMethodAsync("NNCBPD", err, result);
 }
+function classifyML5(hash, dotnet, inputs)
+{
+    NeuralNetworks[hash].classify(inputs, ml5classify.bind(dotnet));
+}
+function ml5classify(err, result)
+{
+    console.log(result);
+    this.invokeMethodAsync("NNCBCF", err, result);
+}
+
+
+
 function getLayersInfoML5(hash)
 {
     return NeuralNetworks[hash].model.layers.length;
@@ -107,12 +119,9 @@ function getBiasML5(hash, layerNo)
         Data: wtVal,
         Shape: [wts.shape[0],1]
     }
-    console.log(payload);
-
     return payload;
 }
 function setWeightsML5(hash, layerNo, array,r,c,bias)
 {
     NeuralNetworks[hash].model.layers[layerNo].setWeights([ml5.tf.tensor2d(array, shape = [r, c]), ml5.tf.tensor1d(bias)]);
-    NeuralNetworks[hash].model.layers[layerNo].getWeights()[0].print();
 }
