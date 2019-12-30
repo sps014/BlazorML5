@@ -1,2 +1,3 @@
 # ML5 For Blazor
- Added NN for Blazor
+ 
+ ### My attempt to use ML5 library from Blazor WASM
