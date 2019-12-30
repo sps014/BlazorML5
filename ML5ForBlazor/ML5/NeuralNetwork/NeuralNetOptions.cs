@@ -8,33 +8,37 @@ namespace ML5
     public class NeuralNetworkOptions
     {
         public string dataUrl { get; set; }
-        public string task { get; set; }
-        public string activationHidden { get; set; }
-        public string activationOutput { get; set; }
+        public NetworkTask task { get; set; } = NetworkTask.regression;
+        public Activation activationHidden { get; set; } = Activation.none;
+        public Activation activationOutput { get; set; } = Activation.none;
         public bool debug { get; set; }
-        public double learningRate { get; set; } = 0.25;
+        public object learningRate { get; set; }
         public object inputs { get; set; }
         public object outputs { get; set; }
         public object noVal { get; set; }
-        public int hiddenUnits { get; set; }
+        public object hiddenUnits { get; set; }
         public object modelMetrics { get; set; }
         public string modelLoss {get;set;}
-        public object modelOptimizer { get; set; }
-        public int batchSize { get; set; } = 64;
-        public int epochs { get; set; } = 32;
-        public Layer[] layers { get; set; }
-        public class Layer
-        {
-            public string type {get;set;}
-            public int units { get; set; }
-            public string activation { get; set; }
-        }
-        public enum Task
-        {
-            regression,
-            classification
-        }
+        public Optimizers modelOptimizer { get; set; } = Optimizers.none;
+        public int batchSize { get; set; } = 32;
+        public int epochs { get; set; } = 64;
+        public NetworkLayer[] layers { get; set; }
     }
+    public enum NetworkTask
+    {
+        regression,
+        classification
+    }
+    public class NetworkLayer
+    {
+        /// <summary>
+        /// layer name eg. "dense"
+        /// </summary>
+        public string type { get; set; }
+        public int units { get; set; }
+        public Activation activation { get; set; }
+    }
+
     public class TrainingOptions
     {
         public int batchSize { get; set; } = 64;
@@ -57,4 +61,32 @@ namespace ML5
         public string weights { get; set; }
 
     }
+    public enum Activation
+    {
+        elu,
+        hardSigmoid,
+        linear,
+        relu,
+        relu6,
+        selu,
+        sigmoid,
+        softmax,
+        softplus,
+        softsign,
+        tanh,
+        none
+    }
+    public enum Optimizers
+    {
+        sgd,
+        momentum,
+        adagrad,
+        adadelta,
+        adam,
+        adamax,
+        rmsprop,
+        none
+    }
+
 }
+

@@ -1,52 +1,11 @@
 ﻿@page "/"
 @inject IJSRuntime runtime
+@inject HttpClient Http
 @using ML5
 
-<div>
-    <h1>No of wts supplied: @count</h1>
-    <h4>Here are the weights</h4>
-@foreach (var v in done)
-{
-    <p>@v</p>
-}
-</div>
+ <p>Hello</p>
 
 @code
-{    int count;
-    List<string> done { get; set; } = new List<string>();
-    protected async override void OnInitialized()
-    {
-        NeuralNetworkOptions option = new NeuralNetworkOptions()
-        {
-            inputs =1,
-            outputs = 2,
-            task= "classification",
-            debug=true
+{   
 
-        };
-        NeuralNetwork net = new NeuralNetwork(runtime,option);
-
-        for (int i = 0; i < 100; i++)
-        {
-            net.AddData(new double[] { i/100.0}, new string[] { (i/100.0)>0.5?"large":"small" });
-        }
-
-        net.NormalizeData();
-        net.Train(new TrainingOptions() { epochs = 50 },false);
-
-        net.OnTrainingComplete += async() =>
-        {
-            done.Add("training done");
-            StateHasChanged();
-
-            net.OnClassification += async (error, Result) =>
-            {
-                done.Add(Result[0].label + "->" + Result[0].confidence.ToString());
-                StateHasChanged();
-            };
-            net.Classify(new double[] { 0.1 });
-            StateHasChanged();
-
-        };
-    }
 }

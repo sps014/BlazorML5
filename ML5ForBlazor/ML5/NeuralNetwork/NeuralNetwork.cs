@@ -82,8 +82,8 @@ namespace ML5
         /// Start training model
         /// </summary>
         /// <param name="trainingOptions"></param>
-        /// <param name="subscribeCallBack">enable callbacks like whileTraining,doneTrainig</param>
-        public async void Train(TrainingOptions trainingOptions=null,bool subscribeCallBack=true)
+        /// <param name="subscribeCallBack">enable callbacks for whileTraining</param>
+        public async void Train(TrainingOptions trainingOptions=null,bool subscribeCallBack=false)
         {
             await Runtime.InvokeVoidAsync("trainML5", Hash, DotNet,subscribeCallBack,trainingOptions);
         }
@@ -114,6 +114,11 @@ namespace ML5
         public async void Load(ModelOptions options)
         {
             await Runtime.InvokeVoidAsync("loadML5", Hash, DotNet, null,options);
+
+        }
+        public async void Print(object obj)
+        {
+            await Runtime.InvokeVoidAsync("print", obj);
 
         }
 
@@ -169,6 +174,7 @@ namespace ML5
         }
 
         public delegate void ModelLoadedHandler();
+        //When given traing model loads
         public event ModelLoadedHandler OnModelLoaded;
 
         public delegate void DoneTrainingHandler();

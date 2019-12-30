@@ -8,6 +8,23 @@ function createNNML5(hash, inputs, outputs)
 
 function createNNConfigML5(hash,config,isCallBack,dotNet)
 {
+
+    //enum handling
+    config["task"] = getTask(config["task"]);
+    config["activationHidden"] = getActivation(config["activationHidden"]);
+    config["activationOutput"] = getActivation(config["activationOutput"]);
+    config["modelOptimizer"] = getOptimizer(config["modelOptimizer"]);
+
+
+    //set enum for layers if supplied
+    if (config["layers"] != null)
+    {
+        for (var i = 0; i < config["layers"].length; i++)
+        {
+            config["layers"][i]["activation"] = getActivation(config["layers"][i]["activation"]);
+        }
+    }
+
     //clean up config
     Object.keys(config).forEach((key) => (config[key] == null) && delete config[key]);
 
@@ -18,6 +35,79 @@ function createNNConfigML5(hash,config,isCallBack,dotNet)
         nn = ml5.neuralNetwork(config);
     NeuralNetworks[hash] = nn;
 }
+
+
+function getTask(num)
+{
+    switch (num)
+    {
+        case 0:
+            return "regression";
+        default:
+            return "classification";
+    }
+}
+
+function getActivation(num)
+{
+    switch (num)
+    {
+        case 0:
+            return 'elu';
+        case 1:
+            return 'hardSigmoid';
+        case 2:
+            return 'linear';
+        case 3:
+            return 'relu';
+        case 4:
+            return 'relu6';
+        case 5:
+            return 'selu';
+        case 6:
+            return 'sigmoid';
+        case 7:
+            return 'softmax';
+        case 8:
+            return 'softplus';
+        case 9:
+            return 'softsign';
+        case 10:
+            return 'tanh';
+        default:
+            return null;
+    }
+}
+
+function getOptimizer(num)
+{
+    switch (num) {
+        case 0:
+            return ml5.tf.train.sgd(0.25);
+        case 1:
+            return ml5.tf.train.momentum(0.25,0.1);
+        case 2:
+            return ml5.tf.train.adagrad(0.25);
+        case 3:
+            return ml5.tf.train.adadelta();
+        case 4:
+            return ml5.tf.train.adam();
+        case 5:
+            return ml5.tf.train.adamax();
+        case 6:
+            return ml5.tf.train.rmsprop(0.25);
+        default:
+            return null;
+    }
+}
+
+
+
+
+
+
+
+
 
 function ml5ModelLoaded()
 {
@@ -78,9 +168,6 @@ function ml5classify(err, result)
 {
     this.invokeMethodAsync("NNCBCF", err, result);
 }
-
-
-
 
 
 
@@ -193,4 +280,17 @@ function getBiasML5(hash, layerNo)
 function setWeightsML5(hash, layerNo, array,r,c,bias)
 {
     NeuralNetworks[hash].model.layers[layerNo].setWeights([ml5.tf.tensor2d(array, shape = [r, c]), ml5.tf.tensor1d(bias)]);
+}
+
+
+
+
+
+
+
+
+
+function print(obj)
+{
+    console.log(obj);
 }
