@@ -122,8 +122,10 @@ namespace ML5
 
         }
 
+
         //NeuralNet CallBack Model Load,While Train,Done Training
         [JSInvokable("NNCBML")]
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
         public async Task __ModelLoaded__()
         {
             OnModelLoaded?.Invoke();
@@ -172,6 +174,8 @@ namespace ML5
         {
             OnDataLoad?.Invoke();
         }
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+
 
         public delegate void ModelLoadedHandler();
         //When given traing model loads
