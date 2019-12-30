@@ -7,4 +7,4 @@
 2. Image Classification
 
 #### Demo
-1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With NN
+1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neual Network
