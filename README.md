@@ -4,7 +4,7 @@
 
 #### Features
 1. Neural Network 
-
+2. Image Classification
 
 #### Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source)
