@@ -13,11 +13,52 @@
 #### Usage
 
 ```C#
-//on top of your index razor add
-
+//on top of your  razor file add
 @inject IJSRuntime JSRuntime
-
 ```
+
+ ##### Neural Network
+ 1. Creating NN
+ ```C#
+ 
+ ```
+  Custom Network Options
+
+ ```C#
+ NeuralNetworkOptions options = new NeuralNetworkOptions()
+        {
+            activationHidden = Activation.relu,
+            activationOutput = Activation.linear,
+            inputs = 2,
+            outputs = 3,
+            task = NetworkTask.regression,
+            layers = new NetworkLayer[]
+            {
+            new NetworkLayer()
+            {
+                type = "dense", units = 12, activation = Activation.relu
+            },
+            new NetworkLayer()
+            {
+                type = "dense", units = 12, activation = Activation.sigmoid
+            }
+            },
+            epochs = 32,
+            batchSize = 15,
+            dataUrl = "url",
+            hiddenUnits = 21,
+            debug = true,
+            modelOptimizer = Optimizers.rmsprop,
+            learningRate=0.001,
+            modelLoss="meanSquareError",
+            modelMetrics= "accuracy"
+        };
+        
+        //Create Object
+        NeuralNetwork net = new NeuralNetwork(JSRuntime, options);
+
+
+ ```
 
  ##### Image Classifier
  
