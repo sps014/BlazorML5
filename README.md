@@ -9,12 +9,13 @@
 ## Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
 
-
-### Usage
-
+## Installation
 ```Nuget
 Install-Package BlazorML5 -Version 1.0.0
 ```
+
+### Usage
+
 
 ```C#
 //on top of your  razor file add
