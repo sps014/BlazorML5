@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Blazor.Hosting;
 
-namespace ML5ForBlazor
+namespace DemoApplication
 {
     public class Program
     {

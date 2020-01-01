@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML5ForBlazor", "ML5ForBlazor\ML5ForBlazor.csproj", "{DFF4D59D-64CF-4F14-910C-45064E690D10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Extensions.ML5", "Blazor.Extensions.ML5\Blazor.Extensions.ML5.csproj", "{05C82435-9447-4A77-8971-B3982791688F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApplication", "DemoApplication\DemoApplication.csproj", "{AE3C17FD-452A-48B0-BF8A-CC2263697908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFF4D59D-64CF-4F14-910C-45064E690D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C82435-9447-4A77-8971-B3982791688F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C82435-9447-4A77-8971-B3982791688F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C82435-9447-4A77-8971-B3982791688F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C82435-9447-4A77-8971-B3982791688F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3C17FD-452A-48B0-BF8A-CC2263697908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3C17FD-452A-48B0-BF8A-CC2263697908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3C17FD-452A-48B0-BF8A-CC2263697908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3C17FD-452A-48B0-BF8A-CC2263697908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

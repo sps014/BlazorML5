@@ -279,7 +279,10 @@ function getBiasML5(hash, layerNo)
 }
 function setWeightsML5(hash, layerNo, array,r,c,bias)
 {
-    NeuralNetworks[hash].model.layers[layerNo].setWeights([ml5.tf.tensor2d(array, shape = [r, c]), ml5.tf.tensor1d(bias)]);
+    ml5.tf.tidy(() =>
+    {
+        NeuralNetworks[hash].model.layers[layerNo].setWeights([ml5.tf.tensor2d(array, shape = [r, c]), ml5.tf.tensor1d(bias)]);
+    });
 }
 
 

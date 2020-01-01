@@ -1,0 +1,14 @@
+﻿@page "/"
+@inject IJSRuntime Runtime
+@using ML5
+
+<h1>Hello, world!</h1>
+
+@code
+{      protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        NeuralNetwork net = new NeuralNetwork(Runtime, 2, 1);
+
+    }
+}

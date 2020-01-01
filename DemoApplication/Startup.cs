@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ML5ForBlazor
+namespace DemoApplication
 {
     public class Startup
     {

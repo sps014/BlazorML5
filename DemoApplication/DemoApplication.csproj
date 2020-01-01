@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\data\" />
+    <ProjectReference Include="..\Blazor.Extensions.ML5\Blazor.Extensions.ML5.csproj" />
   </ItemGroup>
 
 </Project>
