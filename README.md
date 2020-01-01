@@ -2,11 +2,11 @@
  
  ### My attempt to use ML5 library from Blazor WASM
 
-#### Features
+## Features
 1. Neural Network 
 2. Image Classification
 
-### Demo
+## Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
 
 
@@ -16,6 +16,9 @@
 //on top of your  razor file add
 @inject IJSRuntime JSRuntime
 ```
+
+Use this project as Boilerplate
+
 
  #### Neural Network
  1. Creating Neural Network ,you can also visit [ML5 NN Docs](https://learn.ml5js.org/docs/#/reference/neural-network)
