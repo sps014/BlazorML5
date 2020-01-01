@@ -1,4 +1,4 @@
-# ML5 For Blazor
+# ML5-Blazor
  
  ### My attempt to use ML5 library from Blazor WASM (Client Side)
 
