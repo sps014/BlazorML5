@@ -18,7 +18,8 @@
  1. Creating Classifier
   ```C#
  ImageClassifier classifier = new ImageClassifier(jsruntime, ImageModel.MobileNet);//BuiltIn Model
- ImageClassifier classifier = new ImageClassifier(JSRuntime, "path/to/wwwroot/model/or/url"); //Custom Teachable Machine
+ //Custom Teachable Machine
+ ImageClassifier classifier = new ImageClassifier(JSRuntime, "path/to/wwwroot/model/or/url"); 
   ```
  2. events
  ```C#
