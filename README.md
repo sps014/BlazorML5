@@ -19,8 +19,20 @@
 
  ##### Neural Network
  1. Creating NN
- ```C#
  
+ ```C# 
+         //inputs and outputs
+        NeuralNetwork net = new NeuralNetwork(JSRuntime, 2,3);
+ ```
+ ```C#
+ NeuralNetworkOptions options = new NeuralNetworkOptions()
+ {
+            inputs=new string[] {"dob","age"},
+            outputs=new string[] {"gender"},
+            hiddenUnits=3,
+            task = NetworkTask.classification
+};
+NeuralNetwork net = new NeuralNetwork(JSRuntime, options);
  ```
   Custom Network Options
 
