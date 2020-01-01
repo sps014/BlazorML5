@@ -6,18 +6,18 @@
 1. Neural Network 
 2. Image Classification
 
-#### Demo
+### Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
 
 
-#### Usage
+### Usage
 
 ```C#
 //on top of your  razor file add
 @inject IJSRuntime JSRuntime
 ```
 
- ##### Neural Network
+ #### Neural Network
  1. Creating Neural Network ,you can also visit [ML5 NN Docs](https://learn.ml5js.org/docs/#/reference/neural-network)
  
  ```C# 
@@ -116,7 +116,7 @@ Adding Data
 
 ```
 
- ##### Image Classifier
+ #### Image Classifier
  
  1. Creating Classifier
   ```C#
