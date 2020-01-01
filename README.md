@@ -29,3 +29,23 @@
  {
       //do prediction
  }
+```
+3. Classify
+
+```c#
+  void ModelLoaded()
+    {
+    //result
+        classifier.OnClassification += GetResult;
+        //video or img element,optional no of classes
+        classifier.Classify(ElementReference,?noOfClasses);
+        //imag data as parameter
+        classifier.Classify(imageData);
+    }
+    void GetResult(string err,CResult[] result)
+    {
+        var cofidence = result[0].confidence;
+        var label = result[0].label;
+    }
+
+```
