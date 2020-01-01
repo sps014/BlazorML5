@@ -12,12 +12,18 @@
 
 #### Usage
 
+```C#
+//on top of your index razor add
+
+@inject IJSRuntime JSRuntime
+
+```
 
  ##### Image Classifier
  
  1. Creating Classifier
   ```C#
- ImageClassifier classifier = new ImageClassifier(jsruntime, ImageModel.MobileNet);//BuiltIn Model
+ ImageClassifier classifier = new ImageClassifier(JSRuntime, ImageModel.MobileNet);//BuiltIn Model
  //Custom Teachable Machine
  ImageClassifier classifier = new ImageClassifier(JSRuntime, "path/to/wwwroot/model/or/url"); 
   ```
