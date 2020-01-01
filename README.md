@@ -71,6 +71,36 @@ NeuralNetwork net = new NeuralNetwork(JSRuntime, options);
 
 
  ```
+ 
+ Events for Prediction,Classification, Load and Save Model and Data
+ ```C#
+ 
+ //when option in constructor is specified for dataURL
+        net.OnModelLoaded += ModelLoaded;
+ //when prediction 
+        net.Predict(new double[] { 1, 2 });
+        net.OnPredict += (err, Results) => { var s = Results[0].value; };
+
+ //when classfication 
+        net.Classify(new double[] { 1, 2 });
+        net.OnClassification += (err, Results) => { var s = Results[0].label; };
+
+ //when saving data or loading  data
+        net.SaveData("optionalPath");
+        net.OnDataSave += () => { };
+        net.LoadData("Path");
+        net.OnDataLoad += () => { };
+
+  //save,load model
+        net.Save();
+        net.OnSave += () => { };
+        net.Load("path");
+        net.Load(new ModelOptions { metadata = "", model = "", weights = "" });
+        net.OnLoad += () => { };
+
+
+ 
+ ```
 
  ##### Image Classifier
  
