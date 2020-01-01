@@ -12,6 +12,10 @@
 
 ### Usage
 
+```
+Install-Package BlazorML5 -Version 1.0.0
+```
+
 ```C#
 //on top of your  razor file add
 @inject IJSRuntime JSRuntime
