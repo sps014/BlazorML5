@@ -18,7 +18,7 @@
 ```
 
  ##### Neural Network
- 1. Creating NN
+ 1. Creating Neural Network ,you can also visit [ML5 NN Docs](https://learn.ml5js.org/docs/#/reference/neural-network)
  
  ```C# 
          //inputs and outputs
@@ -101,6 +101,20 @@ NeuralNetwork net = new NeuralNetwork(JSRuntime, options);
 
  
  ```
+Training 
+```C#
+//training with optional training options 
+        net.Train(new TrainingOptions() { batchSize=32,epochs=12},true);
+        net.OnTrainingComplete += () => { };
+        //work only if the 2nd parameter is Train() is true
+        net.WhileTraining += (epochs, loss) => { };
+```
+
+Adding Data
+```
+        net.AddData(inputsArray, outputsArray);
+
+```
 
  ##### Image Classifier
  
