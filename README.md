@@ -17,7 +17,18 @@
 @inject IJSRuntime JSRuntime
 ```
 
-Use this project as Boilerplate
+in your index.html in client app
+
+import these libraries
+
+```
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+```
+import 1st library or 2nd or both depends on your need.
+```
+    <script src="_content/Blazor.Extensions.ML5/ml5ImageClassifier.js"></script>
+    <script src="_content/Blazor.Extensions.ML5/ml5NeuralNetwork.js"></script>
+```
 
 
  #### Neural Network
