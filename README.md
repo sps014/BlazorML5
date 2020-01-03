@@ -31,8 +31,8 @@ import these libraries
 ```
 import 1st library or 2nd or both depends on your need.
 ```
-    <script src="_content/Blazor.Extensions.ML5/ml5ImageClassifier.js"></script>
-    <script src="_content/Blazor.Extensions.ML5/ml5NeuralNetwork.js"></script>
+    <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
+    <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
 ```
 
 
