@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RazorLangVersion>3.0</RazorLangVersion>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Shivendra Pratap Singh</Authors>
+    <Company>None</Company>
+    <Description>Utilize ML5 Library from c# in Blazor .Create a Neural Network or use a Image Classifier.</Description>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sps014/Blazor.Extensions.ML5</PackageProjectUrl>
+    <PackageIcon>ml5_logo_purple-88e082b8dc81d8729f95bcc092db90c5.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryType>https://github.com/sps014/Blazor.Extensions.ML5</RepositoryType>
+    <PackageTags>Neural Network,Machine Learning</PackageTags>
+    <PackageId>BlazorML5</PackageId>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Include="..\..\..\ml5_logo_purple-88e082b8dc81d8729f95bcc092db90c5.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,14 +1,33 @@
 ﻿@page "/"
 @inject IJSRuntime Runtime
 @using ML5
+@using ML5.WebCam
 
-<h1>Hello, world!</h1>
+<button type="button" class="btn btn-primary" @onclick="Init" style="height:60px">Primary</button>
+<video autoplay width="600" height="400" @ref="video"></video>
+<h1>@Data</h1>
 
 @code
-{      protected override void OnInitialized()
+{
+    private ElementReference video;
+    private string Data { get; set; }
+    void Init()
     {
-        base.OnInitialized();
-        NeuralNetwork net = new NeuralNetwork(Runtime, 2, 1);
 
+        WebCam cam = new WebCam(Runtime);
+        cam.Capture(video);
+        ImageClassifier classifier = new ImageClassifier(Runtime, "tm_model/model.json");
+        classifier.OnModelLoad += () =>
+        {
+            Data = "Model Loaded";
+            classifier.OnClassification += ClassifyResult;
+            classifier.Classify(video);
+        };
+
+    }
+    private void ClassifyResult(string err, CResult[] res)
+    {
+        Data = res[0].label;
+        base.StateHasChanged();
     }
 }

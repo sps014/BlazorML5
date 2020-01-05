@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Extensions.ML5", "Blazor.Extensions.ML5\Blazor.Extensions.ML5.csproj", "{05C82435-9447-4A77-8971-B3982791688F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorML5", "Blazor.Extensions.ML5\BlazorML5.csproj", "{05C82435-9447-4A77-8971-B3982791688F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApplication", "DemoApplication\DemoApplication.csproj", "{AE3C17FD-452A-48B0-BF8A-CC2263697908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApplication", "DemoApplication\DemoApplication.csproj", "{AE3C17FD-452A-48B0-BF8A-CC2263697908}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

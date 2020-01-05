@@ -90,12 +90,14 @@ namespace ML5
         }
 
         [JSInvokable("ICFML")]
-        public async Task __ModelLoaded__()
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task __ModelLoadedIC__()
         {
             OnModelLoad?.Invoke();
         }
         [JSInvokable("ICFCF")]
         public async Task __Classify__(string err,CResult[] results)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
             OnClassification?.Invoke(err,results);
         }
