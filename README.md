@@ -1,4 +1,4 @@
-# ML5 For Blazor
+# ML5-Blazor
  
  ### My attempt to use ML5 library from Blazor WASM (Client Side)
 
@@ -9,8 +9,13 @@
 ## Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
 
+## Installation
+```Nuget
+Install-Package BlazorML5 -Version 1.0.0
+```
 
 ### Usage
+
 
 ```C#
 //on top of your  razor file add
@@ -26,8 +31,8 @@ import these libraries
 ```
 import 1st library or 2nd or both depends on your need.
 ```
-    <script src="_content/Blazor.Extensions.ML5/ml5ImageClassifier.js"></script>
-    <script src="_content/Blazor.Extensions.ML5/ml5NeuralNetwork.js"></script>
+    <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
+    <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
 ```
 
 
