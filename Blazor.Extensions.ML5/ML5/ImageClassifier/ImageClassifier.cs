@@ -63,7 +63,7 @@ namespace ML5
         {
             Hash = Helper.UIDGenerator();
             DotNet = DotNetObjectReference.Create(this);
-            await Runtime.InvokeVoidAsync("initImageClassifierStrML5", DotNet,Hash,model,opt);
+            await Runtime.InvokeVoidAsync("initImageClassifierStrML5", Hash,DotNet, model,opt);
         }
 
         ~ImageClassifier()

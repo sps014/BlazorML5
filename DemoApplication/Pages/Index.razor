@@ -11,12 +11,17 @@
 {
     private ElementReference video;
     private string Data { get; set; }
+    SoundClassifier classifier;
     void Init()
     {
 
+        classifier=new SoundClassifier(Runtime, SoundModel.SpeechCommands18w);
+
+        classifier.Classify();
+
         WebCam cam = new WebCam(Runtime);
         cam.Capture(video);
-        ImageClassifier classifier = new ImageClassifier(Runtime, "tm_model/model.json");
+        //ImageClassifier classifier = new ImageClassifier(Runtime, "tm_model/model.json");
         classifier.OnModelLoad += () =>
         {
             Data = "Model Loaded";

@@ -8,9 +8,9 @@ function initImageClassifierVidML5(Hash, DotNet, model, video, options)
     else
         icf = ml5.imageClassifier(model, video, ml5ModelLoadedImageClassifier.bind(DotNet));
 
-    ImageClassifiers[Hash] = model;
+    ImageClassifiers[Hash] = icf;
 }
-function initImageClassifierStrML5(DotNet, Hash, model, opt)
+function initImageClassifierStrML5(Hash, DotNet, model, opt)
 {
     let icf;
     if (opt != null)

@@ -7,6 +7,7 @@ function LoadCoreLibraries()
     Libraries.push('_content/BlazorML5/WebCam.js');
     Libraries.push('_content/BlazorML5/ml5ImageClassifier.js');
     Libraries.push('_content/BlazorML5/ml5NeuralNetwork.js');
+    Libraries.push('_content/BlazorML5/ml5SoundClassifier.js');
 
 
 
