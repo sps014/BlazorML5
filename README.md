@@ -5,6 +5,8 @@
 ## Features
 1. Neural Network 
 2. Image Classification
+3. Sound Classifier
+4. WebCam Helper
 
 ## Demo
 1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
