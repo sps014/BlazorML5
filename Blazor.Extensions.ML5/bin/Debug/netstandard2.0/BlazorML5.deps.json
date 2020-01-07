@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "BlazorML5/1.0.0": {
+      "BlazorML5/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "3.1.0",
           "Microsoft.AspNetCore.Components.Web": "3.1.0",
@@ -879,7 +879,7 @@
       }
     },
     ".NETStandard,Version=v2.0/": {
-      "BlazorML5/1.0.0": {
+      "BlazorML5/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Components": "3.1.0",
           "Microsoft.AspNetCore.Components.Web": "3.1.0",
@@ -1232,7 +1232,7 @@
     }
   },
   "libraries": {
-    "BlazorML5/1.0.0": {
+    "BlazorML5/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

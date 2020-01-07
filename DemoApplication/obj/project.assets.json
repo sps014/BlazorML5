@@ -398,7 +398,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "BlazorML5/1.0.0": {
+      "BlazorML5/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -1299,7 +1299,7 @@
         "version.txt"
       ]
     },
-    "BlazorML5/1.0.0": {
+    "BlazorML5/1.0.1": {
       "type": "project",
       "path": "../Blazor.Extensions.ML5/BlazorML5.csproj",
       "msbuildProject": "../Blazor.Extensions.ML5/BlazorML5.csproj"
@@ -1307,7 +1307,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "BlazorML5 >= 1.0.0",
+      "BlazorML5 >= 1.0.1",
       "Microsoft.AspNetCore.Blazor >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.Build >= 3.1.0-preview4.19579.2",
       "Microsoft.AspNetCore.Blazor.DevServer >= 3.1.0-preview4.19579.2",

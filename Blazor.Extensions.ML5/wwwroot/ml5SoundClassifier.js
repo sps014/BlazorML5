@@ -20,7 +20,6 @@ function ml5ModelLoadedSoundClassifier() {
 }
 
 function soundClassifierClassify(hash, DotNet, sound) {
-    console.log(hash, SoundClassifiers[hash])
 
     if (sound != null)
         SoundClassifiers[hash].classify(sound, soundResultClassification.bind(DotNet));

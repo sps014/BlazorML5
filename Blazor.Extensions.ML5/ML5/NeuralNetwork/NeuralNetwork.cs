@@ -47,17 +47,11 @@ namespace ML5
             InitConfig(options);
 
         }
-        public NeuralNetwork(IJSRuntime jSRuntime, NeuralNetworkOptions options,bool notifyModelLoad)
-        {
-            Runtime = jSRuntime;
-            Hash = Helper.UIDGenerator();
-            InitConfig(options,notifyModelLoad);
-        }
         private async void Init(int inputs,int outputs)
         {
-            await Runtime.InvokeVoidAsync("createNNML5", Hash,inputs,outputs);
+            await Runtime.InvokeVoidAsync("createNNML5", Hash,inputs,outputs,DotNet);
         }
-        private async void InitConfig(NeuralNetworkOptions options, bool isCallBack=false)
+        private async void InitConfig(NeuralNetworkOptions options, bool isCallBack=true)
         {
             DotNet = DotNetObjectReference.Create(this);
             await Runtime.InvokeVoidAsync("createNNConfigML5", Hash, options,isCallBack,DotNet);

@@ -936,7 +936,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "restore": {
       "projectUniqueName": "C:\\Users\\Shivendra\\Desktop\\test\\ML5ForBlazor\\Blazor.Extensions.ML5\\BlazorML5.csproj",
       "projectName": "BlazorML5",

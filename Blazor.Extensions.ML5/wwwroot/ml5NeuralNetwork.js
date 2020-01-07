@@ -1,8 +1,8 @@
 ﻿let NeuralNetworks = new Object();
 
-function createNNML5(hash, inputs, outputs)
+function createNNML5(hash, inputs, outputs,dotnet)
 {
-    let nn = ml5.neuralNetwork(inputs, outputs);
+    let nn = ml5.neuralNetwork(inputs, outputs, ml5ModelLoaded.bind(dotnet));
     NeuralNetworks[hash] = nn;
 }
 
