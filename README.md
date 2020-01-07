@@ -9,8 +9,7 @@
 4. WebCam Helper
 
 ## Demo
-1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) Training in Browser With Neural Network
-
+1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
 ## Installation
 ```Nuget
 Install-Package BlazorML5 -Version 1.0.0
