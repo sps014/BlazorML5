@@ -10,6 +10,10 @@
 
 ## Demo
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
+
+## Code Sample
+1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/DemoApplication) 
+
 ## Installation
 ```Nuget
 Install-Package BlazorML5 -Version 1.0.0
@@ -23,14 +27,14 @@ Install-Package BlazorML5 -Version 1.0.0
 @inject IJSRuntime JSRuntime
 ```
 
-in your index.html in client app
+in your index.html in client app or index.cshtml in server
 
-import these libraries
+import this library in head section 
 
 ```
-<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="_content/BlazorML5/BlazorML5Core.js"></script>
 ```
-import 1st library or 2nd or both depends on your need.
+or you can do manual import if you need.
 ```
     <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
     <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
