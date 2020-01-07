@@ -9,7 +9,7 @@
 4. WebCam Helper
 
 ## Demo
-1. [Color Classifier](https://github.com/sps014/Color-Classifier-Demo-Source) Training in Browser With Neural Network
+1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/NeuralNetwork) Training in Browser With Neural Network
 
 ## Installation
 ```Nuget
