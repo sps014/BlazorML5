@@ -1,4 +1,6 @@
 # ML5-Blazor
+ [![NuGet Package](https://img.shields.io/badge/nuget-v3.1.0%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
+
  
  ### My attempt to use ML5 library from Blazor WASM (Client Side)
 
@@ -15,6 +17,7 @@
 1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/DemoApplication) 
 
 ## Installation
+
 ```Nuget
 Install-Package BlazorML5 -Version 1.0.0
 ```
