@@ -1,5 +1,5 @@
 # ML5-Blazor
- [![NuGet Package](https://img.shields.io/badge/nuget-v3.1.0%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
+ [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.1%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
 
  
  ### My attempt to use ML5 library from Blazor WASM (Client Side)
