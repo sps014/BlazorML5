@@ -2,7 +2,7 @@
  [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.1%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
 
  
- ### My attempt to use ML5 library from Blazor WASM (Client Side)
+ ### My attempt to use ML5 library from Blazor WASM (Client Side) 
 
 ## Features
 1. Neural Network 
@@ -45,6 +45,7 @@ or you can do manual import if you need.
 
 
  #### Neural Network
+ 
  1. Creating Neural Network ,you can also visit [ML5 NN Docs](https://learn.ml5js.org/docs/#/reference/neural-network)
  
  ```C# 
