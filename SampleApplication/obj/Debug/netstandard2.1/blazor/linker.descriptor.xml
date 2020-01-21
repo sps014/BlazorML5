@@ -1,5 +1,0 @@
-﻿<linker>
-  <assembly fullname="SampleApplication">
-    <type fullname="*" required="true" />
-  </assembly>
-</linker>

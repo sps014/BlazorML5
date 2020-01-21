@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BlazorML5</id>
+    <version>1.0.1</version>
+    <authors>Shivendra Pratap Singh</authors>
+    <owners>Shivendra Pratap Singh</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>ml5.png</icon>
+    <projectUrl>https://github.com/sps014/Blazor.Extensions.ML5</projectUrl>
+    <description>Utilize ML5 Library from c# in Blazor Client.Play with Teachable Machine models or  Create a Neural Network model or use a Image Classifier or Sound Classifier , with build in support for WebCam.Visit Github for documentation.</description>
+    <releaseNotes>Added Sound Classifier , added Easy imports,a lot api changes have been done see github https://github.com/sps014/BlazorML5 for documentation.</releaseNotes>
+    <tags>Neural Network, Machine Learning,Teachable Machine,ML,Deep Learning,AI,Image Classifier,Sound Classifier</tags>
+    <repository type="https://github.com/sps014/Blazor.Extensions.ML5" url="https://github.com/sps014/BlazorML5" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.AspNetCore.Components" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="3.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\bin\Release\netstandard2.0\BlazorML5.dll" target="lib\netstandard2.0\BlazorML5.dll" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\obj\Release\netstandard2.0\staticwebassets\msbuild.BlazorML5.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\obj\Release\netstandard2.0\staticwebassets\msbuild.build.BlazorML5.props" target="build\BlazorML5.props" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\obj\Release\netstandard2.0\staticwebassets\msbuild.buildMultiTargeting.BlazorML5.props" target="buildMultiTargeting\BlazorML5.props" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\obj\Release\netstandard2.0\staticwebassets\msbuild.buildTransitive.BlazorML5.props" target="buildTransitive\BlazorML5.props" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\wwwroot\BlazorML5Core.js" target="staticwebassets\BlazorML5Core.js" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\wwwroot\ml5ImageClassifier.js" target="staticwebassets\ml5ImageClassifier.js" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\wwwroot\ml5NeuralNetwork.js" target="staticwebassets\ml5NeuralNetwork.js" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\wwwroot\ml5SoundClassifier.js" target="staticwebassets\ml5SoundClassifier.js" />
+    <file src="C:\Users\Shivendra\Desktop\test\ML5ForBlazor\Blazor.Extensions.ML5\wwwroot\WebCam.js" target="staticwebassets\WebCam.js" />
+    <file src="C:\Users\Shivendra\Desktop\ml5.png" target="ml5.png" />
+  </files>
+</package>

@@ -11,9 +11,9 @@
 </div>
 <div>
     <center>
-        <input type="range" min=0 max=255 @bind-value="@r" id="red" @onclick="updatePredict"/>
-        <input type="range" min=0 max=255 @bind-value="@g" id="green"  @onclick="updatePredict" />
-        <input type="range" min=0 max=255 @bind-value="@b" id="blue"  @onclick="updatePredict"/>
+        <input type="range" min=0 max=255 @bind-value="@R" id="red"/>
+        <input type="range" min=0 max=255 @bind-value="@G" id="green" />
+        <input type="range" min=0 max=255 @bind-value="@B" id="blue"/>
         <br /><br />
         <div id="box"></div><br /><br />
         <br />
@@ -169,6 +169,42 @@
 </style>
 @code
 {
+    int R
+    {
+        get
+        {
+            return r;
+        }
+        set
+        {
+            r = value;
+            updatePredict();
+        }
+    }
+    int G
+    {
+        get
+        {
+            return g;
+        }
+        set
+        {
+            g = value;
+            updatePredict();
+        }
+    }
+    int B
+    {
+        get
+        {
+            return b;
+        }
+        set
+        {
+            b = value;
+            updatePredict();
+        }
+    }
     int r = 150, g = 10, b = 0;
     string output = "";
     ML5.NeuralNetwork net;
@@ -197,6 +233,7 @@
         LoadModel();
     }
 
+
     void ProcessModel()
     {
         net.Print("Model Loaded");
@@ -206,6 +243,7 @@
     void Classify()
     {
         net.Classify(new int[] { r, g, b });
+
     }
     void OnClassify(string err, CResult[] result)
     {
