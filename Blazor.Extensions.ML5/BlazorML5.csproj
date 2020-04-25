@@ -19,6 +19,7 @@
     <PackageReleaseNotes>Added Sound Classifier , added Easy imports,a lot api changes have been done see github https://github.com/sps014/BlazorML5 for documentation.</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/sps014/BlazorML5</RepositoryUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RootNamespace>ML5</RootNamespace>
   </PropertyGroup>
 
 
