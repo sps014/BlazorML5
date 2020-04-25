@@ -7,14 +7,14 @@
     <Authors>Shivendra Pratap Singh</Authors>
     <Company>None</Company>
     <Description>Utilize ML5 Library from c# in Blazor Client.Play with Teachable Machine models or  Create a Neural Network model or use a Image Classifier or Sound Classifier , with build in support for WebCam.Visit Github for documentation.</Description>
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/sps014/Blazor.Extensions.ML5</PackageProjectUrl>
     <PackageIcon>ml5.png</PackageIcon>
     <PackageIconUrl />
     <RepositoryType>https://github.com/sps014/Blazor.Extensions.ML5</RepositoryType>
     <PackageTags>Neural Network, Machine Learning,Teachable Machine,ML,Deep Learning,AI,Image Classifier,Sound Classifier</PackageTags>
     <PackageId>BlazorML5</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageReleaseNotes>Added Sound Classifier , added Easy imports,a lot api changes have been done see github https://github.com/sps014/BlazorML5 for documentation.</PackageReleaseNotes>
     <RepositoryUrl>https://github.com/sps014/BlazorML5</RepositoryUrl>
