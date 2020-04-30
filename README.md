@@ -35,10 +35,12 @@ in your index.html in client app or index.cshtml in server
 import this library in head section 
 
 ```
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
     <script src="_content/BlazorML5/BlazorML5Core.js"></script>
 ```
 or you can do manual import if you need.
 ```
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
     <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
     <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
 ```
