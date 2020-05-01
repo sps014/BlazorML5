@@ -14,7 +14,7 @@
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
 
 ## Code Sample
-1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/SampleApplication/Pages) 
+1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/SampleApplication) 
 
 ## Installation
 
