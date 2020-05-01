@@ -19,7 +19,7 @@
 ## Installation
 
 ```Nuget
-Install-Package BlazorML5 -Version 1.0.0
+Install-Package BlazorML5 -Version 1.0.2
 ```
 
 ### Usage
