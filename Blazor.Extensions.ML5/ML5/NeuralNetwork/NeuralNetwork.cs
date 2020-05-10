@@ -172,7 +172,9 @@ namespace ML5
 
 
         public delegate void ModelLoadedHandler();
-        //When given traing model loads
+        /// <summary>
+        /// When given training model loads
+        /// </summary>
         public event ModelLoadedHandler OnModelLoaded;
 
         public delegate void DoneTrainingHandler();
@@ -191,6 +193,9 @@ namespace ML5
         public delegate void LoadSaveHandler();
         public event LoadSaveHandler OnLoad;
         public event LoadSaveHandler OnSave;
+        /// <summary>
+        /// When NN Data is loaded
+        /// </summary>
         public event LoadSaveHandler OnDataLoad;
         public event LoadSaveHandler OnDataSave;
 

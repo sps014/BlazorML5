@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject IJSRuntime Runtime
 
     <h2 style="font-weight:bold">Introduction </h2>
 <p>
@@ -28,3 +29,18 @@
     Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
     for ML5 official Documentation.
 </p>
+
+@code
+{
+    ML5.ObjectDetector ObjectDetector;
+    protected override Task OnInitializedAsync()
+    {
+        ObjectDetector = new ML5.ObjectDetector(Runtime, ML5.ObjectDetectorModel.YOLO);
+        ObjectDetector.OnModelLoad += Load;
+        return base.OnInitializedAsync();
+    }
+    void Load()
+    {
+        Console.WriteLine("Loaded Successfully");
+    }
+}
