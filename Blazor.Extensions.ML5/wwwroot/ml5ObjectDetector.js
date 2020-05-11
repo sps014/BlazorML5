@@ -19,3 +19,7 @@ function ml5ModelLoadedObjectDetector() {
 function destroyObjectDetector(hash) {
     delete ObjectDetectors[hash];
 }
+
+function objectDetectorDetect(hash, dotnet, imageData) {
+
+}

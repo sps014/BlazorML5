@@ -1,4 +1,5 @@
-﻿using Microsoft.JSInterop;
+﻿using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,6 +36,14 @@ namespace ML5
         private async void Destroy()
         {
             await Runtime.InvokeVoidAsync("destroyObjectDetector", Hash);
+        }
+        public async void Detect(ElementReference videoOrImageOrCanvas)
+        {
+            await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
+        }
+        public async void Detect(object imageData, int noOfClasses = 0)
+        {
+            await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, imageData);
         }
         [JSInvokable("ODFML")]
         #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
