@@ -51,9 +51,16 @@ namespace ML5
         {
             OnModelLoad?.Invoke();
         }
-
+        [JSInvokable("ODFDR")]
+        public async Task __Detect__(string err, ObjectResult[] results)
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        {
+            OnDetection?.Invoke(err, results);
+        }
         public delegate void ModelLoadedHandler();
         public event ModelLoadedHandler OnModelLoad;
+        public delegate void OnDetectHandler(string err, ObjectResult[] result);
+        public event OnDetectHandler OnDetection;
     }
 
     public partial class ObjectDetectorOptions
@@ -68,5 +75,21 @@ namespace ML5
     {
         COCOSSD,
         YOLO
+    }
+    public class ObjectBox
+    {
+        public double x { get; set; }
+        public double y { get; set; }
+        public double width { get; set; }
+        public double height { get; set; }
+    }
+    public class ObjectResult
+    {
+        public string label { get; set; }
+        public double x { get; set; }
+        public double y { get; set; }
+        public double width { get; set; }
+        public double height { get; set; }
+        public ObjectBox normalized { get; set; }
     }
 }

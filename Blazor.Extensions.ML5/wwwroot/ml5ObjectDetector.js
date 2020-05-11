@@ -25,5 +25,6 @@ function objectDetectorDetect(hash, dotnet, imageData)
     ObjectDetectors[hash].detect(imageData, detection.bind(dotnet));
 }
 function detection(err, res) {
-    console.log(res);
+    this.invokeMethodAsync("ODFDR", err, res);
+
 }

@@ -29,7 +29,8 @@
     Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
     for ML5 official Documentation.
 </p>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQB5Ffc9qkazrrG_cym4-gOT-4gK-OM5OQgRjghq8dgcW1UOKVN&usqp=CAU" crossorigin="anonymous" @ref="refer" />
+<img src="https://raw.githubusercontent.com/ml5js/ml5-examples/development/javascript/ObjectDetector/YOLO_single_image/images/cat.JPG"
+     crossorigin="anonymous" @ref="refer" />
 
 @code
 {
@@ -46,6 +47,11 @@
     void Load()
     {
         Console.WriteLine("Loaded Successfully");
+        ObjectDetector.OnDetection += Det;
         ObjectDetector.Detect(refer);
+    }
+    void Det(string err,ML5.ObjectResult[] res)
+    {
+        Console.WriteLine(res[0].label);
     }
 }
