@@ -29,10 +29,14 @@
     Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
     for ML5 official Documentation.
 </p>
+<img src="https://www.dogster.com/wp-content/uploads/2018/10/golden-eating-toy.jpg" crossorigin="anonymous" @ref="refer" />
 
 @code
 {
     ML5.ObjectDetector ObjectDetector;
+
+    ElementReference refer { get; set; }
+
     protected override Task OnInitializedAsync()
     {
         ObjectDetector = new ML5.ObjectDetector(Runtime, ML5.ObjectDetectorModel.YOLO);
@@ -42,5 +46,6 @@
     void Load()
     {
         Console.WriteLine("Loaded Successfully");
+        ObjectDetector.Detect(refer);
     }
 }
