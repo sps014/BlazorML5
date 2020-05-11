@@ -20,6 +20,10 @@ function destroyObjectDetector(hash) {
     delete ObjectDetectors[hash];
 }
 
-function objectDetectorDetect(hash, dotnet, imageData) {
-
+function objectDetectorDetect(hash, dotnet, imageData)
+{
+    ObjectDetectors[hash].detect(imageData, detection.bind(dotnet));
+}
+function detection(err, res) {
+    console.log(res);
 }
