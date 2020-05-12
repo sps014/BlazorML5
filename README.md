@@ -36,7 +36,7 @@ in your index.html in client app or index.cshtml in server
 import this library in head section 
 
 
-or you can do manual import if you need.
+recommended way to import 
 ```
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
     <script src="_content/BlazorML5/WebCam.js"></script>
