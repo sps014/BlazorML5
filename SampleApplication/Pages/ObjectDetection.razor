@@ -1,21 +1,16 @@
 ﻿@page "/objectdetector"
 @inject IJSRuntime Runtime
 
-<div id="box"
-     style="
-    position:absolute;
-    left:@((int)Object.x)px;
-    top:@((int)Object.y)px;
-    width:@((int)Object.width)px;
-    height:@((int)Object.height)px;
-    border-radius:5px;
-    border-color:greenyellow;
-    background-color:transparent;
-    z-index:2px
-    ">
-
-</div>
-<img src="https://raw.githubusercontent.com/ml5js/ml5-examples/development/javascript/ObjectDetector/YOLO_single_image/images/cat.JPG"
+@if (Object != null)
+{
+    <h3>@Object.label</h3>
+    <p>Bonding Box</p>
+    <p>x=@Object.x</p>
+    <p>y=@Object.y</p>
+    <p>width=@Object.width</p>
+    <p>height=@Object.height</p>
+}
+<img src="https://raw.githubusercontent.com/ml5js/ml5-examples/development/javascript/ObjectDetector/COCOSSD_single_image/images/cat2.JPG"
      crossorigin="anonymous" @ref="refer" />
 
 @code
@@ -23,6 +18,7 @@
     ML5.ObjectDetector ObjectDetector;
 
     ElementReference refer { get; set; }
+
     ML5.ObjectResult Object { get; set; } = new ML5.ObjectResult();
 
     protected override Task OnInitializedAsync()
@@ -37,7 +33,7 @@
         ObjectDetector.OnDetection += Det;
         ObjectDetector.Detect(refer);
     }
-    void Det(string err, ML5.ObjectResult[] res)
+    async void Det(string err, ML5.ObjectResult[] res)
     {
         Object = res[0];
         StateHasChanged();

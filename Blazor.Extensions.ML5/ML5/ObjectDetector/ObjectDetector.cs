@@ -41,6 +41,7 @@ namespace ML5
         {
             await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
         }
+       
         public async void Detect(object imageData, int noOfClasses = 0)
         {
             await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, imageData);
