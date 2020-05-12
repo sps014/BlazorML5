@@ -8,7 +8,8 @@
 1. Neural Network 
 2. Image Classification
 3. Sound Classifier
-4. WebCam Helper
+4. Object Detector (YOLO and COCOSSD based)
+5. WebCam Helper
 
 ## Demo
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
@@ -34,15 +35,15 @@ in your index.html in client app or index.cshtml in server
 
 import this library in head section 
 
+
+recommended way to import 
 ```
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
-    <script src="_content/BlazorML5/BlazorML5Core.js"></script>
-```
-or you can do manual import if you need.
-```
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="_content/BlazorML5/WebCam.js"></script>
     <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
     <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
+    <script src="_content/BlazorML5/ml5SoundClassifier.js"></script>
+    <script src="_content/BlazorML5/ml5ObjectDetector.js"></script>
 ```
 
 
