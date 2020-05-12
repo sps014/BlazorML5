@@ -8,7 +8,8 @@
 1. Neural Network 
 2. Image Classification
 3. Sound Classifier
-4. WebCam Helper
+4. Object Detector (YOLO and COCOSSD based)
+5. WebCam Helper
 
 ## Demo
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
