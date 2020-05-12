@@ -27,22 +27,3 @@ function objectDetectorDetect(hash, dotnet, imageData)
 function detection(err, res) {
     this.invokeMethodAsync("ODFDR", err, res);
 }
-
-function getElementPosition(elem) {
-    const rect = elem.getBoundingClientRect();
-    console.log(rect);
-    return { x: rect.left + window.scrollX, y: rect.top + window.scrollY, width: rect.width, height: rect.height };
-}
-function DrawOnImage(img, cnvs,x,y,w,h) {
-
-    cnvs.style.position = "absolute";
-    cnvs.style.left = img.offsetLeft + "px";
-    cnvs.style.top = img.offsetTop + "px";
-
-    var ctx = cnvs.getContext("2d");
-    ctx.beginPath();
-    ctx.rect(x,y,w,h);
-    ctx.lineWidth = 3;
-    ctx.strokeStyle = '#00ff00';
-    ctx.stroke();
-}
