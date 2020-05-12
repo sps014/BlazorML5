@@ -39,10 +39,15 @@ in your index.html in client app or index.cshtml in server
 
 import this library in head section 
 
-
-recommended way to import 
+import ml5
+```html
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> //without Object detector stable
+                            or
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch
 ```
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+recommended way to import ports
+```
     <script src="_content/BlazorML5/WebCam.js"></script>
     <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
     <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
