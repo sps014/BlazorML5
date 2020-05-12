@@ -23,6 +23,10 @@
 Install-Package BlazorML5 -Version 1.0.2
 ```
 
+### Youtube Tutorial
+1. [Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+
+
 ### Usage
 
 
