@@ -41,9 +41,12 @@ import this library in head section
 ```
 or you can do manual import if you need.
 ```
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="_content/BlazorML5/WebCam.js"></script>
     <script src="_content/BlazorML5/ml5ImageClassifier.js"></script>
     <script src="_content/BlazorML5/ml5NeuralNetwork.js"></script>
+    <script src="_content/BlazorML5/ml5SoundClassifier.js"></script>
+    <script src="_content/BlazorML5/ml5ObjectDetector.js"></script>
 ```
 
 
