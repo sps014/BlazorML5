@@ -2,7 +2,7 @@
  [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.2%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
 
  
- ### An experimental illustration API to use ML5 from Blazor.
+ ### An experimental API to use ML5 from Blazor.
 
 ## Features
 1. Neural Network 
