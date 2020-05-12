@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorML5", "Blazor.Extensions.ML5\BlazorML5.csproj", "{05C82435-9447-4A77-8971-B3982791688F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{6B3AF1E2-2A22-4E9C-AA29-FCE1D6275933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{6B3AF1E2-2A22-4E9C-AA29-FCE1D6275933}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -14,6 +14,7 @@
         <li class="list-group-item list-group-item-primary">Neural Network      ✔</li>
         <li class="list-group-item list-group-item-success">Image Classifier    ✔</li>
         <li class="list-group-item list-group-item-primary">Sound Classifier ✔</li>
+        <li class="list-group-item list-group-item-success">Object Detector ✔</li>
         <li class="list-group-item list-group-item-info">Web Cam &nbsp;&emsp; &emsp; ✔</li>
     </ul>
 
@@ -29,29 +30,3 @@
     Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
     for ML5 official Documentation.
 </p>
-<img src="https://raw.githubusercontent.com/ml5js/ml5-examples/development/javascript/ObjectDetector/YOLO_single_image/images/cat.JPG"
-     crossorigin="anonymous" @ref="refer" />
-
-@code
-{
-    ML5.ObjectDetector ObjectDetector;
-
-    ElementReference refer { get; set; }
-
-    protected override Task OnInitializedAsync()
-    {
-        ObjectDetector = new ML5.ObjectDetector(Runtime, ML5.ObjectDetectorModel.YOLO);
-        ObjectDetector.OnModelLoad += Load;
-        return base.OnInitializedAsync();
-    }
-    void Load()
-    {
-        Console.WriteLine("Loaded Successfully");
-        ObjectDetector.OnDetection += Det;
-        ObjectDetector.Detect(refer);
-    }
-    void Det(string err,ML5.ObjectResult[] res)
-    {
-        Console.WriteLine(res[0].label);
-    }
-}
