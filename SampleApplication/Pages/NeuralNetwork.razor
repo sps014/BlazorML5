@@ -247,6 +247,8 @@
     }
     void OnClassify(string err, CResult[] result)
     {
+        if(err==null)
+            Console.WriteLine("Error:" + err);
         output = result[0].label;
         StateHasChanged();
 

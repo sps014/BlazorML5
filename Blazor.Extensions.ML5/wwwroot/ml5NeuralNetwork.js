@@ -107,8 +107,6 @@ function getOptimizer(num)
 
 
 
-
-
 function ml5ModelLoaded()
 {
     this.invokeMethodAsync("NNCBML", "__ModelLoaded__");
@@ -158,14 +156,26 @@ function predictML5(hash,dotnet,inputs)
 }
 function ml5Predict(err, result)
 {
+    if (err != null) {
+        console.error(err);
+        return;
+    }
     this.invokeMethodAsync("NNCBPD", err, result);
 }
 function classifyML5(hash, dotnet, inputs)
 {
+    console.log(NeuralNetworks[hash]);
+
     NeuralNetworks[hash].classify(inputs, ml5classify.bind(dotnet));
 }
 function ml5classify(err, result)
 {
+    console.log(result);
+
+    if (err != null) {
+        console.error(err);
+        return;
+    }
     this.invokeMethodAsync("NNCBCF", err, result);
 }
 
