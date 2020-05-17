@@ -41,9 +41,9 @@ import this library in head section
 
 import ml5
 ```html
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> //without Object detector stable
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> //without Object detector stable full support NN
                             or
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch, NN bugs
 ```
 
 recommended way to import ports
@@ -192,4 +192,55 @@ Adding Data
         var label = result[0].label;
     }
 
+```
+
+#### Object Detector
+##### Note: In ML5.js Object detector is in preview and you must use dev channel script in index.html , if you use this there are bugs with NN that i have created issue in ml5.js, that will be fixed with release of 0.5.0 version
+```html
+<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch
+```
+razor code
+
+```html
+
+@if (Object != null)
+{
+    <h3>@Object.label</h3>
+    <p>Bonding Box</p>
+    <p>x=@Object.x</p>
+    <p>y=@Object.y</p>
+    <p>width=@Object.width</p>
+    <p>height=@Object.height</p>
+}
+<img src="https://raw.githubusercontent.com/ml5js/ml5-examples/development/javascript/ObjectDetector/COCOSSD_single_image/images/cat2.JPG"
+     crossorigin="anonymous" @ref="refer" />
+
+```
+
+now main c# code 
+```cs
+ ML5.ObjectDetector ObjectDetector;
+
+    ElementReference refer { get; set; }
+
+    ML5.ObjectResult Object { get; set; } 
+
+    protected override Task OnInitializedAsync()
+    {
+        ObjectDetector = new ML5.ObjectDetector(Runtime, ML5.ObjectDetectorModel.YOLO);
+        ObjectDetector.OnModelLoad += Load;
+        return base.OnInitializedAsync();
+    }
+    void Load()
+    {
+        Console.WriteLine("Loaded Successfully");
+        ObjectDetector.OnDetection += Det;
+        ObjectDetector.Detect(refer);
+    }
+    async void Det(string err, ML5.ObjectResult[] res)
+    {
+        Object = res[0];
+        StateHasChanged();
+        Console.WriteLine(res[0].label);
+    }
 ```
