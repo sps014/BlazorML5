@@ -11,6 +11,12 @@
 4. Object Detector (YOLO and COCOSSD based)
 5. WebCam Helper
 
+## Todo
+1. Add support of Posenet
+2. Improved support of ml5 version 0.5.0
+3. Tutorial+Dedicated Demo pages
+4. Test on Blazor Server
+
 ## Demo
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
 
