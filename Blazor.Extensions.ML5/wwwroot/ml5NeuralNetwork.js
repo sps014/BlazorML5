@@ -117,7 +117,11 @@ function destroyNNML5(hash)
 }
 function addDataML5(hash, xs, ys)
 {
-    NeuralNetworks[hash].addData(xs, ys);
+    if (ml5.version > "0.4.3")
+        NeuralNetworks[hash].addData([xs], [ys]);
+    else
+        NeuralNetworks[hash].addData(xs, ys);
+
 }
 function normalizeDataML5(hash)
 {
