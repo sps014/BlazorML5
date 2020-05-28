@@ -17,23 +17,23 @@
         {
             task=NetworkTask.regression,debug=true,epochs=32
         });
-        nn.OnModelLoaded +=()=>{ Console.WriteLine("Loaded"); };
         float[] input = new float[100];
-        string[] output = new string[100];
+        float[] output = new float[100];
         for (int i = 0; i < 100; i++)
         {
             input[i] = i / 100.0f;
             if (i < 50)
             {
-                output[i] = "0";
+                output[i] = 0;
             }
             else
-                output[i] = "1";
+                output[i] = 1;
             nn.AddData(input[i], output[i]);
 
 
         }
         nn.OnTrainingComplete += () => {
+            Console.WriteLine("Completed");
             nn.OnPredict += Predict;
             nn.Predict(0.05);
         };
