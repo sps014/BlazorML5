@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Shivendra Pratap Singh</Authors>
     <Company>None</Company>
     <Description>Utilize ML5 Library from c# in Blazor Client.Play with Teachable Machine models or  Create a Neural Network model or use a Image Classifier or Sound Classifier or YOLO or COCOSSD model , with build in support for WebCam.Visit Github for documentation.</Description>
