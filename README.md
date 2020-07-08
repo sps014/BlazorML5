@@ -1,5 +1,5 @@
 # ML5-Blazor
- [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.3%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
+ [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.4%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
 
  
  ### An experimental API to use ML5 from Blazor.
@@ -20,6 +20,10 @@
 ## Demo
 1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
 
+### Youtube Tutorial
+1. [Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+
+
 ## Code Sample
 1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/SampleApplication) 
 
@@ -28,10 +32,6 @@
 ```Nuget
 Install-Package BlazorML5 -Version 1.0.3
 ```
-
-### Youtube Tutorial
-1. [Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
-
 
 ### Usage
 
@@ -199,10 +199,7 @@ Adding Data
 ```
 
 #### Object Detector
-##### Note: In ML5.js Object detector is in preview and you must use dev channel script in index.html , if you use this there are bugs with NN that i have created issue in ml5.js, that will be fixed with release of 0.5.0 version
-```html
-<script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch
-```
+
 razor code
 
 ```html
