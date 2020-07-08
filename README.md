@@ -47,9 +47,7 @@ import this library in head section
 
 import ml5
 ```html
-    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script> //without Object detector stable full support NN
-                            or
-    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script> // with Object detector dev branch, NN bugs
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
 ```
 
 recommended way to import ports
