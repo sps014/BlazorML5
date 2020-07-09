@@ -6,7 +6,7 @@
 @using System.IO;
 
 
-<button>@version</button>
+@*<button>@version</button>
 
 @code
 {
@@ -45,9 +45,9 @@
     {
         Console.WriteLine(results[0].label);
     }
-}
+}*@
 
-@*<div>
+<div>
         <h2 style="color:forestgreen">Color Classification</h2><br />
         <h5>Create A Color With Sliders</h5>
     </div>
@@ -254,8 +254,6 @@
         {
             NeuralNetworkOptions option = new NeuralNetworkOptions()
             {
-                inputs = new string[] { "r", "g", "b" },
-                outputs = new string[] { "label" },
                 task = NetworkTask.classification,
                 debug = true
 
@@ -267,19 +265,19 @@
             net.OnTrainingComplete += Classify;
             net.OnLoad += () =>
             {
-                updatePredict();
+                //updatePredict();
                 net.Print("Loaded Model Data ie. Wts and Bias ");
             };
             net.OnSave += () => { net.Print("Saved Model Data ie. Wts and Bias"); };
 
-            LoadModel();
+            //LoadModel();
         }
 
 
         void ProcessModel()
         {
             net.Print("Model Loaded");
-            net.NormalizeData();
+            //net.NormalizeData();
             net.Train(new TrainingOptions() { epochs = 64, batchSize = 32 });
         }
         void Classify()
@@ -310,10 +308,10 @@
             DataSet[] datasets = await Http.GetJsonAsync<DataSet[]>("data/colorData.json");
             foreach (var item in datasets)
             {
-                net.AddData(new short[] { item.r, item.g, item.b }, new string[] { item.label });
+                net.AddData(new Dictionary<string,short> { { "r",item.r }, { "g",item.g }, { "b",item.b } }, new Dictionary<string,string> { {"label", item.label } });
             }
             ProcessModel();
-            net.Print("Data set Added");
+            net.Print("Data set Added of length : "+datasets.Length);
         }
         private void Train()
         {
@@ -332,4 +330,4 @@
 
 
         }
-    }*@
+    }
