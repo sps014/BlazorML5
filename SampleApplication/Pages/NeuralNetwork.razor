@@ -17,22 +17,24 @@
         {
             task=NetworkTask.regression,debug=true,epochs=32,inputs=2,outputs=1
         });
+
         for (int i = 1; i <= 10; i++)
         {
             for (int j = 1; j <= 10; j++)
             {
-                nn.AddData(new int[] {i,j }, i*j);
+                nn.AddData(new object[] {i,j}, new object[] {i*j});
             }
 
-
+           //nn.NormalizeData();
         }
 
 
         nn.OnTrainingComplete += () => {
             Console.WriteLine("Completed");
             nn.OnPredict += Predict;
-            nn.Predict(new int[] { 5, 3 });
+            nn.Predict(new object[] { 5, 3 } );
         };
+        nn.NormalizeData();
         nn.Train();
 
         return base.OnInitializedAsync();

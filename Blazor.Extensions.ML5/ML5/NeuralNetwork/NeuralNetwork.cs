@@ -64,7 +64,7 @@ namespace ML5
         {
             await Runtime.InvokeVoidAsync("destroyNNML5", Hash);
         }
-        public async void AddData(object xs,object ys)
+        public async void AddData(object[] xs,object[] ys)
         {
             await Runtime.InvokeVoidAsync("addDataML5",Hash, xs, ys);
         }
@@ -81,11 +81,11 @@ namespace ML5
         {
             await Runtime.InvokeVoidAsync("trainML5", Hash, DotNet,subscribeCallBack,trainingOptions);
         }
-        public async void Predict(object inputs)
+        public async void Predict(object[] inputs)
         {
             await Runtime.InvokeVoidAsync("predictML5", Hash, DotNet, inputs);
         }
-        public async void Classify(object inputs)
+        public async void Classify(object[] inputs)
         {
             await Runtime.InvokeVoidAsync("classifyML5", Hash, DotNet, inputs);
         }
