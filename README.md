@@ -3,7 +3,7 @@
 [![NuGet Badge](https://buildstats.info/nuget/BlazorML5)](https://www.nuget.org/packages/BlazorML5)
 
  
- ### An experimental API to use ML5 from Blazor.
+ ### An Easy Machine Learning Library for Blazor.
 
 ## Features
 1. Neural Network 
