@@ -1,5 +1,6 @@
 # ML5-Blazor
  [![NuGet Package](https://img.shields.io/badge/nuget-v1.0.4%20Preview%204-orange.svg)](https://www.nuget.org/packages/BlazorML5/)
+[![NuGet Badge](https://buildstats.info/nuget/BlazorML5)](https://www.nuget.org/packages/BlazorML5)
 
  
  ### An experimental API to use ML5 from Blazor.
