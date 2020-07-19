@@ -27,7 +27,8 @@ namespace ML5
     public enum NetworkTask
     {
         regression,
-        classification
+        classification,
+        imageClassification
     }
     public class NetworkLayer
     {
