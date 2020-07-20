@@ -11,9 +11,10 @@
 @code
 {
     string version { get; set; }
+    ML5.NeuralNetwork nn;
     protected override Task OnInitializedAsync()
     {
-        ML5.NeuralNetwork nn = new ML5.NeuralNetwork(Runtime,new NeuralNetworkOptions()
+        nn = new ML5.NeuralNetwork(Runtime,new NeuralNetworkOptions()
         {
             task=NetworkTask.regression,debug=true,epochs=32,inputs=2,outputs=1
         });
@@ -25,7 +26,7 @@
                 nn.AddData(new object[] {i,j}, new object[] {i*j});
             }
 
-           //nn.NormalizeData();
+            //nn.NormalizeData();
         }
 
 
@@ -39,8 +40,13 @@
 
         return base.OnInitializedAsync();
     }
-    void Predict(string err, Result[] results)
+    async void Predict(string err, Result[] results)
     {
         Console.WriteLine(results[0].label);
+        foreach(var layer in await nn.Layers)
+        {
+            var v=await layer.GetWeights();
+            Console.Write(v.ToString());
+        }
     }
 }
