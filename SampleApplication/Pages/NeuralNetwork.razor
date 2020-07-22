@@ -5,13 +5,13 @@
 @using ML5;
 @using System.IO;
 
-
-<button>@version</button>
+<p>@result</p>
 
 @code
 {
-    string version { get; set; }
     ML5.NeuralNetwork nn;
+    string result { get; set; }
+
     protected override Task OnInitializedAsync()
     {
         nn = new ML5.NeuralNetwork(Runtime,new NeuralNetworkOptions()
@@ -25,8 +25,6 @@
             {
                 nn.AddData(new object[] {i,j}, new object[] {i*j});
             }
-
-            //nn.NormalizeData();
         }
 
 
@@ -35,18 +33,14 @@
             nn.OnPredict += Predict;
             nn.Predict(new object[] { 5, 3 } );
         };
-        nn.NormalizeData();
+
         nn.Train();
 
         return base.OnInitializedAsync();
     }
-    async void Predict(string err, Result[] results)
+    void Predict(string err, Result[] results)
     {
+        result = results[0].value;
         Console.WriteLine(results[0].label);
-        foreach(var layer in await nn.Layers)
-        {
-            var v=await layer.GetWeights();
-            Console.Write(v.ToString());
-        }
     }
 }
