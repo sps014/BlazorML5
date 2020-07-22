@@ -10,13 +10,7 @@ namespace ML5
     {
         public IJSRuntime Runtime { get; set; }
         public string Hash { get; private set; }
-        public Task<Layer[]> Layers
-        {
-            get
-            {
-                return GetLayers();
-            }
-        }
+
         public DotNetObjectReference<NeuralNetwork> DotNet { get; private set; }
 
         public NeuralNetwork(IJSRuntime jSRuntime,int inputs,int outputs)
@@ -25,16 +19,6 @@ namespace ML5
             Hash = Helper.UIDGenerator();
             Init(inputs, outputs);
 
-        }
-        private async Task<Layer[]> GetLayers()
-        {
-            int layerCount = await GetLayersInfo();
-            List<Layer> layers = new List<Layer>();
-            for (int i = 0; i < layerCount; i++)
-            {
-                layers.Add(new Layer(Runtime, Hash, i));
-            }
-            return layers.ToArray();
         }
         private async Task<int> GetLayersInfo()
         {
