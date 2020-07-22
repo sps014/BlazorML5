@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ML5
 {
+    [Obsolete("Please consider using ML.Net model builder instead, disabling Neural Network because of Performace benchmarks.")]
     public class NeuralNetwork
     {
         public IJSRuntime Runtime { get; set; }
@@ -157,7 +158,7 @@ namespace ML5
 
         public delegate void ModelLoadedHandler();
         /// <summary>
-        /// When given training model loads
+        /// When a given training model configured 
         /// </summary>
         public event ModelLoadedHandler OnModelLoaded;
 
@@ -175,6 +176,9 @@ namespace ML5
 
 
         public delegate void LoadSaveHandler();
+        /// <summary>
+        /// Load An Existing NN Model
+        /// </summary>
         public event LoadSaveHandler OnLoad;
         public event LoadSaveHandler OnSave;
         /// <summary>
