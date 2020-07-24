@@ -44,13 +44,23 @@ namespace ML5
             await runtime.InvokeVoidAsync("poseNetML5", Hash.ToString(), DotNetObjectRef, element, options, type);
 
         }
-        public async Task<List<PoseResult>> OnSinglePose(ElementReference? canvasOrVideoOrImage=null)
+        public async Task<List<PoseResult>> SinglePose(ElementReference? canvasOrVideoOrImage=null)
         {
             List<PoseResult> jsonRes;
             if (canvasOrVideoOrImage != null)
                 jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetsinglePoseML5", Hash.ToString(), canvasOrVideoOrImage);
             else
                 jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetsinglePoseML5", Hash.ToString(), null);
+
+            return jsonRes;
+        }
+        public async Task<List<PoseResult>> MultiPose(ElementReference? canvasOrVideoOrImage = null)
+        {
+            List<PoseResult> jsonRes;
+            if (canvasOrVideoOrImage != null)
+                jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetmultiPoseML5", Hash.ToString(), canvasOrVideoOrImage);
+            else
+                jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetmultiPoseML5", Hash.ToString(), null);
 
             return jsonRes;
         }

@@ -11,7 +11,7 @@
         net = new ML5.PoseNet(Runtime);
         net.OnModelLoad += async () => {
             Console.WriteLine("Loaded Model dude");
-            var poses=await net.OnSinglePose(refer);
+            var poses=await net.MultiPose(refer);
             Console.WriteLine(poses[0].pose.nose.confidence);
         };
         base.OnInitialized();

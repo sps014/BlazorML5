@@ -33,6 +33,9 @@ function poseNetModelLoad() {
 
 async function poseNetsinglePoseML5(hash, canvas) {
     var results = await PoseNets[hash].singlePose(canvas);
-    console.log(results);
+    return results;
+}
+async function poseNetmultiPoseML5(hash, canvas) {
+    var results = await PoseNets[hash].multiPose(canvas);
     return results;
 }
