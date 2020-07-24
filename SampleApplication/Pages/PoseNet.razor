@@ -1,12 +1,19 @@
 ﻿@page "/posenet"
 @inject IJSRuntime Runtime
-
+<img src="https://static.photocdn.pt/images/articles/2019/07/24/images/articles/2019/07/22/poses_for_men_back_lean.jpg"
+     crossorigin="anonymous" @ref="refer"/>
 @code
 {
     ML5.PoseNet net;
+    ElementReference refer;
     protected override void OnInitialized()
     {
         net = new ML5.PoseNet(Runtime);
+        net.OnModelLoad += async () => {
+            Console.WriteLine("Loaded Model dude");
+            var poses=await net.OnSinglePose(refer);
+            System.Text.Json.JsonSerializer.Deserialize<ML5.Root>(poses);
+        };
         base.OnInitialized();
     }
 }
