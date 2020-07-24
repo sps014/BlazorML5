@@ -40,7 +40,7 @@
     }
     void Predict(string err, Result[] results)
     {
-        result = results[0].value;
+        result = results[0].value.ToString();
         Console.WriteLine(results[0].label);
     }
 }

@@ -2,7 +2,7 @@
 
 function poseNetML5(hash, dotnet, video = null, options = null, type = null)
 {
-    const poseNet;
+    let poseNet;
     if (video != null) {
         if (options != null) {
             poseNet = ml5.poseNet(video, options, poseNetModelLoad.bind(dotnet));
@@ -11,11 +11,18 @@ function poseNetML5(hash, dotnet, video = null, options = null, type = null)
             poseNet = ml5.poseNet(video, type, poseNetModelLoad.bind(dotnet));
         }
         else {
-            poseNet = ml5.poseNet(video , poseNetModelLoad.bind(dotnet));
+            poseNet = ml5.poseNet(video, poseNetModelLoad.bind(dotnet));
         }
     }
-    poseNet = ml5.poseNet(?video, ?type, ?callback);
-
+    else {
+        if (options != null) {
+            poseNet = ml5.poseNet(poseNetModelLoad.bind(dotnet), options);
+        }
+    }
+    PoseNets[hash] = poseNet;
+}
+function destroyPoseNetML5(hash) {
+    delete PoseNets[hash];
 }
 function poseNetModelLoad() {
     console.log("Loaded model");

@@ -14,29 +14,45 @@ namespace ML5
         public DotNetObjectReference<PoseNet> DotNetObjectRef { get; private set; }
         public PoseNet(IJSRuntime runtime)
         {
-            Init(runtime);
+            Init(runtime, null, null, null);
         }
         public PoseNet(IJSRuntime runtime,ElementReference element,DetectionType type)
         {
-            Init(runtime);
-
+            Init(runtime, element, null, type);
+            //function poseNetML5(hash, dotnet, video = null, options = null, type = null)
+        }
+        public PoseNet(IJSRuntime runtime, ElementReference element)
+        {
+            Init(runtime, element, null, null);
+            //function poseNetML5(hash, dotnet, video = null, options = null, type = null)
         }
         public PoseNet(IJSRuntime runtime, ElementReference element, PoseNetOptions options)
         {
-            Init(runtime);
-
+            Init(runtime, element, options, null);
         }
         public PoseNet(IJSRuntime runtime, PoseNetOptions options)
         {
-            Init(runtime);
+            Init(runtime, null, options, null);
 
         }
-        private void Init(IJSRuntime runtime)
+        private async void Init(IJSRuntime runtime,ElementReference? element,PoseNetOptions options,DetectionType? type)
         {
             Runtime = runtime;
             DotNetObjectRef = DotNetObjectReference.Create(this);
             Hash = PoseNetHash++;
+            await runtime.InvokeVoidAsync("poseNetML5", Hash.ToString(), DotNetObjectRef, element, options, type);
+
         }
+        ~PoseNet()
+        {
+            destroy();
+        }
+        async void destroy()
+        {
+            await Runtime.InvokeVoidAsync("destroyPoseNetML5", Hash.ToString());
+
+        }
+
         public enum DetectionType
         {
             single,multiple

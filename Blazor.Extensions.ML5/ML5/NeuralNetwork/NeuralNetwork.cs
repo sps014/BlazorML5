@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ML5
 {
-    [Obsolete("Please consider using ML.Net model builder instead, disabling Neural Network because of Performace benchmarks.")]
+    [Obsolete("Please consider using ML.Net model builder instead,never train heavy models on client side with it, heavy perf penality with js interops")]
     public class NeuralNetwork
     {
         public IJSRuntime Runtime { get; set; }

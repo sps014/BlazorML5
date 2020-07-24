@@ -1,0 +1,12 @@
+﻿@page "/posenet"
+@inject IJSRuntime Runtime
+
+@code
+{
+    ML5.PoseNet net;
+    protected override void OnInitialized()
+    {
+        net = new ML5.PoseNet(Runtime);
+        base.OnInitialized();
+    }
+}
