@@ -22,6 +22,7 @@ function poseNetML5(hash, dotnet, video = null, options = null, type = null)
             poseNet = ml5.poseNet(poseNetModelLoad.bind(dotnet));
         }
     }
+    poseNet.on('pose', posecallback.bind(dotnet));
     PoseNets[hash] = poseNet;
 }
 function destroyPoseNetML5(hash) {
@@ -39,3 +40,9 @@ async function poseNetmultiPoseML5(hash, canvas) {
     var results = await PoseNets[hash].multiPose(canvas);
     return results;
 }
+
+//function posecallback(result) {
+//    this.invokeMethodAsync("PNCBF", result);
+
+    
+//}
