@@ -12,7 +12,7 @@
         net.OnModelLoad += async () => {
             Console.WriteLine("Loaded Model dude");
             var poses=await net.OnSinglePose(refer);
-            System.Text.Json.JsonSerializer.Deserialize<ML5.Root>(poses);
+            Console.WriteLine(poses[0].pose.nose.confidence);
         };
         base.OnInitialized();
     }

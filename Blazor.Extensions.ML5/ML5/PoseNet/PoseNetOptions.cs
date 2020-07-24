@@ -22,6 +22,8 @@ namespace ML5
     }
 
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
+    
+
     public class Position
     {
         public double x { get; set; }
@@ -197,19 +199,12 @@ namespace ML5
 
     }
 
-    public class MyArray
+    public class PoseResult
     {
         public Pose pose { get; set; }
         public List<List<Keypoint>> skeleton { get; set; }
 
     }
-
-    public class Root
-    {
-        public List<MyArray> MyArray { get; set; }
-
-    }
-
 
 }
 

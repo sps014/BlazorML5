@@ -34,5 +34,5 @@ function poseNetModelLoad() {
 async function poseNetsinglePoseML5(hash, canvas) {
     var results = await PoseNets[hash].singlePose(canvas);
     console.log(results);
-    return JSON.stringify(results);
+    return results;
 }
