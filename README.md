@@ -10,11 +10,12 @@
 2. Image Classification
 3. Sound Classifier
 4. Object Detector (YOLO and COCOSSD based)
-5. WebCam Helper
+5. PoseNet [Not in Nuget]
+6. WebCam Helper
 
 ## Todo
-1. Add support of Posenet
-2. Improved support of ml5 version 0.5.0
+1. Add support of more ML Models
+2. Improve support of ml5 version 0.5.0
 3. Tutorial+Dedicated Demo pages
 4. Test on Blazor Server
 
