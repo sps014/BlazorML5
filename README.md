@@ -20,7 +20,7 @@
 4. Test on Blazor Server
 
 ### Documentation
-[Wiki](https://github.com/sps014/BlazorML5/wiki)
+[Wiki](https://github.com/sps014/BlazorML5/wiki)\
 [Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
 
 ## Demo
