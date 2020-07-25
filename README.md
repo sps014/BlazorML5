@@ -6,11 +6,11 @@
  ### An Easy Machine Learning Library for Blazor.
 
 ## Features
-1. Neural Network 
-2. Image Classification
-3. Sound Classifier
-4. Object Detector (YOLO and COCOSSD based)
-5. PoseNet [Not in Nuget]
+1. [Neural Network](https://github.com/sps014/BlazorML5/wiki/Neural-Network) 
+2. [Image Classification](https://github.com/sps014/BlazorML5/wiki/Image-Classification)
+3. [Sound Classifier](https://github.com/sps014/BlazorML5/wiki/Sound-Detector)
+4. [Object Detector (YOLO and COCOSSD based)](https://github.com/sps014/BlazorML5/wiki/Object-Detector-(YOLO-CocoSSD))
+5. [PoseNet [Not in Nuget]](https://github.com/sps014/BlazorML5/wiki/PoseNet)
 6. WebCam Helper
 
 ## Todo
@@ -19,7 +19,7 @@
 3. Tutorial+Dedicated Demo pages
 4. Test on Blazor Server
 
-### Documentation
+### [Documentation](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation)
 [Wiki](https://github.com/sps014/BlazorML5/wiki)\
 [Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
 
