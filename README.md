@@ -23,12 +23,12 @@
 [Wiki](https://github.com/sps014/BlazorML5/wiki)
 
 ## Demo
-1. [Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
+[Core ML5 Sample](https://blazor-ml5-sample.netlify.com/) 
 
 ###  Tutorial
-1. [Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+[Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
 
 
 ## Code Sample
-1. [Source Code](https://github.com/sps014/BlazorML5/tree/master/SampleApplication) 
+[Source Code](https://github.com/sps014/BlazorML5/tree/master/SampleApplication) 
 
