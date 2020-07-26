@@ -1,0 +1,80 @@
+﻿@page "/neuralnet"
+@using ML5
+@inject IJSRuntime Runtime
+@inject HttpClient Http
+
+<h5>Color Classification</h5>
+
+@if (trained)
+{
+    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+
+}
+
+<p>@Result</p>
+
+@if (dataset != null)
+{
+    <p style="color:deeppink;font-size:medium">Training DataSet Size : @dataset.Length</p>
+}
+@code {
+
+    bool trained = false;
+    string Result;
+    NeuralNetwork network;
+    Data[] dataset;
+    protected override Task OnInitializedAsync()
+    {
+        NeuralNetworkOptions option = new NeuralNetworkOptions()
+        {
+            inputs = 3,
+            outputs = 1,
+            task = NetworkTask.classification,
+            debug = true,
+        };
+        network = new NeuralNetwork(Runtime, option);
+        network.OnClassification += OnClassify;
+        network.OnTrainingComplete += OnTrained;
+        Loaddata();
+        return base.OnInitializedAsync();
+    }
+
+    async void Loaddata()
+    {
+        dataset = await Http.GetFromJsonAsync<Data[]>("data/colorDataSmall.json");
+        foreach (var data in dataset)
+        {
+            network.AddData(new object[] { data.r, data.b, data.g }, new object[] { data.label });
+        }
+        network.NormalizeData();
+
+        Console.WriteLine("Added Dataset of size : " + dataset.Length);
+
+
+        StartTrain();
+    }
+    void OnTrained()
+    {
+        trained = true;
+        StateHasChanged();
+    }
+
+    void StartTrain()
+    {
+        network.Train();
+    }
+
+
+    void OnClassify(string error, CResult[] results)
+    {
+        Result = results[0].label;
+        StateHasChanged();
+    }
+    class Data
+    {
+        public int r { get; set; }
+        public int g { get; set; }
+        public int b { get; set; }
+        public string label { get; set; }
+    }
+}

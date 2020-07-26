@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ML5
 {
-    [Obsolete("Please consider using ML.Net model builder instead,never train heavy models on client side with it, heavy perf penality with js interops")]
+    //[Obsolete("Please consider using ML.Net model builder instead,never train heavy models on client side with it, heavy perf penality with js interops")]
     public class NeuralNetwork
     {
         public IJSRuntime Runtime { get; set; }
@@ -61,7 +61,7 @@ namespace ML5
         /// Start training model
         /// </summary>
         /// <param name="trainingOptions"></param>
-        /// <param name="subscribeCallBack">enable callbacks for whileTraining</param>
+        /// <param name="subscribeCallBack">enable callbacks for whileTraining [False][costly operation instead use debug flag on initial neural network]</param>
         public async void Train(TrainingOptions trainingOptions=null,bool subscribeCallBack=false)
         {
             await Runtime.InvokeVoidAsync("trainML5", Hash, DotNet,subscribeCallBack,trainingOptions);
