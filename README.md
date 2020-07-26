@@ -19,8 +19,8 @@
 3. Tutorial+Dedicated Demo pages
 4. Test on Blazor Server
 
-### [Documentation](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation)
-[Wiki](https://github.com/sps014/BlazorML5/wiki)\
+### Documentation
+[Wiki](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation)\
 [Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
 
 ## Demo
