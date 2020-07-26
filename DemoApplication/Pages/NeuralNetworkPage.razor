@@ -3,78 +3,263 @@
 @inject IJSRuntime Runtime
 @inject HttpClient Http
 
-<h5>Color Classification</h5>
+<div>
+    <h2 style="color:forestgreen">Color Classification</h2><br />
+    <h5>Create A Color With Sliders</h5>
+</div>
+<div>
+    <center>
+        <input type="range" min=0 max=255 @bind-value="@r" id="red" @onclick="classify" />
+        <input type="range" min=0 max=255 @bind-value="@g" id="green" @onclick="classify" />
+        <input type="range" min=0 max=255 @bind-value="@b" id="blue" @onclick="classify" />
+        <br /><br />
+        <div id="box"></div><br /><br />
+        <br />
+        <p>It seems a bit </p>
+        <p style="font-weight:bolder">@Result</p>
+        <br />
+        @*<button type="button" class="btn btn-primary" @onclick="Save">Save</button>
+        <button type="button" class="btn btn-warning" @onclick="LoadDataSet">Re-Train</button>*@
+    </center>
+ </div>
 
-@if (trained)
-{
-    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
 
-}
 
-<p>@Result</p>
-
-@if (dataset != null)
-{
-    <p style="color:deeppink;font-size:medium">Training DataSet Size : @dataset.Length</p>
-}
-@code {
-
-    bool trained = false;
-    string Result;
-    NeuralNetwork network;
-    Data[] dataset;
-    protected override Task OnInitializedAsync()
+    @if (dataset != null)
     {
-        NeuralNetworkOptions option = new NeuralNetworkOptions()
-        {
-            inputs = 3,
-            outputs = 1,
-            task = NetworkTask.classification,
-            debug = true,
-        };
-        network = new NeuralNetwork(Runtime, option);
-        network.OnClassification += OnClassify;
-        network.OnTrainingComplete += OnTrained;
-        Loaddata();
-        return base.OnInitializedAsync();
+        <p style="color:deeppink;font-size:medium">Training DataSet Size : @dataset.Length</p>
     }
 
-    async void Loaddata()
-    {
-        dataset = await Http.GetFromJsonAsync<Data[]>("data/colorDataSmall.json");
-        foreach (var data in dataset)
+    @code {
+
+        int r = 150, g = 10, b = 0;
+
+        bool trained = false;
+        string Result;
+        NeuralNetwork network;
+        Data[] dataset;
+        protected override Task OnInitializedAsync()
         {
-            network.AddData(new object[] { data.r, data.b, data.g }, new object[] { data.label });
+            NeuralNetworkOptions option = new NeuralNetworkOptions()
+            {
+                inputs = 3,
+                outputs = 1,
+                task = NetworkTask.classification,
+                debug = true,
+            };
+            network = new NeuralNetwork(Runtime, option);
+            network.OnClassification += OnClassify;
+            network.OnTrainingComplete += OnTrained;
+            Loaddata();
+            return base.OnInitializedAsync();
         }
-        network.NormalizeData();
 
-        Console.WriteLine("Added Dataset of size : " + dataset.Length);
+        void classify()
+        {
+            network.Classify(new object[] { r, g, b });
+        }
+
+        async void Loaddata()
+        {
+            dataset = await Http.GetFromJsonAsync<Data[]>("data/colorDataSmall.json");
+            foreach (var data in dataset)
+            {
+                network.AddData(new object[] { data.r, data.b, data.g }, new object[] { data.label });
+            }
+            network.NormalizeData();
+
+            Console.WriteLine("Added Dataset of size : " + dataset.Length);
 
 
-        StartTrain();
+            StartTrain();
+        }
+        void OnTrained()
+        {
+            trained = true;
+            StateHasChanged();
+        }
+
+        void StartTrain()
+        {
+            network.Train();
+        }
+
+
+        void OnClassify(string error, CResult[] results)
+        {
+            Result = results[0].label;
+            StateHasChanged();
+        }
+        class Data
+        {
+            public int r { get; set; }
+            public int g { get; set; }
+            public int b { get; set; }
+            public string label { get; set; }
+        }
     }
-    void OnTrained()
-    {
-        trained = true;
-        StateHasChanged();
-    }
-
-    void StartTrain()
-    {
-        network.Train();
-    }
 
 
-    void OnClassify(string error, CResult[] results)
-    {
-        Result = results[0].label;
-        StateHasChanged();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @*Codepen copied range control :)
+
+    *@
+
+    <style>
+    #green {
+        -webkit-appearance: none;
+        background-color: springgreen;
+        height: 8px;
+        overflow: visible;
+        width: 33%;
+        position: relative;
+        outline:none;
+        border-radius: 3px;
     }
-    class Data
-    {
-        public int r { get; set; }
-        public int g { get; set; }
-        public int b { get; set; }
-        public string label { get; set; }
+
+    #red {
+        -webkit-appearance: none;
+        background-color: deeppink;
+        height: 8px;
+        overflow: visible;
+        width: 33%;
+        outline:none;
+        position: relative;
+        border-radius: 3px;
     }
-}
+
+    #blue {
+        -webkit-appearance: none;
+        background-color: dodgerblue;
+        height: 8px;
+        overflow: visible;
+        width: 33%;
+        outline: none;
+        position: relative;
+        border-radius: 3px;
+    }
+
+    #box {
+        background-color: rgb(@r,@g,@b);
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        border-color:black;
+        border-width:thick;
+        border-style:solid;
+    }
+
+
+    input[type='range']::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: deepskyblue;
+        box-shadow: 1px 1px 8px pink;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 100;
+    }
+
+        input[type='range']::-webkit-slider-thumb:before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 40%;
+            width: 10%;
+            height: 200px;
+            display: block;
+            background: red;
+            z-index: -10;
+            box-shadow: 0 0 10px darkred;
+            opacity: .1;
+        }
+
+    input[type='range']:hover::-webkit-slider-thumb:before {
+        opacity: 1;
+    }
+
+    .slice {
+        width: 50px;
+        max-height: 10px;
+        height: 10px;
+        position: relative;
+        top: -15px;
+        padding-top: 20px;
+        overflow: visible;
+    }
+
+    .thing {
+        border-radius: 50%;
+        background: yellow;
+        border: 1px solid black;
+        width: 70px;
+        height: 70px;
+        position: relative;
+    }
+
+        .thing:before, .thing:after {
+            content: '';
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            top: 15px;
+            left: 15px;
+            background: black;
+            display: block;
+            position: absolute;
+        }
+
+        .thing:after {
+            left: auto;
+            right: 15px;
+        }
+
+    .slice:hover .thing {
+        background: red;
+    }
+
+    .thing:hover {
+        background: yellow !important;
+    }
+
+    .slice:hover .thing:before {
+        left: 10px;
+    }
+
+
+    .slice:hover .thing:after {
+        right: 10px;
+    }
+
+    .thing, .thing:before, .thing:after {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+        .thing:hover:before {
+            left: 15px !important;
+        }
+
+
+        .thing:hover:after {
+            right: 15px !important;
+        }
+
+    </style>
