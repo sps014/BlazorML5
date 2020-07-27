@@ -43,6 +43,8 @@ function getTask(num)
     {
         case 0:
             return "regression";
+        case 2:
+            return "imageClassification";
         default:
             return "classification";
     }
@@ -168,7 +170,6 @@ function classifyML5(hash, dotnet, inputs)
 }
 function ml5classify(err, result)
 {
-    console.log(result);
 
     if (err != null) {
         console.error(err);
