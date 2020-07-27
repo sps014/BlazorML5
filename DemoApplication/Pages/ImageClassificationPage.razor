@@ -1,0 +1,56 @@
+﻿@page "/ImageClassifier"
+@using ML5
+@inject IJSRuntime Runtime
+
+@if (loaded)
+{
+    <center>
+        <p>Expected Image contains :</p>
+        <div class="alert-primary" style="font-weight:bolder">@Res</div>
+        <br />
+        <video width="90%" height="60%" @ref="video"
+               crossorigin="anonymous" autoplay
+               src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+        </video>
+    </center>
+}
+else
+{
+    <div class="alert-warning">Please Wait while loading the model...:</div>
+}
+
+@code
+{
+    ElementReference video;
+    ML5.ImageClassifier classifier;
+    private string Res;
+    bool loaded;
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            classifier = new ML5.ImageClassifier(Runtime, ImageModel.MobileNet);
+            classifier.OnModelLoad += ModelLoad;
+            classifier.OnClassification += GetClassfy;
+        }
+        else
+        {
+            classifier.Classify(video);
+        }
+
+        base.OnAfterRender(firstRender);
+
+    }
+
+    private void ModelLoad()
+    {
+        loaded = true;
+        classifier.Classify(video);
+        StateHasChanged();
+    }
+    private void GetClassfy(string err, CResult[] res)
+    {
+        Res = res[0].label;
+        StateHasChanged();
+    }
+}
