@@ -1,0 +1,39 @@
+﻿@page "/SoundClassifier"
+@inject IJSRuntime Runtime
+
+@if (!loaded)
+{
+    <div class="alert-warning">
+        loading model please wait, allow microphone permission
+    </div>
+}
+else
+{
+  <div class="alert-primary">You can try saying One,Two...Nine </div>
+  <b>@Result</b>
+  <br />
+}
+@code
+{
+    string Result;
+    ML5.SoundClassifier classifier;
+    bool loaded;
+    protected override void OnInitialized()
+    {
+        classifier = new ML5.SoundClassifier(Runtime, ML5.SoundModel.SpeechCommands18w);
+        classifier.OnModelLoad += ModelLoad;
+        classifier.OnClassification += OnResult;
+        base.OnInitialized();
+    }
+    private void ModelLoad()
+    {
+        loaded = true;
+        StateHasChanged();
+        classifier.Classify();
+    }
+    private void OnResult(string err, ML5.CResult[] res)
+    {
+        Result = res[0].label;
+        StateHasChanged();
+    }
+}
