@@ -1,0 +1,65 @@
+﻿@page "/objectdetector"
+@inject IJSRuntime Runtime
+@using Blazor.Extensions
+@using Blazor.Extensions.Canvas
+
+@if (Object != null)
+{
+    <h3>@Object.label</h3>
+}
+else
+{
+    <div class="alert-warning">Loading model please wait..</div>
+}
+
+<BECanvas Width="560" Height="350" @ref="_canvasReference"></BECanvas>
+
+<img src="/data/dog.jpg"
+     crossorigin="anonymous" @ref="refer" style="display:none"/>
+
+@code
+{
+    ML5.ObjectDetector ObjectDetector;
+
+    ElementReference refer { get; set; }
+
+    ML5.ObjectResult Object { get; set; }
+
+    protected override Task OnInitializedAsync()
+    {
+        ObjectDetector = new ML5.ObjectDetector(Runtime, ML5.ObjectDetectorModel.YOLO);
+        ObjectDetector.OnModelLoad += Load;
+        return base.OnInitializedAsync();
+    }
+    void Load()
+    {
+        Console.WriteLine("Loaded Successfully");
+        ObjectDetector.OnDetection += Det;
+        ObjectDetector.Detect(refer);
+    }
+    void Det(string err, ML5.ObjectResult[] res)
+    {
+        Object = res[0];
+        StateHasChanged();
+    }
+
+
+
+    private Blazor.Extensions.Canvas.Canvas2D.Canvas2DContext _context;
+
+    protected Blazor.Extensions.BECanvasComponent _canvasReference;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        this._context = await this._canvasReference.CreateCanvas2DAsync();
+        await this._context.SetFillStyleAsync("transparent");
+        await this._context.DrawImageAsync(refer, 0, 0);
+        await this._context.SetLineWidthAsync(5);
+        await this._context.SetStrokeStyleAsync("yellow");
+
+        if (Object!=null)
+        {
+            await this._context.StrokeRectAsync(Object.x, Object.y, Object.width, Object.height);
+        }
+    }
+}
