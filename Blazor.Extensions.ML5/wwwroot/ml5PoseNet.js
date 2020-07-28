@@ -41,8 +41,8 @@ async function poseNetmultiPoseML5(hash, canvas) {
     return results;
 }
 
-//function posecallback(result) {
-//    this.invokeMethodAsync("PNCBF", result);
+function posecallback(result) {
+    this.invokeMethodAsync("PNCBF", result);
 
     
-//}
+}

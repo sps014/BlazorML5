@@ -83,18 +83,20 @@ namespace ML5
         {
             OnModelLoad?.Invoke();
         }
-//        [JSInvokable("PNCBF")]
-//#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-//        public async Task __CBKPN__(List<PoseResult> results)
-//        {
-//            OnPose?.Invoke(results);
-//        }
+        [JSInvokable("PNCBF")]
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task __CBKPN__(List<PoseResult> results)
+        {
+            OnPose?.Invoke(results);
+        }
+
+
 
         public delegate void ModelLoadedHandler();
         public event ModelLoadedHandler OnModelLoad;
 
-        //public delegate void OnPoseHandler(List<PoseResult> result);
-        //public event OnPoseHandler OnPose;
+        public delegate void OnPoseHandler(List<PoseResult> result);
+        public event OnPoseHandler OnPose;
         public enum DetectionType
         {
             single,multiple

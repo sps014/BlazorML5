@@ -1,20 +1,93 @@
 ﻿@page "/posenet"
+
 @inject IJSRuntime Runtime
-<img src="https://static.photocdn.pt/images/articles/2019/07/24/images/articles/2019/07/22/poses_for_men_back_lean.jpg"
-     crossorigin="anonymous" @ref="refer" />
+@using Blazor.Extensions
+@using Blazor.Extensions.Canvas
+
+<BECanvas Width="534" Height="628" @ref="_canvasReference"></BECanvas>
+
+@if(Result==null)
+{
+    <div class="alert-primary"></div>
+}
+
+<img src="data/pose.jpg"
+     crossorigin="anonymous" @ref="refer"  style="display:none"/>
 @code
 {
     ML5.PoseNet net;
     ElementReference refer;
+    List<ML5.PoseResult> Result;
+
     protected override void OnInitialized()
     {
         net = new ML5.PoseNet(Runtime);
-        net.OnModelLoad += async () =>
-        {
-            Console.WriteLine("Loaded Model dude");
-            var poses = await net.MultiPose(refer);
-            Console.WriteLine(poses[0].pose.nose.confidence);
-        };
+        net.OnModelLoad += OnLoad;
         base.OnInitialized();
+    }
+    async void OnLoad()
+    {
+        Console.WriteLine("Loaded Model...");
+        Result = await net.MultiPose(refer);
+        StateHasChanged();
+        Console.WriteLine(Result.Count);
+
+    }
+
+    private Blazor.Extensions.Canvas.Canvas2D.Canvas2DContext _context;
+
+    protected Blazor.Extensions.BECanvasComponent _canvasReference;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        this._context = await this._canvasReference.CreateCanvas2DAsync();
+        await this._context.SetFillStyleAsync("red");
+        await this._context.DrawImageAsync(refer, 0, 0);
+        await this._context.SetLineWidthAsync(5);
+        await this._context.SetStrokeStyleAsync("yellow");
+
+        if (Result != null)
+        {
+            var nose = Result[0].pose.nose;
+            var lwrist = Result[0].pose.leftWrist;
+            var rwrist = Result[0].pose.rightWrist;
+            var lknee = Result[0].pose.leftKnee;
+            var rknee = Result[0].pose.rightKnee;
+            var lshould = Result[0].pose.leftShoulder;
+            var rshould = Result[0].pose.rightShoulder;
+            var leftElbow = Result[0].pose.leftElbow;
+            var rightElbow = Result[0].pose.rightElbow;
+            await this._context.BeginPathAsync();
+            await this._context.ArcAsync(nose.x, nose.y, 15,0,MathF.PI*2);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.SetStrokeStyleAsync("DeepPink");
+            await this._context.ArcAsync(lwrist.x, lwrist.y, 15, 0, 2*MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.ArcAsync(rwrist.x, rwrist.y, 15, 0, 2*MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.SetStrokeStyleAsync("green");
+            await this._context.ArcAsync(lknee.x, lknee.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.ArcAsync(rknee.x, rknee.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.SetStrokeStyleAsync("yellow");
+            await this._context.ArcAsync(lshould.x, lshould.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.ArcAsync(rshould.x, rshould.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.SetStrokeStyleAsync("green");
+            await this._context.ArcAsync(leftElbow.x, leftElbow.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+            await this._context.BeginPathAsync();
+            await this._context.ArcAsync(rightElbow.x, rightElbow.y, 15, 0, 2 * MathF.PI);
+            await this._context.StrokeAsync();
+        }
     }
 }
