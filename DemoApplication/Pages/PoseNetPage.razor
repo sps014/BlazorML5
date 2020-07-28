@@ -4,15 +4,17 @@
 @using Blazor.Extensions
 @using Blazor.Extensions.Canvas
 
-<BECanvas Width="534" Height="628" @ref="_canvasReference"></BECanvas>
 
-@if(Result==null)
+@if (Result == null)
 {
     <div class="alert-warning">Please Wait while model is loading...</div>
 }
 
+<BECanvas Width="534" Height="628" @ref="_canvasReference"></BECanvas>
+
+
 <img src="data/pose.jpg"
-     crossorigin="anonymous" @ref="refer"  style="display:none"/>
+     crossorigin="anonymous" @ref="refer" style="display:none" />
 @code
 {
     ML5.PoseNet net;
@@ -58,14 +60,14 @@
             var leftElbow = Result[0].pose.leftElbow;
             var rightElbow = Result[0].pose.rightElbow;
             await this._context.BeginPathAsync();
-            await this._context.ArcAsync(nose.x, nose.y, 15,0,MathF.PI*2);
+            await this._context.ArcAsync(nose.x, nose.y, 15, 0, MathF.PI * 2);
             await this._context.StrokeAsync();
             await this._context.BeginPathAsync();
             await this._context.SetStrokeStyleAsync("DeepPink");
-            await this._context.ArcAsync(lwrist.x, lwrist.y, 15, 0, 2*MathF.PI);
+            await this._context.ArcAsync(lwrist.x, lwrist.y, 15, 0, 2 * MathF.PI);
             await this._context.StrokeAsync();
             await this._context.BeginPathAsync();
-            await this._context.ArcAsync(rwrist.x, rwrist.y, 15, 0, 2*MathF.PI);
+            await this._context.ArcAsync(rwrist.x, rwrist.y, 15, 0, 2 * MathF.PI);
             await this._context.StrokeAsync();
             await this._context.BeginPathAsync();
             await this._context.SetStrokeStyleAsync("green");
