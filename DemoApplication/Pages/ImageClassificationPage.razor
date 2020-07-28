@@ -45,8 +45,8 @@ else
     private void ModelLoad()
     {
         loaded = true;
-        classifier.Classify(video);
         StateHasChanged();
+        classifier.Classify(video);
     }
     private void GetClassfy(string err, CResult[] res)
     {
