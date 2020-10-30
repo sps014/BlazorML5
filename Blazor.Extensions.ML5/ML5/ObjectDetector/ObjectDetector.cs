@@ -2,6 +2,7 @@
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,52 +10,52 @@ namespace ML5
 {
     public class ObjectDetector
     {
-        public IJSRuntime Runtime { get; set; }
+        public IJSInProcessRuntime Runtime { get; set; }
         public string Hash { get; private set; }
         public DotNetObjectReference<ObjectDetector> DotNet { get; private set; }
-        public ObjectDetector(IJSRuntime runtime, string modelURL, ObjectDetectorOptions serializableOptions = null)
+        public ObjectDetector(IJSInProcessRuntime runtime, string modelURL, ObjectDetectorOptions serializableOptions = null)
         {
             Runtime = runtime;
             Init(modelURL, serializableOptions);
         }
-        public ObjectDetector(IJSRuntime runtime, ObjectDetectorModel model, ObjectDetectorOptions serializableOptions = null)
+        public ObjectDetector(IJSInProcessRuntime runtime, ObjectDetectorModel model, ObjectDetectorOptions serializableOptions = null)
         {
             Runtime = runtime;
             Init(model.ToString().ToLower(), serializableOptions);
         }
-        private async void Init(string model, object opt = null)
+        private void Init(string model, object opt = null)
         {
             Hash = Helper.UIDGenerator();
             DotNet = DotNetObjectReference.Create(this);
-            await Runtime.InvokeVoidAsync("initObjectDetectorML5", Hash, DotNet, model, opt);
+            Runtime.InvokeVoid("initObjectDetectorML5", Hash, DotNet, model, opt);
         }
 
         ~ObjectDetector()
         {
             Destroy();
         }
-        private async void Destroy()
+        private  void Destroy()
         {
-            await Runtime.InvokeVoidAsync("destroyObjectDetector", Hash);
+            Runtime.InvokeVoid("destroyObjectDetector", Hash);
         }
-        public async void Detect(ElementReference videoOrImageOrCanvas)
+        public  void Detect(ElementReference videoOrImageOrCanvas)
         {
-            await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
+            Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
         }
        
-        public async void Detect(object imageData, int noOfClasses = 0)
+        public  void Detect(object imageData, int noOfClasses = 0)
         {
-            await Runtime.InvokeVoidAsync("objectDetectorDetect", Hash, DotNet, imageData);
+             Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, imageData);
         }
+        [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("ODFML")]
-        #pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task __ModelLoadedOD__()
+        public void __ModelLoadedOD__()
         {
             OnModelLoad?.Invoke();
         }
+        [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("ODFDR")]
-        public async Task __Detect__(string err, ObjectResult[] results)
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        public void __Detect__(string err, ObjectResult[] results)
         {
             OnDetection?.Invoke(err, results);
         }

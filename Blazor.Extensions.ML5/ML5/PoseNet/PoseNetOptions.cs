@@ -24,186 +24,144 @@ namespace ML5
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse); 
     
 
-    public class Position
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-
+    public class Position    {
+        public double x { get; set; } 
+        public double y { get; set; } 
     }
 
-    public class Keypoint
-    {
-        public double score { get; set; }
-        public string part { get; set; }
-        public Position position { get; set; }
-
+    public class Keypoint    {
+        public double score { get; set; } 
+        public string part { get; set; } 
+        public Position position { get; set; } 
     }
 
-    public class Nose
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class Nose    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftEye
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftEye    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightEye
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightEye    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftEar
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftEar    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightEar
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightEar    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftShoulder
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftShoulder    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightShoulder
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightShoulder    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftElbow
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftElbow    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightElbow
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightElbow    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftWrist
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftWrist    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightWrist
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightWrist    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftHip
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftHip    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightHip
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightHip    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftKnee
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftKnee    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightKnee
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightKnee    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class LeftAnkle
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class LeftAnkle    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class RightAnkle
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-        public double confidence { get; set; }
-
+    public class RightAnkle    {
+        public double x { get; set; } 
+        public double y { get; set; } 
+        public double confidence { get; set; } 
     }
 
-    public class Pose
-    {
-        public double score { get; set; }
-        public List<Keypoint> keypoints { get; set; }
-        public Nose nose { get; set; }
-        public LeftEye leftEye { get; set; }
-        public RightEye rightEye { get; set; }
-        public LeftEar leftEar { get; set; }
-        public RightEar rightEar { get; set; }
-        public LeftShoulder leftShoulder { get; set; }
-        public RightShoulder rightShoulder { get; set; }
-        public LeftElbow leftElbow { get; set; }
-        public RightElbow rightElbow { get; set; }
-        public LeftWrist leftWrist { get; set; }
-        public RightWrist rightWrist { get; set; }
-        public LeftHip leftHip { get; set; }
-        public RightHip rightHip { get; set; }
-        public LeftKnee leftKnee { get; set; }
-        public RightKnee rightKnee { get; set; }
-        public LeftAnkle leftAnkle { get; set; }
-        public RightAnkle rightAnkle { get; set; }
-
+    public class Pose    {
+        public double score { get; set; } 
+        public List<Keypoint> keypoints { get; set; } 
+        public Nose nose { get; set; } 
+        public LeftEye leftEye { get; set; } 
+        public RightEye rightEye { get; set; } 
+        public LeftEar leftEar { get; set; } 
+        public RightEar rightEar { get; set; } 
+        public LeftShoulder leftShoulder { get; set; } 
+        public RightShoulder rightShoulder { get; set; } 
+        public LeftElbow leftElbow { get; set; } 
+        public RightElbow rightElbow { get; set; } 
+        public LeftWrist leftWrist { get; set; } 
+        public RightWrist rightWrist { get; set; } 
+        public LeftHip leftHip { get; set; } 
+        public RightHip rightHip { get; set; } 
+        public LeftKnee leftKnee { get; set; } 
+        public RightKnee rightKnee { get; set; } 
+        public LeftAnkle leftAnkle { get; set; } 
+        public RightAnkle rightAnkle { get; set; } 
     }
 
-    public class PoseResult
-    {
-        public Pose pose { get; set; }
-        public List<List<Keypoint>> skeleton { get; set; }
-
+    public class PoseResult    {
+        public Pose pose { get; set; } 
+        public List<List<Keypoint>> skeleton { get; set; } 
     }
 
 }
