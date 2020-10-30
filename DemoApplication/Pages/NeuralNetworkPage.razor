@@ -3,79 +3,108 @@
 @inject IJSInProcessRuntime Runtime
 @inject HttpClient Http
 
-<div>
-    <h2 style="color:forestgreen">Neural Network</h2><br />
-    <h5>Titanic Dataset Example</h5>
-    <br />
-    <br />
-</div>
-<div>
-    @if (trained)
-    {
-        <center>
-            <div class="card" style="width: 38rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        Gender
-                        <select class="form-control" @bind="gender">
-                            <option value="male" selected>male</option>
-                            <option value="female">female</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        Fare Class
-                        <select class="form-control" @bind="fare_class">
-                            <option value="first" selected>first</option>
-                            <option value="second">second</option>
-                            <option value="third">third</option>
-                        </select>
-                    </li>
-                    <li class="list-group-item">
-                        Age  (Yrs)
-                        <form onsubmit="return false;">
-                            <input type="number" min="01" max="100" class="form-control" @bind-value="age">
-                        </form>
+    <div class="container">
+        <!--Section: Content-->
+        <section class="p-5 my-md-0">
+            <div class="row">
+                <div class="col-md-12 mx-0">
+                    <!-- Material form login -->
+                    <div class="card text-white" style="background-color: #141b29">
+                        <h3 class="card-header text-success" style="font-weight:bold">Neural Network </h3>
+                        <!--Card content-->
+                        <div class="card-body">
 
-                    </li>
-                    <li class="list-group-item">
-                        Fare
-                        <form onsubmit="return false;">
-                            <input type="number" min="0" max="300" class="form-control" @bind-value="fare">
-                        </form>
-                    </li>
-                    <li class="list-group-item">
-                        <button class="btn btn-primary" type="submit" @onclick="classify">Predict</button>
-                    </li>
-                    <li class="list-group-item">
-                        @if (Result != null)
-                        {
-                            <div class="alert alert-@(Result.IndexOf("died") >= 0 ? "danger" : "primary")" role="alert">
-                                Prediction: @Result
+                            <h6 class="card-title" style="font-weight:bold">Titanic Dataset Example </h6>
+                            <br />
+                            <div>
+                                @if (trained)
+                                {
+                                    <center>
+                                        <div class="card" style="">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    Gender
+                                                    <select class="form-control bg-dark" @bind="gender">
+                                                        <option value="male" selected>male</option>
+                                                        <option value="female">female</option>
+                                                    </select>
+                                                </li>
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    Fare Class
+                                                    <select class="form-control bg-dark" @bind="fare_class">
+                                                        <option value="first" selected>first</option>
+                                                        <option value="second">second</option>
+                                                        <option value="third">third</option>
+                                                    </select>
+                                                </li>
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    Age  (Yrs)
+                                                    <form onsubmit="return false;">
+                                                        <input type="number" min="01" max="100" class="form-control bg-dark" @bind-value="age">
+                                                    </form>
+
+                                                </li>
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    Fare
+                                                    <form onsubmit="return false;">
+                                                        <input type="number" min="0" max="300" class="form-control bg-dark" @bind-value="fare">
+                                                    </form>
+                                                </li>
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    <button class="btn btn-primary" type="submit" @onclick="classify">Predict</button>
+                                                </li>
+                                                <li class="list-group-item" style="background-color: #050317">
+                                                    @if (Result != null)
+                                                    {
+                                                        <div class="alert alert-@(Result.IndexOf("died") >= 0 ? "danger" : "primary")" role="alert">
+                                                            Prediction: @Result
+                                                        </div>
+                                                    }
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </center>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-danger" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm"
+                                              role="status"
+                                              aria-hidden="true"></span>
+                                        Fetching Dataset
+                                    </button>
+                                    <br />
+                                    <br />
+                                }
                             </div>
-                        }
-                    </li>
-                </ul>
+
+
+
+
+                        </div>
+                        <div class="card-footer text-white">
+                            @if (dataset != null)
+                            {
+                                <p style="font-size:medium">Training DataSet Size : @dataset.Length</p>
+                                <p style="font-size:medium">Dataset is bit small, train for longer time</p>
+                            }
+                        </div>
+
+                    </div>
+                    <!-- Material form login -->
+                </div>
             </div>
 
-        </center>
-    }
-    else
-    {
+        </section>
+        <!--Section: Content-->
 
-        <div class="alert alert-primary" role="alert">
-            Loading and Training Dataset, please have patience
-        </div>
-    }
-</div>
+
+    </div>
 
 
 
-@if (dataset != null)
-{
-    <p style="color:black;font-size:medium">Training DataSet Size : @dataset.Length</p>
-    <p style="color:black;font-size:medium">Dataset is bit small, train for longer time</p>
 
-}
 
 @code {
 
@@ -83,7 +112,7 @@
     string Result;
     NeuralNetwork network;
     Data[] dataset;
-    int age, fare;
+    int age=10, fare=1000;
     string fare_class, gender;
 
     protected override Task OnInitializedAsync()
@@ -153,3 +182,9 @@
         public int fare { get; set; }
     }
 }
+
+<style>
+    body {
+        background-image: url(/img/synthwave.jpg)
+    }
+</style>
