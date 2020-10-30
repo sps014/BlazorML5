@@ -14,17 +14,12 @@
 5. [PoseNet](https://github.com/sps014/BlazorML5/wiki/PoseNet)
 6. WebCam Helper
 
-## Todo
-1. Add support of more ML Models
-2. Improve support of ml5 version 0.5.0
-3. Tutorial+Dedicated Demo pages
-4. Test on Blazor Server
+#### Demo
+[Live Demo](https://blazor-ml5-sample.netlify.com/) 
+
 
 ### Documentation
 [Wiki](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation)\
 [Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
-
-#### Demo
-[Live Demo](https://blazor-ml5-sample.netlify.com/) 
 
 
