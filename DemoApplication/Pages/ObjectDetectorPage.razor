@@ -1,21 +1,55 @@
 ﻿@page "/objectdetector"
-@inject IJSRuntime Runtime
+@inject IJSInProcessRuntime Runtime
 @using Blazor.Extensions
 @using Blazor.Extensions.Canvas
 
-@if (Object != null)
-{
-    <h3>@Object.label</h3>
-}
-else
-{
-    <div class="alert-warning">Loading model please wait..</div>
-}
 
-<BECanvas Width="560" Height="350" @ref="_canvasReference"></BECanvas>
+<div class="container">
+    <!--Section: Content-->
+    <section class="p-5 my-md-0">
+        <div class="row">
+            <div class="col-md-12 mx-0">
+                <!-- Material form login -->
+                <div class="card text-white" style="background-color: #141b29">
+                    <h4 class="card-header text-success" style="font-weight:bold">Object Detector </h4>
+                    <!--Card content-->
+                    <div class="card-body">
 
-<img src="/data/dog.jpg"
-     crossorigin="anonymous" @ref="refer" style="display:none"/>
+                        @if (Object != null)
+                        {
+                            <h7 class="card-title"> Bounding Box for @Object.label</h7>
+                        }
+                        else
+                        {
+                            <button class="btn btn-danger text-white" type="button" disabled>
+                                <span class="spinner-border  spinner-border-sm"
+                                      role="status"
+                                      aria-hidden="true"></span>
+                                Fetching Model
+                            </button>
+                        }
+                        <br />
+                        <br />
+                        <BECanvas Width="560" Height="350" @ref="_canvasReference"></BECanvas>
+
+                        <img src="/data/dog.jpg" 
+                             crossorigin="anonymous" @ref="refer" style="display:none;" />
+
+                    </div>
+
+                </div>
+                <!-- Material form login -->
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+
+
 
 @code
 {
@@ -57,7 +91,7 @@ else
         await this._context.SetLineWidthAsync(5);
         await this._context.SetStrokeStyleAsync("yellow");
 
-        if (Object!=null)
+        if (Object != null)
         {
             await this._context.StrokeRectAsync(Object.x, Object.y, Object.width, Object.height);
         }

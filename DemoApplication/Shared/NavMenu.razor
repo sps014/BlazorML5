@@ -1,52 +1,51 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">BlazorML5</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-</div>
+﻿<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #141b29">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Blazor ML5 Samples</a>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="neuralnet">
-                <span class="oi oi-graph" aria-hidden="true"></span> Neural Network
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="ImageClassifier">
-                <span class="oi oi-image" aria-hidden="true"></span> Image Classifier
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="SoundClassifier">
-                <span class="oi oi-musical-note" aria-hidden="true"></span> Sound Classifier
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="objectdetector">
-                <span class="oi oi-magnifying-glass" aria-hidden="true"></span> Object Detector
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="posenet">
-                <span class="oi oi-eye" aria-hidden="true"></span> PoseNet
-            </NavLink>
-        </li>
-    </ul>
-</div>
+        <!-- Toggle button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarLeftAlignExample"
+                aria-controls="navbarLeftAlignExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation"> 
+            <i class="fas fa-bars"></i>
+        </button>
 
-@code {
-    private bool collapseNavMenu = true;
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+            <!-- Left links -->
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/neuralnet">Neural Network</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/ImageClassifier">Image Classifier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/SoundClassifier">Sound Classifier</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/objectdetector">Object Detector</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/posenet">PoseNet</a>
+                </li>
+            </ul>
+             <a class="nav-link" href="https://github.com/sps014/BlazorML5">
+             Github</a>
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<style>
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
+    body {
+        background-image: url(/img/synthwave.jpg)
     }
-}
+</style>

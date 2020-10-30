@@ -1,20 +1,57 @@
 ﻿@page "/posenet"
 
-@inject IJSRuntime Runtime
+@inject IJSInProcessRuntime Runtime
 @using Blazor.Extensions
 @using Blazor.Extensions.Canvas
 
 
-@if (Result == null)
-{
-    <div class="alert-warning">Please Wait while model is loading...</div>
-}
+<div class="container">
+    <!--Section: Content-->
+    <section class="p-5 my-md-0">
+        <div class="row">
+            <div class="col-md-12 mx-0">
+                <!-- Material form login -->
+                <div class="card text-white" style="background-color: #141b29">
+                    <h4 class="card-header text-success" style="font-weight:bold">Pose Net </h4>
+                    <!--Card content-->
+                    <div class="card-body">
 
-<BECanvas Width="534" Height="628" @ref="_canvasReference"></BECanvas>
+                        @if (Result == null)
+                        {
+                            <button class="btn btn-danger text-white" type="button" disabled>
+                                <span class="spinner-border  spinner-border-sm"
+                                      role="status"
+                                      aria-hidden="true"></span>
+                                Fetching Posenet Model
+                            </button>
+                        }
+                        <br />
+                        <br />
+
+                        <BECanvas Width="534" Height="628" @ref="_canvasReference"></BECanvas>
 
 
-<img src="data/pose.jpg"
-     crossorigin="anonymous" @ref="refer" style="display:none" />
+                        <img src="data/pose.jpg"
+                             crossorigin="anonymous" @ref="refer" style="display:none" />
+
+                        <br />
+                        <br />
+
+                    </div>
+
+                </div>
+                <!-- Material form login -->
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
+
+
 @code
 {
     ML5.PoseNet net;
@@ -30,7 +67,7 @@
     async void OnLoad()
     {
         Console.WriteLine("Loaded Model...");
-        Result = await net.MultiPose(refer);
+        Result = await net.SinglePose(refer);
         StateHasChanged();
 
     }
