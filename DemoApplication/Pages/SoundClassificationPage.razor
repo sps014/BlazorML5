@@ -1,18 +1,65 @@
 ﻿@page "/SoundClassifier"
 @inject IJSInProcessRuntime Runtime
 
-@if (!loaded)
-{
-    <div class="alert-warning">
-        loading model please wait, allow microphone permission
-    </div>
-}
-else
-{
-  <div class="alert-primary">You can try saying One,Two...Nine </div>
-  <b>@Result</b>
-  <br />
-}
+
+<div class="container">
+    <!--Section: Content-->
+    <section class="p-5 my-md-0">
+        <div class="row">
+            <div class="col-md-12 mx-0">
+                <!-- Material form login -->
+                <div class="card text-white" style="background-color: #141b29">
+                    <h4 class="card-header text-warning" style="font-weight:bold">Sound Classification </h4>
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        @if (!loaded)
+                        {
+
+                            <button class="btn btn-danger" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm"
+                                      role="status"
+                                      aria-hidden="true"></span>
+                                Fetching Sound Model
+                            </button>
+                            <br />
+                            <br />
+                            <div class="alert-warning">
+                                allow microphone permission
+                            </div>
+                            <br />
+                            <br />
+                        }
+                        else
+                        {
+                            <button class="btn btn-primary text-white" type="button" disabled>
+                                <span class="spinner-border  spinner-border-sm"
+                                      role="status"
+                                      aria-hidden="true"></span>
+                                  Listening
+                            </button>
+                            <br />
+                            <br />
+                            <b class="my-4">You can try saying One,Two...Nine  , up,down,yes,no etc and also can use a custom model </b>
+                            <br />
+                            <br />
+                            <div class="alert-primary">@Result </div>
+                            <br />
+                            <br />
+                        }
+                    </div>
+
+                </div>
+                <!-- Material form login -->
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
+
+
+</div>
+
 @code
 {
     string Result;
