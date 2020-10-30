@@ -12,14 +12,16 @@
 3. [Sound Classifier](https://github.com/sps014/BlazorML5/wiki/Sound-Detector)
 4. [Object Detector (YOLO and COCOSSD based)](https://github.com/sps014/BlazorML5/wiki/Object-Detector-(YOLO-CocoSSD))
 5. [PoseNet](https://github.com/sps014/BlazorML5/wiki/PoseNet)
-6. WebCam Helper
 
 #### Hosted Sample
 [Live Demo](https://blazor-ml5-sample.netlify.com/) 
 
 
-### Documentation
-[Wiki](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation)\
-[Youtube Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+#### Installation Instruction
+Install Asp.Net Core payload and then follow [instructions here](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation) to configure ML5 to use it from C# Blazor app.<br>
+Some Youtube videos are also there, you can check out. [this Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+.
+
+
 
 
