@@ -2,6 +2,7 @@
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,54 +10,53 @@ namespace ML5
 {
     public class SoundClassifier
     {
-        public IJSRuntime Runtime { get; set; }
+        public IJSInProcessRuntime Runtime { get; set; }
         public string Hash { get; private set; }
         public DotNetObjectReference<SoundClassifier> DotNet { get; private set; }
-        public SoundClassifier(IJSRuntime runtime, string modelURL, SoundOptions serializableOptions = null)
+        public SoundClassifier(IJSInProcessRuntime runtime, string modelURL, SoundOptions serializableOptions = null)
         {
             Runtime = runtime;
             Init(modelURL, serializableOptions);
         }
-        public SoundClassifier(IJSRuntime runtime, SoundModel model, SoundOptions serializableOptions = null)
+        public SoundClassifier(IJSInProcessRuntime runtime, SoundModel model, SoundOptions serializableOptions = null)
         {
             Runtime = runtime;
             
             Init(model.ToString(), serializableOptions);
         }
 
-        private async void Init(string model, object opt = null)
+        private  void Init(string model, object opt = null)
         {
             Hash = Helper.UIDGenerator();
             DotNet = DotNetObjectReference.Create(this);
-            await Runtime.InvokeVoidAsync("initSoundClassifierML5", Hash,DotNet, model, opt);
+            Runtime.InvokeVoid("initSoundClassifierML5", Hash,DotNet, model, opt);
         }
 
         ~SoundClassifier()
         {
             Destroy();
         }
-        private async void Destroy()
+        private  void Destroy()
         {
-            await Runtime.InvokeVoidAsync("destroySoundClassifier", Hash);
+             Runtime.InvokeVoid("destroySoundClassifier", Hash);
         }
-        public async void Classify(object serializableOpt = null)
+        public  void Classify(object serializableOpt = null)
         {
-                await Runtime.InvokeVoidAsync("soundClassifierClassify", Hash, DotNet,serializableOpt);
+               Runtime.InvokeVoid("soundClassifierClassify", Hash, DotNet,serializableOpt);
         }
-        public async void Classify(ElementReference videoImageElement,object serializableOpt=null)
+        public void Classify(ElementReference videoImageElement,object serializableOpt=null)
         {
-            await Runtime.InvokeVoidAsync("soundClassifierClassify", Hash, DotNet,videoImageElement,serializableOpt);
+            Runtime.InvokeVoid("soundClassifierClassify", Hash, DotNet,videoImageElement,serializableOpt);
         }
-
+        [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("SCFML")]
-#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
-        public async Task __ModelLoadedSC__()
+        public void __ModelLoadedSC__()
         {
             OnModelLoad?.Invoke();
         }
+        [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("SCFCF")]
-        public async Task __Classify__(string err, CResult[] results)
-#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
+        public void __Classify__(string err, CResult[] results)
         {
             OnClassification?.Invoke(err, results);
         }
