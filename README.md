@@ -14,7 +14,7 @@
 5. [PoseNet](https://github.com/sps014/BlazorML5/wiki/PoseNet)
 6. WebCam Helper
 
-#### Demo
+#### Hosted Sample
 [Live Demo](https://blazor-ml5-sample.netlify.com/) 
 
 
