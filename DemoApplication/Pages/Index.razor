@@ -1,31 +1,71 @@
 ﻿@page "/"
 
-<h2 style="font-weight:bold">Introduction </h2>
-<p>
-    BlazorML5 is an unofficial port of  ML5 machine Learning Library,
-    you can use higher level API for Machine learning related task on Blazor.This Website contains
-    demo of each classes implemented.
-    Currently the following
-    classes have been implemented with dependency on ML5:
+<div class="container">
+    <!--Section: Content-->
+    <section class="p-5 my-md-0">
+        <div class="row">
+            <div class="col-md-12 mx-0">
+                <!-- Material form login -->
+                <div class="card">
+                    <h3 class="card-header" style="font-weight:bold">Introduction </h3>
+                    <!--Card content-->
+                    <div class="card-body">
+
+                        <!-- Form -->
+                        <div>
+
+                            <p>
+                                BlazorML5 is an unofficial port of  ML5 machine Learning Library,
+                                you can use higher level API for Machine learning related task on Blazor.This Website contains
+                                demo of each classes implemented.
+                                Currently the following
+                                classes have been implemented with dependency on ML5:
+
+                                <div class="card text-white bg-secondary mb-3">
+                                    <div class="card-body mb-1">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><a href="/neuralnet">Neural Network&nbsp;✔</a></li>
+                                            <li class="list-group-item"><a href="/ImageClassifier">Image Classifier    ✔</a></li>
+                                            <li class="list-group-item"><a href="/SoundClassifier">Sound Classifier ✔</a></li>
+                                            <li class="list-group-item"><a href="/objectdetector">Object Detector&nbsp;  ✔</a></li>
+                                            <li class="list-group-item"><a href="/posenet">PoseNet  &emsp; &emsp; &emsp;✔</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </p>
+                            <br />
+                            <br />
+
+                            <p class="card-footer text-muted">
+                                <h5>Documentation</h5>
+                                Visit
+                                <a href="https://github.com/sps014/BlazorML5/blob/master/README.md">here</a>
+                                for API documentation.
+                                <br />
+                                Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
+                                for ML5 official Documentation.
+                            </p>
+
+                        </div>
+                        <!-- Form -->
+
+                    </div>
+
+                </div>
+                <!-- Material form login -->
+            </div>
+        </div>
+
+    </section>
+    <!--Section: Content-->
 
 
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-primary"><a href="/neuralnet">Neural Network&nbsp;✔</a></li>
-        <li class="list-group-item list-group-item-success"><a href="/ImageClassifier">Image Classifier    ✔</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="/SoundClassifier">Sound Classifier ✔</a></li>
-        <li class="list-group-item list-group-item-success"><a href="/objectdetector">Object Detector&nbsp;  ✔</a></li>
-        <li class="list-group-item list-group-item-primary"><a href="/posenet">PoseNet  &emsp; &emsp; &emsp;✔</a></li>
-    </ul>
+</div>
 
-</p>
-<br />
-<br />
-<h4>Documentation</h4>
-<p>
-    Visit
-    <a href="https://github.com/sps014/BlazorML5/blob/master/README.md">here</a>
-    for API documentation.
-    <br />
-    Visit <a href="https://learn.ml5js.org/docs/#/reference/index">here</a>
-    for ML5 official Documentation.
-</p>
+<style>
+    body
+    {
+        background-image:url(/img/synthwave.jpg)
+    }
+</style>

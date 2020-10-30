@@ -4,11 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>BlazorML5 Demo</title>
+    <title>Blazor ML5 Demo</title>
     <base href="/" />
-    <link rel="stylesheet"
-          href="css/prism.css">
-    <script src="js/prism.js"></script>
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="DemoApplication.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    <script src="js/mdb.min.js"></script>
+    <link rel="stylesheet" href="css/mdb.min.css" />
     <script src="_content/Blazor.Extensions.Canvas/blazor.extensions.canvas.js"></script>
 
     <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
@@ -18,14 +23,10 @@
     <script src="_content/BlazorML5/ml5SoundClassifier.js"></script>
     <script src="_content/BlazorML5/ml5ObjectDetector.js"></script>
     <script src="_content/BlazorML5/ml5PoseNet.js"></script>
-
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
 </head>
 
 <body>
-    <app>Loading...</app>
-    <script>Prism.highlightAll();</script>
+    <div id="app">Loading...</div>
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.

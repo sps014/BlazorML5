@@ -43,7 +43,7 @@ namespace ML5
             Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
         }
        
-        public  void Detect(object imageData, int noOfClasses = 0)
+        public  void Detect(object imageData)
         {
              Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, imageData);
         }
