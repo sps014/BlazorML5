@@ -14,6 +14,9 @@ namespace ML5
         public static int PoseNetHash { get; private set; } = 0;
         public int Hash { get; private set; }
         public DotNetObjectReference<PoseNet> DotNetObjectRef { get; private set; }
+
+        private IJSInProcessObjectReference JSReference;
+
         public PoseNet(IJSInProcessRuntime runtime)
         {
             Init(runtime, null, null, null);
@@ -37,25 +40,27 @@ namespace ML5
             Init(runtime, null, options, null);
 
         }
-        private  void Init(IJSInProcessRuntime runtime,ElementReference? element,PoseNetOptions options,DetectionType? type)
+        private async void Init(IJSInProcessRuntime runtime,ElementReference? element,PoseNetOptions options,DetectionType? type)
         {
             Runtime = runtime;
             DotNetObjectRef = DotNetObjectReference.Create(this);
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5PoseNet.js");
+
             Hash = PoseNetHash++;
-            runtime.InvokeVoid("poseNetML5", Hash.ToString(), DotNetObjectRef, element, options, type);
+            JSReference.InvokeVoid("poseNetML5", Hash.ToString(), DotNetObjectRef, element, options, type);
 
         }
         public async  Task<List<PoseResult>> SinglePose(ElementReference? canvasOrVideoOrImage=null)
         {
             List<PoseResult> jsonRes;
-            jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetsinglePoseML5", Hash.ToString(), canvasOrVideoOrImage);
+            jsonRes = await JSReference.InvokeAsync<List<PoseResult>>("poseNetsinglePoseML5", Hash.ToString(), canvasOrVideoOrImage);
 
             return jsonRes;
         }
         public async Task<List<PoseResult>> MultiPose(ElementReference? canvasOrVideoOrImage = null)
         {
             List<PoseResult> jsonRes;
-            jsonRes = await Runtime.InvokeAsync<List<PoseResult>>("poseNetmultiPoseML5", Hash.ToString(), canvasOrVideoOrImage);
+            jsonRes = await JSReference.InvokeAsync<List<PoseResult>>("poseNetmultiPoseML5", Hash.ToString(), canvasOrVideoOrImage);
 
             return jsonRes;
         }
@@ -65,7 +70,7 @@ namespace ML5
         }
          void destroy()
         {
-             Runtime.InvokeVoid("destroyPoseNetML5", Hash.ToString());
+            JSReference.InvokeVoid("destroyPoseNetML5", Hash.ToString());
 
         }
 
