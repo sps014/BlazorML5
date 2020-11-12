@@ -1,6 +1,6 @@
 ﻿let ObjectDetectors = new Object();
 
-function initObjectDetectorML5(Hash, DotNet, model, options)
+export function initObjectDetectorML5(Hash, DotNet, model, options)
 {
     let od;
     if (options != null)
@@ -16,11 +16,11 @@ function ml5ModelLoadedObjectDetector() {
     this.invokeMethodAsync("ODFML", "__ModelLoadedOD__");
 }
 
-function destroyObjectDetector(hash) {
+export function destroyObjectDetector(hash) {
     delete ObjectDetectors[hash];
 }
 
-function objectDetectorDetect(hash, dotnet, imageData)
+export function objectDetectorDetect(hash, dotnet, imageData)
 {
     ObjectDetectors[hash].detect(imageData, detection.bind(dotnet));
 }
