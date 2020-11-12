@@ -11,6 +11,7 @@ namespace ML5
     public class NeuralNetwork
     {
         public IJSInProcessRuntime Runtime { get; set; }
+        private IJSInProcessObjectReference JSReference;
         public string Hash { get; private set; }
 
         public DotNetObjectReference<NeuralNetwork> DotNet { get; private set; }
@@ -22,6 +23,7 @@ namespace ML5
             Init(inputs, outputs);
 
         }
+
         private int GetLayersInfo()
         {
             return  Runtime.Invoke<int>("getLayersInfoML5", Hash);
@@ -33,14 +35,17 @@ namespace ML5
             InitConfig(options);
 
         }
-        private  void Init(int inputs,int outputs)
-        {
-             Runtime.InvokeVoid("createNNML5", Hash,inputs,outputs,DotNet);
-        }
-        private  void InitConfig(NeuralNetworkOptions options, bool isCallBack=true)
+        private async void Init(int inputs,int outputs)
         {
             DotNet = DotNetObjectReference.Create(this);
-            Runtime.InvokeVoid("createNNConfigML5", Hash, options,isCallBack,DotNet);
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5NeuralNetwork.js");
+            JSReference.InvokeVoid("createNNML5", Hash,inputs,outputs,DotNet);
+        }
+        private async void InitConfig(NeuralNetworkOptions options, bool isCallBack=true)
+        {
+            DotNet = DotNetObjectReference.Create(this);
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5NeuralNetwork.js");
+            JSReference.InvokeVoid("createNNConfigML5", Hash, options,isCallBack,DotNet);
         }
         ~NeuralNetwork()
         {
@@ -48,15 +53,15 @@ namespace ML5
         }
         private  void Destroy()
         {
-             Runtime.InvokeVoid("destroyNNML5", Hash);
+            JSReference.InvokeVoid("destroyNNML5", Hash);
         }
         public  void AddData(object[] xs,object[] ys)
         {
-             Runtime.InvokeVoid("addDataML5",Hash, xs, ys);
+            JSReference.InvokeVoid("addDataML5",Hash, xs, ys);
         }
         public  void NormalizeData()
         {
-             Runtime.InvokeVoid("normalizeDataML5", Hash);
+            JSReference.InvokeVoid("normalizeDataML5", Hash);
         }
         /// <summary>
         /// Start training model
@@ -65,40 +70,40 @@ namespace ML5
         /// <param name="subscribeCallBack">enable callbacks for whileTraining [False][costly operation instead use debug flag on initial neural network]</param>
         public  void Train(TrainingOptions trainingOptions=null,bool subscribeCallBack=false)
         {
-             Runtime.InvokeVoid("trainML5", Hash, DotNet,subscribeCallBack,trainingOptions);
+            JSReference.InvokeVoid("trainML5", Hash, DotNet,subscribeCallBack,trainingOptions);
         }
         public  void Predict(object[] inputs)
         {
-             Runtime.InvokeVoid("predictML5", Hash, DotNet, inputs);
+            JSReference.InvokeVoid("predictML5", Hash, DotNet, inputs);
         }
         public  void Classify(object[] inputs)
         {
-             Runtime.InvokeVoid("classifyML5", Hash, DotNet, inputs);
+            JSReference.InvokeVoid("classifyML5", Hash, DotNet, inputs);
         }
         public  void SaveData(string path=null)
         {
-             Runtime.InvokeVoid("saveDataML5", Hash, DotNet,path);
+            JSReference.InvokeVoid("saveDataML5", Hash, DotNet,path);
         }
         public  void LoadData(string path = null)
         {
-             Runtime.InvokeVoid("loadDataML5", Hash, DotNet, path);
+            JSReference.InvokeVoid("loadDataML5", Hash, DotNet, path);
         }
         public  void Save(string path = null)
         {
-             Runtime.InvokeVoid("saveML5", Hash, DotNet, path);
+            JSReference.InvokeVoid("saveML5", Hash, DotNet, path);
         }
         public  void Load(string path = null)
         {
-             Runtime.InvokeVoid("loadML5", Hash, DotNet, path);
+            JSReference.InvokeVoid("loadML5", Hash, DotNet, path);
         }
         public  void Load(ModelOptions options)
         {
-             Runtime.InvokeVoid("loadML5", Hash, DotNet, null,options);
+            JSReference.InvokeVoid("loadML5", Hash, DotNet, null,options);
 
         }
         public void Print(object obj)
         {
-             Runtime.InvokeVoid("print", obj);
+            JSReference.InvokeVoid("print", obj);
 
         }
 
