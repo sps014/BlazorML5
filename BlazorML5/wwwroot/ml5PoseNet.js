@@ -1,6 +1,6 @@
 ﻿let PoseNets = new Object();
 
-function poseNetML5(hash, dotnet, video = null, options = null, type = null)
+export function poseNetML5(hash, dotnet, video = null, options = null, type = null)
 {
     let poseNet;
     if (video != null) {
@@ -25,24 +25,22 @@ function poseNetML5(hash, dotnet, video = null, options = null, type = null)
     poseNet.on('pose', posecallback.bind(dotnet));
     PoseNets[hash] = poseNet;
 }
-function destroyPoseNetML5(hash) {
+export function destroyPoseNetML5(hash) {
     delete PoseNets[hash];
 }
 function poseNetModelLoad() {
     this.invokeMethodAsync("PNFML", "__ModelLoadedPN__");
 }
 
-async function poseNetsinglePoseML5(hash, canvas) {
+export async function poseNetsinglePoseML5(hash, canvas) {
     var results = await PoseNets[hash].singlePose(canvas);
     return results;
 }
-async function poseNetmultiPoseML5(hash, canvas) {
+export async function poseNetmultiPoseML5(hash, canvas) {
     var results = await PoseNets[hash].multiPose(canvas);
     return results;
 }
 
 function posecallback(result) {
     this.invokeMethodAsync("PNCBF", result);
-
-    
 }

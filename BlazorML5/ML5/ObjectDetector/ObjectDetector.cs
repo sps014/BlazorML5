@@ -13,6 +13,9 @@ namespace ML5
         public IJSInProcessRuntime Runtime { get; set; }
         public string Hash { get; private set; }
         public DotNetObjectReference<ObjectDetector> DotNet { get; private set; }
+
+        private IJSInProcessObjectReference JSReference;
+
         public ObjectDetector(IJSInProcessRuntime runtime, string modelURL, ObjectDetectorOptions serializableOptions = null)
         {
             Runtime = runtime;
@@ -23,11 +26,13 @@ namespace ML5
             Runtime = runtime;
             Init(model.ToString().ToLower(), serializableOptions);
         }
-        private void Init(string model, object opt = null)
+        private async void Init(string model, object opt = null)
         {
             Hash = Helper.UIDGenerator();
             DotNet = DotNetObjectReference.Create(this);
-            Runtime.InvokeVoid("initObjectDetectorML5", Hash, DotNet, model, opt);
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5ObjectDetector.js");
+
+            JSReference.InvokeVoid("initObjectDetectorML5", Hash, DotNet, model, opt);
         }
 
         ~ObjectDetector()
@@ -36,16 +41,16 @@ namespace ML5
         }
         private  void Destroy()
         {
-            Runtime.InvokeVoid("destroyObjectDetector", Hash);
+            JSReference.InvokeVoid("destroyObjectDetector", Hash);
         }
         public  void Detect(ElementReference videoOrImageOrCanvas)
         {
-            Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
+            JSReference.InvokeVoid("objectDetectorDetect", Hash, DotNet, videoOrImageOrCanvas);
         }
        
         public  void Detect(object imageData)
         {
-             Runtime.InvokeVoid("objectDetectorDetect", Hash, DotNet, imageData);
+            JSReference.InvokeVoid("objectDetectorDetect", Hash, DotNet, imageData);
         }
         [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("ODFML")]

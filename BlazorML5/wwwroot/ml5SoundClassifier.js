@@ -1,6 +1,6 @@
 ﻿let SoundClassifiers = new Object();
 
-function initSoundClassifierML5(Hash, DotNet, model, options) {
+export function initSoundClassifierML5(Hash, DotNet, model, options) {
     let icf;
     if (options != null)
         icf = ml5.soundClassifier(model, options, ml5ModelLoadedSoundClassifier.bind(DotNet));
@@ -11,7 +11,7 @@ function initSoundClassifierML5(Hash, DotNet, model, options) {
 
 }
 
-function destroySoundClassifier(hash) {
+export function destroySoundClassifier(hash) {
     delete SoundClassifiers[hash];
 }
 
@@ -19,7 +19,7 @@ function ml5ModelLoadedSoundClassifier() {
     this.invokeMethodAsync("SCFML", "__ModelLoadedSC__");
 }
 
-function soundClassifierClassify(hash, DotNet, sound) {
+export function soundClassifierClassify(hash, DotNet, sound) {
 
     if (sound != null)
         SoundClassifiers[hash].classify(sound, soundResultClassification.bind(DotNet));
@@ -28,7 +28,7 @@ function soundClassifierClassify(hash, DotNet, sound) {
 
 
 }
-function soundResultClassification(err, res) {
+ function soundResultClassification(err, res) {
     this.invokeMethodAsync("SCFCF", err, res);
 
 }

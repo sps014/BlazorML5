@@ -12,6 +12,7 @@ namespace ML5
     {
         public IJSInProcessRuntime Runtime { get; set; }
         public string Hash { get; private set; }
+        private IJSInProcessObjectReference JSReference;
         public DotNetObjectReference<SoundClassifier> DotNet { get; private set; }
         public SoundClassifier(IJSInProcessRuntime runtime, string modelURL, SoundOptions serializableOptions = null)
         {
@@ -21,15 +22,15 @@ namespace ML5
         public SoundClassifier(IJSInProcessRuntime runtime, SoundModel model, SoundOptions serializableOptions = null)
         {
             Runtime = runtime;
-            
             Init(model.ToString(), serializableOptions);
         }
 
-        private  void Init(string model, object opt = null)
+        private async void Init(string model, object opt = null)
         {
             Hash = Helper.UIDGenerator();
             DotNet = DotNetObjectReference.Create(this);
-            Runtime.InvokeVoid("initSoundClassifierML5", Hash,DotNet, model, opt);
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5SoundClassifier.js");
+            JSReference.InvokeVoid("initSoundClassifierML5", Hash,DotNet, model, opt);
         }
 
         ~SoundClassifier()
@@ -38,15 +39,15 @@ namespace ML5
         }
         private  void Destroy()
         {
-             Runtime.InvokeVoid("destroySoundClassifier", Hash);
+             JSReference.InvokeVoid("destroySoundClassifier", Hash);
         }
         public  void Classify(object serializableOpt = null)
         {
-               Runtime.InvokeVoid("soundClassifierClassify", Hash, DotNet,serializableOpt);
+            JSReference.InvokeVoid("soundClassifierClassify", Hash, DotNet,serializableOpt);
         }
         public void Classify(ElementReference videoImageElement,object serializableOpt=null)
         {
-            Runtime.InvokeVoid("soundClassifierClassify", Hash, DotNet,videoImageElement,serializableOpt);
+            JSReference.InvokeVoid("soundClassifierClassify", Hash, DotNet,videoImageElement,serializableOpt);
         }
         [EditorBrowsable(EditorBrowsableState.Never)]
         [JSInvokable("SCFML")]

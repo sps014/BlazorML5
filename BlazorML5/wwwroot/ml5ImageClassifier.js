@@ -1,6 +1,6 @@
 ﻿let ImageClassifiers = new Object();
 
-function initImageClassifierVidML5(Hash, DotNet, model, video, options)
+export function initImageClassifierVidML5(Hash, DotNet, model, video, options)
 {
     let icf;
     if (options != null)
@@ -10,7 +10,7 @@ function initImageClassifierVidML5(Hash, DotNet, model, video, options)
 
     ImageClassifiers[Hash] = icf;
 }
-function initImageClassifierStrML5(Hash, DotNet, model, opt)
+export function initImageClassifierStrML5(Hash, DotNet, model, opt)
 {
     let icf;
     if (opt != null)
@@ -21,7 +21,7 @@ function initImageClassifierStrML5(Hash, DotNet, model, opt)
     ImageClassifiers[Hash] = icf;
 
 }
-function destroyImageClassifier(hash)
+export function destroyImageClassifier(hash)
 {
     delete ImageClassifiers[hash];
 }
@@ -31,7 +31,7 @@ function ml5ModelLoadedImageClassifier()
     this.invokeMethodAsync("ICFML", "__ModelLoadedIC__");
 }
 
-function imageClassifierClassify(hash,DotNet,image,noOfClasses)
+export function imageClassifierClassify(hash,DotNet,image,noOfClasses)
 {
     if (noOfClasses != null)
     {

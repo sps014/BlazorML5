@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace ML5
     public class ImageClassifier
     {
         public IJSInProcessRuntime Runtime { get; set; }
+        private IJSInProcessObjectReference JSReference { get; set; }
         public string Hash { get; private set; }
         public DotNetObjectReference<ImageClassifier> DotNet { get; private set; }
         public ImageClassifier(IJSInProcessRuntime runtime, ImageModel model, ElementReference video, object serializableOptions = null)
@@ -51,17 +53,19 @@ namespace ML5
 
         }
 
-        private void Init(string modelURL, ElementReference video, object options = null)
+        private async void Init(string modelURL, ElementReference video, object options = null)
         {
             Hash = Helper.UIDGenerator();
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5ImageClassifier.js");
             DotNet = DotNetObjectReference.Create(this);
-            Runtime.InvokeVoid("initImageClassifierVidML5", Hash,DotNet, modelURL, video, options);
+            JSReference.InvokeVoid("initImageClassifierVidML5", Hash,DotNet, modelURL, video, options);
         }
-        private  void Init(string model,object opt=null)
+        private async void Init(string model,object opt=null)
         {
             Hash = Helper.UIDGenerator();
+            JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5ImageClassifier.js");
             DotNet = DotNetObjectReference.Create(this);
-            Runtime.InvokeVoid("initImageClassifierStrML5", Hash,DotNet, model,opt);
+            JSReference.InvokeVoid("initImageClassifierStrML5", Hash,DotNet, model,opt);
         }
 
         ~ImageClassifier()
@@ -70,21 +74,21 @@ namespace ML5
         }
         private void Destroy()
         {
-            Runtime.InvokeVoid("destroyImageClassifier", Hash);
+            JSReference.InvokeVoid("destroyImageClassifier", Hash);
         }
         public void Classify(ElementReference videoOrImageOrCanvas,int noOfClasses=0)
         {
             if(noOfClasses==0)
-               Runtime.InvokeVoid("imageClassifierClassify",Hash,DotNet, videoOrImageOrCanvas);
+                JSReference.InvokeVoid("imageClassifierClassify",Hash,DotNet, videoOrImageOrCanvas);
             else
-                Runtime.InvokeVoid("imageClassifierClassify", Hash, DotNet, videoOrImageOrCanvas,noOfClasses);
+                JSReference.InvokeVoid("imageClassifierClassify", Hash, DotNet, videoOrImageOrCanvas,noOfClasses);
         }
         public  void Classify(object imageData, int noOfClasses = 0)
         {
             if (noOfClasses == 0)
-                Runtime.InvokeVoid("imageClassifierClassify", Hash, DotNet, imageData);
+                JSReference.InvokeVoid("imageClassifierClassify", Hash, DotNet, imageData);
             else
-                Runtime.InvokeVoid("imageClassifierClassify", Hash, DotNet, imageData, noOfClasses);
+                JSReference.InvokeVoid("imageClassifierClassify", Hash, DotNet, imageData, noOfClasses);
         }
 
         [EditorBrowsable(EditorBrowsableState.Never)]

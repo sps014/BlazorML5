@@ -1,12 +1,12 @@
 ﻿let NeuralNetworks = new Object();
 
-function createNNML5(hash, inputs, outputs,dotnet)
+export function createNNML5(hash, inputs, outputs,dotnet)
 {
     let nn = ml5.neuralNetwork(inputs, outputs, ml5ModelLoaded.bind(dotnet));
     NeuralNetworks[hash] = nn;
 }
 
-function createNNConfigML5(hash,config,isCallBack,dotNet)
+export function createNNConfigML5(hash,config,isCallBack,dotNet)
 {
 
     //enum handling
@@ -113,19 +113,19 @@ function ml5ModelLoaded()
 {
     this.invokeMethodAsync("NNCBML", "__ModelLoaded__");
 }
-function destroyNNML5(hash)
+export function destroyNNML5(hash)
 {
     delete NeuralNetworks[hash];
 }
-function addDataML5(hash, xs, ys)
+export function addDataML5(hash, xs, ys)
 {
    NeuralNetworks[hash].addData(xs, ys);
 }
-function normalizeDataML5(hash)
+export function normalizeDataML5(hash)
 {
     NeuralNetworks[hash].normalizeData();
 }
-function trainML5(Hash, DotNet,subCallBack, trainingOptions)
+export function trainML5(Hash, DotNet,subCallBack, trainingOptions)
 {
     if (trainingOptions != null && subCallBack == true)
     {
@@ -152,11 +152,11 @@ function ml5DoneTraining()
 {
     this.invokeMethodAsync("NNCBDT", "__DoneTraining__");
 }
-function predictML5(hash,dotnet,inputs)
+export function predictML5(hash,dotnet,inputs)
 {
         NeuralNetworks[hash].predict(inputs, ml5Predict.bind(dotnet));
 }
-function ml5Predict(err, result)
+export function ml5Predict(err, result)
 {
     if (err != null) {
         console.error(err);
@@ -164,7 +164,7 @@ function ml5Predict(err, result)
     }
     this.invokeMethodAsync("NNCBPD", err, result);
 }
-function classifyML5(hash, dotnet, inputs)
+export function classifyML5(hash, dotnet, inputs)
 {
     NeuralNetworks[hash].classify(inputs, ml5classify.bind(dotnet));
 }
@@ -182,7 +182,7 @@ function ml5classify(err, result)
 
 
 
-function loadML5(hash, dotnet, path, options)
+export function loadML5(hash, dotnet, path, options)
 {
     if (options != null)
     {
@@ -198,7 +198,7 @@ function ml5Load()
     this.invokeMethodAsync("NNCBMLS","__ModelLoad__");
 }
 
-function saveML5(hash, dotnet, path)
+export function saveML5(hash, dotnet, path)
 {
     if (path != null)
         NeuralNetworks[hash].save(path, ml5Save.bind(dotnet));
@@ -210,7 +210,7 @@ function ml5Save()
 {
     this.invokeMethodAsync("NNCBMS", "__ModelSave__");
 }
-function loadDataML5(hash, dotnet, path)
+export function loadDataML5(hash, dotnet, path)
 {
     NeuralNetworks[hash].save(path, ml5Save.bind(dotnet));
 }
@@ -218,7 +218,7 @@ function ml5loadData()
 {
     this.invokeMethodAsync("NNCBDL","__DataLoad__");
 }
-function saveDataML5(hash, dotnet, path)
+export function saveDataML5(hash, dotnet, path)
 {
     if (path != null)
         NeuralNetworks[hash].saveData(path, ml5SaveData.bind(dotnet));
