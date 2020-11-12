@@ -26,7 +26,7 @@ export function destroyImageClassifier(hash)
     delete ImageClassifiers[hash];
 }
 
-export function ml5ModelLoadedImageClassifier()
+function ml5ModelLoadedImageClassifier()
 {
     this.invokeMethodAsync("ICFML", "__ModelLoadedIC__");
 }
@@ -44,7 +44,7 @@ export function imageClassifierClassify(hash,DotNet,image,noOfClasses)
 
 
 }
-export function imageResultClassification(err,res)
+function imageResultClassification(err,res)
 {
     this.invokeMethodAsync("ICFCF", err, res);
 

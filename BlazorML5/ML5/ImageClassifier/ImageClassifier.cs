@@ -53,14 +53,14 @@ namespace ML5
 
         }
 
-        private async Task Init(string modelURL, ElementReference video, object options = null)
+        private async void Init(string modelURL, ElementReference video, object options = null)
         {
             Hash = Helper.UIDGenerator();
             JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5ImageClassifier.js");
             DotNet = DotNetObjectReference.Create(this);
             JSReference.InvokeVoid("initImageClassifierVidML5", Hash,DotNet, modelURL, video, options);
         }
-        private async Task Init(string model,object opt=null)
+        private async void Init(string model,object opt=null)
         {
             Hash = Helper.UIDGenerator();
             JSReference = await Runtime.InvokeAsync<IJSInProcessObjectReference>("import", "./_content/BlazorML5/ml5ImageClassifier.js");
