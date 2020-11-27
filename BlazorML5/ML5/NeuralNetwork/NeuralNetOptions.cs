@@ -1,10 +1,90 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace ML5
+namespace BlazorML5
 {
+    public class NeuralNetworkOptions
+    {
+        [JsonPropertyName("inputs")]
+        public List<object> Inputs { get; set; }
+
+        [JsonPropertyName("outputs")]
+        public List<object> Outputs { get; set; }
+
+        [JsonPropertyName("dataUrl")]
+        public string DataUrl { get; set; }
+
+        [JsonPropertyName("modelUrl")]
+        public string ModelUrl { get; set; }
+
+        [JsonPropertyName("layers")]
+        public List<object> Layers { get; set; }
+
+        [JsonPropertyName("task")]
+        public object Task { get; set; }
+
+        [JsonPropertyName("debug")]
+        public bool Debug { get; set; }
+
+        [JsonPropertyName("learningRate")]
+        public double LearningRate { get; set; }
+
+        [JsonPropertyName("hiddenUnits")]
+        public int HiddenUnits { get; set; }
+
+        [JsonPropertyName("activationHidden")]
+        public string ActivationHidden { get; set; }
+
+        [JsonPropertyName("activationOutput")]
+        public string ActivationOutput { get; set; }
+
+        [JsonPropertyName("batchSize")]
+        public int BatchSize { get; set; } = 32;
+
+        [JsonPropertyName("epochs")]
+        public int Epochs { get; set; } = 64;
+
+        [JsonPropertyName("modelMetrics")]
+        public string ModelMetrics { get; set; }
+
+
+    }
+    public static class Activation
+    {
+        public const string Elu = "elu";
+        public const string Selu = "selu";
+        public const string Relu = "relu";
+        public const string Relu6 = "relu6";
+        public const string Linear = "linear";
+        public const string Sigmoid = "sigmoid";
+        public const string HardSigmoid = "hardSigmoid";
+        public const string Softplus = "softplus";
+        public const string Softsign = "softsign";
+        public const string Tanh = "tanh";
+        public const string Softmax = "softmax";
+        public const string LogSoftmax = "logSoftmax";
+        public const string Swish = "swish";
+
+
+    }
+    public static class Metric
+    {
+        public const string BinaryAccuracy= "binaryAccuracy";
+        public const string BinaryCrossentropy = "binaryCrossentropy";
+        public const string CategoricalAccuracy = "categoricalAccuracy";
+        public const string CategoricalCrossentropy = "categoricalCrossentropy";
+        public const string CosineProximity = "cosineProximity";
+        public const string MeanAbsoluteError = "meanAbsoluteError";
+        public const string MeanAbsolutePercentageError = "meanAbsolutePercentageError";
+        public const string MeanSquaredError = "meanSquaredError";
+        public const string Precision = "precision";
+        public const string SparseCategoricalAccuracy = "sparseCategoricalAccuracy";
+        public const string Recall = "recall";
+    }
+
     public class NeuralNetworkOptions
     {
         public string dataUrl { get; set; }
