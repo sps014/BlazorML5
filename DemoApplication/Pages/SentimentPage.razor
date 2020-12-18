@@ -1,0 +1,14 @@
+﻿@page "/sentiment"
+@using ML5
+
+@inject IJSRuntime Runtime
+
+@code {      
+
+    protected override async Task OnInitializedAsync()
+    {
+        Sentiment sent = new Sentiment(Runtime);
+        sent.ModelLoaded += () => Console.WriteLine(sent.Predict("Good Movie so far"));
+    }
+
+}
