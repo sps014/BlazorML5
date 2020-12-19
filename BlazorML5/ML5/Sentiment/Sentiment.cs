@@ -27,6 +27,10 @@ namespace ML5
             Runtime = runtime as IJSInProcessRuntime;
             Init(modelPath);
         }
+        ~Sentiment()
+        {
+            JSReference.InvokeVoid("destroySenti", Hash);
+        }
         public double Predict(string text)
         {
             return JSReference.Invoke<double>("predictSentiMl5", Hash, text);
