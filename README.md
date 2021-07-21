@@ -4,6 +4,10 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
  
+ ### Warning
+ This repo is deprecated in favour of better , performant BlazorBindGen.
+ See [sample](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor) how to use ML5 models with BlazorBindGen [here](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor).
+ 
  ### An Easy Machine Learning Library for Blazor.
 
 ## Current Features
