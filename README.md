@@ -5,8 +5,8 @@
 
  
  ### Warning
- This repo is deprecated in favour of better , performant BlazorBindGen.
- See [sample](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor) how to use ML5 models with BlazorBindGen [here](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor).
+To minimize the bundle size libary is rewritten with binding generator, for raw example:
+See [sample](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor) how to use ML5 models with BlazorBindGen [here](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor).
  
  ### An Easy Machine Learning Library for Blazor.
 
