@@ -1,14 +1,30 @@
 ﻿@page "/"
 @using BlazorML5
+@using BlazorML5.Helpers
 @inject IJSRuntime runtime
 
 <PageTitle>Index</PageTitle>
-
+<button @onclick="AddData">Add Data</button>
 @code
 {
+    NeuralNetwork _network;
     protected override async Task OnInitializedAsync()
     {
         await ML5.InitAsync(runtime);
+
+        _network = await NeuralNetwork.CreateAsync(new(){Inputs=1,Outputs=1,Task=TaskType.Regression});
+
+    }
+    async void AddData()
+    {
+        await _network.AddData(new object[]{ 1},new object[]{1 });
+        await _network.AddData(new object[]{ 2},new object[]{4 });
+        await _network.AddData(new object[]{ 3},new object[]{6 });
+        await _network.AddData(new object[]{ 3},new object[]{6 });
+        await _network.AddData(new object[]{ 3},new object[]{6 });
+        await _network.AddData(new object[]{ 3},new object[]{6 });
+        await _network.NormalizeData();
+        await _network.Train();
     }
 
 }
