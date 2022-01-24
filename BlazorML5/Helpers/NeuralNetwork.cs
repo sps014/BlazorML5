@@ -28,7 +28,7 @@ public class NeuralNetwork
     /// </summary>
     /// <param name="options">Specify configuration of neural network</param>
     /// <returns></returns>
-    public static async Task<NeuralNetwork> CreateAsync(NeuralNetworkOptions? options=null)
+    public static async Task<NeuralNetwork> CreateAsync(object? options=null)
     {
         options ??= new NeuralNetworkOptions();
         var nnPtr = await Ml5Ptr.CallRefAsync("neuralNetwork",options);
@@ -42,6 +42,8 @@ public class NeuralNetwork
     /// <param name="ys">labels can be array or number</param>
     public async Task AddData(object[] xs, object[] ys)
     {
+        await _neuralNetwork.LogAsync();
+
         await _neuralNetwork.CallVoidAsync("addData", xs, ys );
     }
     
@@ -55,11 +57,10 @@ public class NeuralNetwork
 
     public async Task Train(NeuralNetworkTrainOptions options = default)
     {
-        await _neuralNetwork.LogAsync();
         options??=new NeuralNetworkTrainOptions();
-        await _neuralNetwork.CallVoidAsync("train"
-            ,options,(JSCallback)OnTrainingCallback
-            ,(JSCallback)OnTrainingEndCallback);
+        _neuralNetwork.CallVoid("train",options);
+            //,options,(JSCallback)OnTrainingCallback
+            //,(JSCallback)OnTrainingEndCallback);
     }
 
     public  delegate void OnModelLoadedHandler(NeuralNetwork neuralNetwork);

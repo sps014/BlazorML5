@@ -12,7 +12,7 @@
     {
         await ML5.InitAsync(runtime);
 
-        _network = await NeuralNetwork.CreateAsync(new(){Inputs=1,Outputs=1,Task=TaskType.Regression});
+        _network = await NeuralNetwork.CreateAsync(new{Task="regression"});
 
     }
     async void AddData()
