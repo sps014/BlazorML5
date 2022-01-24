@@ -12,19 +12,38 @@
     {
         await ML5.InitAsync(runtime);
 
-        _network = await NeuralNetwork.CreateAsync(new{Task="regression"});
+        _network = await NeuralNetwork.CreateAsync(new NeuralNetworkOptions()
+        {
+            Task = TaskType.Classification,
+            DataUrl = "https://raw.githubusercontent.com/ml5js/ml5-library/main/examples/p5js/NeuralNetwork/NeuralNetwork_color_classifier/data/colorData_small.json",
+            Debug = true,
+            Inputs = new object[]{"r", "g", "b"},
+            Outputs = new object[]{"label"}
+        });
+        _network.OnTraining+=(l,e)=>
+        {
+            Console.WriteLine($"Training: {e}%");
+        };
+        _network.OnTrainingComplete+=()=>
+        {
+            Console.WriteLine($"Training Complete");
+        };
+        _network.OnDataLoaded+=(e)=>
+        {
+            Console.WriteLine($"Data Loaded");
+        };
 
     }
     async void AddData()
     {
-        await _network.AddData(new object[]{ 1},new object[]{1 });
-        await _network.AddData(new object[]{ 2},new object[]{4 });
-        await _network.AddData(new object[]{ 3},new object[]{6 });
-        await _network.AddData(new object[]{ 3},new object[]{6 });
-        await _network.AddData(new object[]{ 3},new object[]{6 });
-        await _network.AddData(new object[]{ 3},new object[]{6 });
-        await _network.NormalizeData();
-        await _network.Train();
+        //await _network.AddDataAsync(new object[]{ 1},new object[]{1 });
+        //await _network.AddDataAsync(new object[]{ 2},new object[]{4 });
+        //await _network.AddDataAsync(new object[]{ 3},new object[]{6 });
+        //await _network.AddDataAsync(new object[]{ 3},new object[]{6 });
+        //await _network.AddDataAsync(new object[]{ 3},new object[]{6 });
+        //await _network.AddDataAsync(new object[]{ 3},new object[]{6 });
+        //await _network.NormalizeDataAsync();
+        await _network.TrainAsync();
     }
 
 }

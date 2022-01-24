@@ -7,19 +7,19 @@ public class NeuralNetwork
     /// <summary>
     /// Pointer to JS Neural Network Object
     /// </summary>
-    private readonly JObjPtr _neuralNetwork;
+    private  JObjPtr _neuralNetwork;
     
     /// <summary>
     /// set to true if the model is loaded and ready, false if it is not.
     /// </summary>
     public ValueTask<bool> Ready => _neuralNetwork.PropValAsync<bool>("ready");
-    internal NeuralNetwork(JObjPtr neuralNetwork)
+
+    private NeuralNetwork() { }
+
+    internal async Task<NeuralNetwork> InitAsync(JObjPtr neuralNetwork)
     {
-        this._neuralNetwork = neuralNetwork;
-    }
-    internal async Task<NeuralNetwork> InitAsync()
-    {
-        await _neuralNetwork.SetPropCallBackAsync("callback", (_) => OnModelLoaded?.Invoke(this));
+        _neuralNetwork = neuralNetwork;
+        await _neuralNetwork.SetPropCallBackAsync("callback", (_) => OnModelOrDataLoaded?.Invoke(this));
         return this;
     }
 
@@ -28,11 +28,13 @@ public class NeuralNetwork
     /// </summary>
     /// <param name="options">Specify configuration of neural network</param>
     /// <returns></returns>
-    public static async Task<NeuralNetwork> CreateAsync(object? options=null)
+    public static async Task<NeuralNetwork> CreateAsync(NeuralNetworkOptions? options=null)
     {
         options ??= new NeuralNetworkOptions();
-        var nnPtr = await Ml5Ptr.CallRefAsync("neuralNetwork",options);
-        return await new NeuralNetwork(nnPtr).InitAsync();
+        var nn = new NeuralNetwork();
+        var nnPtr = await Ml5Ptr.CallRefAsync("neuralNetwork",await options.EliminateNullPropObject()
+        ,(JSCallback)nn.OnDataLoadedCallback);
+        return await nn.InitAsync(nnPtr);
     }
     
     /// <summary>
@@ -40,51 +42,59 @@ public class NeuralNetwork
     /// </summary>
     /// <param name="xs">features can be a array ,number objects</param>
     /// <param name="ys">labels can be array or number</param>
-    public async Task AddData(object[] xs, object[] ys)
+    public async Task AddDataAsync<T,S>(T[] xs, S[] ys)
     {
-        await _neuralNetwork.LogAsync();
-
         await _neuralNetwork.CallVoidAsync("addData", xs, ys );
     }
     
     /// <summary>
     /// normalizes the data stored in the neural network.
     /// </summary>
-    public async Task NormalizeData()
+    public async Task NormalizeDataAsync()
     {
         await _neuralNetwork.CallVoidAsync("normalizeData");
     }
 
-    public async Task Train(NeuralNetworkTrainOptions options = default)
+    public async Task TrainAsync(NeuralNetworkTrainOptions? options = default)
     {
         options??=new NeuralNetworkTrainOptions();
-        _neuralNetwork.CallVoid("train",options);
-            //,options,(JSCallback)OnTrainingCallback
-            //,(JSCallback)OnTrainingEndCallback);
+        await _neuralNetwork.CallVoidAsync("train"
+            ,options,(JSCallback)OnTrainingCallback
+            ,(JSCallback)OnTrainingEndCallback);
     }
 
-    public  delegate void OnModelLoadedHandler(NeuralNetwork neuralNetwork);
+    public  delegate void OnLoadedHandler(NeuralNetwork neuralNetwork);
     
     /// <summary>
     /// Fires when data or model is loaded and ready to use.
     /// </summary>
-    public event  OnModelLoadedHandler? OnModelLoaded;
-    
+    public event  OnLoadedHandler? OnModelOrDataLoaded;
+
+    /// <summary>
+    /// Fires when data is loaded and ready to use.
+    /// </summary>
+    public event OnLoadedHandler? OnDataLoaded;
+
     public delegate void DoneTrainingHandler();
     public event DoneTrainingHandler? OnTrainingComplete;
 
     public delegate void WhileTrainingHandler(int epoch,double loss);
     public event WhileTrainingHandler? OnTraining;
+
+    private  void OnDataLoadedCallback(JObjPtr[] _)
+    {
+        OnDataLoaded?.Invoke(this);
+    }
     
     /// <summary>
     /// Called several time during training.
     /// </summary>
     /// <param name="obj">represents parameter</param>
-    private void OnTrainingCallback(JObjPtr[] obj)
+    private async void OnTrainingCallback(JObjPtr[] obj)
     {
         if(OnTraining==null) return;
         var epoch = obj[0].To<int>();
-        var loss = obj[1].To<double>();
+        var loss = await obj[1].PropValAsync<double>("loss");
         OnTraining.Invoke(epoch,loss);
     }
     /// <summary>

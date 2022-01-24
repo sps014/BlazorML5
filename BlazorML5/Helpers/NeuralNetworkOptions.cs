@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using BlazorBindGen;
 
 namespace BlazorML5.Helpers;
 
@@ -7,43 +8,36 @@ public record NeuralNetworkOptions
     /// <summary>
     ///Inputs Can be a number or any array of numbers.
     /// </summary>
-    [JsonPropertyName("inputs")]
     public  object? Inputs { get; init; }
     
     /// <summary>
     /// Outputs can be a number or any array of numbers.
     /// </summary>
-    [JsonPropertyName("outputs")]
     public  object? Outputs { get; init; }
 
     /// <summary>
     /// Url from where to get the model.
     /// </summary>
-    [JsonPropertyName("dataUrl")] 
     public string? DataUrl { get; init; } = null;
     
     /// <summary>
     /// Url of pretrained model to load.
     /// </summary>
-    [JsonPropertyName("modelUrl")]
     public string? ModelUrl { get; init; } = null;
     
     /// <summary>
     /// if you want custom layers specify an anonymous object with matching ml5.js custom layer structure.
     /// </summary>
-    [JsonPropertyName("layers")]
     public  object[]? Layers { get; init; }
     
     /// <summary>
     /// Kind of task this neural Network is used for. 'classification', 'regression', 'imageClassification'
     /// </summary>
-    [JsonPropertyName("task")]
     public TaskType? Task { get; init; } = null;
     
     /// <summary>
     /// determines whether or not to show the training visualization
     /// </summary>
-    [JsonPropertyName("debug")]
     public bool Debug { get; init; } = false;
     
     [JsonPropertyName("learningRate")]
@@ -51,6 +45,26 @@ public record NeuralNetworkOptions
     
     [JsonPropertyName("hiddenUnits")]
     public int HiddenUnits { get; init; } = 16;
+
+    internal async Task<JObjPtr> EliminateNullPropObject()
+    {
+        var obj = await BindGen.Window.CallRefAsync("Object");
+        if(Inputs!=null)  
+            await obj.SetPropValAsync("inputs", Inputs);
+        if (Outputs != null)
+            await obj.SetPropValAsync("outputs", Outputs);
+        if (DataUrl != null)
+            await obj.SetPropValAsync("dataUrl", DataUrl);
+        if(ModelUrl!=null)
+            await obj.SetPropValAsync("modelUrl", ModelUrl);
+        if(Layers!=null)
+            await obj.SetPropValAsync("layers", Layers);
+        if(this.Task!=null)
+            await obj.SetPropValAsync("task",UtilHelper.FirstCharSmall(Enum.GetName(typeof(TaskType), this.Task)!));
+        
+        return obj;
+    }
+    
     
 }
 
