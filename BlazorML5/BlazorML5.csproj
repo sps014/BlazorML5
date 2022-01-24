@@ -1,37 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>ML5</RootNamespace>
-    <Version>1.0.6</Version>
-    <Authors>sps014</Authors>
-    <Company>none</Company>
-    <Description>Utilize ML5 Library from c# in Blazor Client.Play with Teachable Machine models or  Create a Neural Network model or use a Image Classifier or Sound Classifier or YOLO or COCOSSD model or PoseNet model , visit Github for documentation.</Description>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>© 2020 sps014</Copyright>
-    <PackageProjectUrl>https://github.com/sps014/BlazorML5</PackageProjectUrl>
-    <PackageIcon>ml5.png</PackageIcon>
-    <RepositoryUrl>https://github.com/sps014/BlazorML5</RepositoryUrl>
-    <RepositoryType>Open Source</RepositoryType>
-    <PackageTags>NeuralNetwork,MachineLearning, TeachableMachine, ML ,Dee Learning, AI, ImageClassifier, SoundClassifier,PoseNet</PackageTags>
-    <PackageReleaseNotes>Performance improvement upto 4 times .
-added Blazor Server support.</PackageReleaseNotes>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  
+
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.0-rc.2.20475.17" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\ml5.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <PackageReference Include="BlazorBindGen" Version="0.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.1" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,14 @@
+﻿@page "/"
+@using BlazorML5
+@inject IJSRuntime runtime
+
+<PageTitle>Index</PageTitle>
+
+@code
+{
+    protected override async Task OnInitializedAsync()
+    {
+        await ML5.InitAsync(runtime);
+    }
+
+}
