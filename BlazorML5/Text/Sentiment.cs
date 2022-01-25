@@ -4,30 +4,24 @@ namespace BlazorML5.Text;
 
 public class Sentiment
 {
+    #nullable disable
     private JObjPtr _sentiment;
     /// <summary>
     /// set to true if the model is loaded and ready, false if it is not.
     /// </summary>
     public ValueTask<bool> Ready => _sentiment.PropValAsync<bool>("ready");
-    private Sentiment(){}
-
-    private Sentiment InitAsync(JObjPtr sentiment)
+    internal Sentiment(){}
+    #nullable restore 
+    internal Sentiment Init(JObjPtr sentiment)
     {
         _sentiment = sentiment;
         return this;
     }
     /// <summary>
-    /// Create a new Sentiment Analysis Classifier
+    /// Predict the sentiment of the text
     /// </summary>
-    /// <param name="model">url of the model , defaults to movie review model</param>
+    /// <param name="text"></param>
     /// <returns></returns>
-    public static async Task<Sentiment> CreateAsync(string model = "movieReviews")
-    {
-        Sentiment ss = new();
-        var sPtr=await ML5.Ml5Ptr.CallRefAsync("sentiment", model, (JSCallback)ss.OnModelLoadedCallback);
-        return ss.InitAsync(sPtr);
-    }
-    
     public async Task<SentimentScore> PredictAsync(string text)
     {
         return await _sentiment.CallAsync<SentimentScore>("predict", text);
@@ -40,7 +34,7 @@ public class Sentiment
     /// </summary>
     public event OnModelLoadedHandler? OnModelLoaded;
 
-    private void OnModelLoadedCallback(JObjPtr[] _)
+    internal void OnModelLoadedCallback(JObjPtr[] _)
     {
         OnModelLoaded?.Invoke();
     }

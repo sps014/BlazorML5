@@ -12,7 +12,8 @@
     {
         await ML5.InitAsync(runtime);
 
-       var  _sentiment =await Sentiment.CreateAsync();
+        var  _sentiment =await ML5.SentimentAsync();
+
         _sentiment.OnModelLoaded += async () =>
         {
             Console.WriteLine("Model Loaded");

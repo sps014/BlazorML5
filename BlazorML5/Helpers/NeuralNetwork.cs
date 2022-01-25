@@ -1,9 +1,9 @@
 ﻿using BlazorBindGen;
-using static BlazorML5.ML5;
 namespace BlazorML5.Helpers;
 
 public class NeuralNetwork
 {
+    #nullable disable
     /// <summary>
     /// Pointer to JS Neural Network Object
     /// </summary>
@@ -14,27 +14,13 @@ public class NeuralNetwork
     /// </summary>
     public ValueTask<bool> Ready => _neuralNetwork.PropValAsync<bool>("ready");
 
-    private NeuralNetwork() { }
-
+    internal NeuralNetwork() { }
+    #nullable restore
     internal async Task<NeuralNetwork> InitAsync(JObjPtr neuralNetwork)
     {
         _neuralNetwork = neuralNetwork;
         await _neuralNetwork.SetPropCallBackAsync("callback", (_) => OnDataLoaded?.Invoke(this));
         return this;
-    }
-
-    /// <summary>
-    /// Creates a new neural network with options like input,output,hidden layers, etc.
-    /// </summary>
-    /// <param name="options">Specify configuration of neural network</param>
-    /// <returns></returns>
-    public static async Task<NeuralNetwork> CreateAsync(NeuralNetworkOptions? options=null)
-    {
-        options ??= new NeuralNetworkOptions();
-        var nn = new NeuralNetwork();
-        var nnPtr = await Ml5Ptr.CallRefAsync("neuralNetwork",await options.EliminateNullPropObject()
-        ,(JSCallback)nn.OnDataLoadedCallback);
-        return await nn.InitAsync(nnPtr);
     }
     
     /// <summary>
@@ -132,6 +118,18 @@ public class NeuralNetwork
         else
             await _neuralNetwork.CallVoidAsync("save", outputName,(JSCallback)OnModelSavedCallback);
     }
+    /// <summary>
+    /// Load a pre-trained Neural Network Model
+    /// </summary>
+    /// <param name="path"></param>
+    public async Task LoadAsync(string[] path)
+    {
+        await _neuralNetwork.CallVoidAsync("load", path,(JSCallback)OnModelLoadCallback);
+    }
+    /// <summary>
+    /// Load a pre-trained Neural Network Model
+    /// </summary>
+    /// <param name="path"></param>
     public async Task LoadAsync(string path)
     {
         await _neuralNetwork.CallVoidAsync("load", path,(JSCallback)OnModelLoadCallback);
@@ -192,6 +190,9 @@ public class NeuralNetwork
     /// </summary>
     public event OnModelSavedHandler? OnModelSaved;
     public  delegate void OnModelLoadHandler();
+    /// <summary>
+    /// Fires when model is loaded.
+    /// </summary>
     public  event  OnModelLoadHandler? OnModelLoaded;
     
     
@@ -223,7 +224,7 @@ public class NeuralNetwork
         var predictions=result[1].To<ClassificationResult[]>();
         OnClassify?.Invoke(err,predictions);
     }
-    private  void OnDataLoadedCallback(JObjPtr[] _)
+    internal void OnDataLoadedCallback(JObjPtr[] _)
     {
         OnDataLoaded?.Invoke(this);
     }
