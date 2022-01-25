@@ -6,7 +6,7 @@
  
  ### Warning
 To minimize the bundle size libary is rewritten with binding generator, for raw example:
-See [sample](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor) how to use ML5 models with BlazorBindGen [here](https://github.com/sps014/BlazorBindGen/blob/main/SampleApp/Pages/ML5Page.razor).
+See [sample](https://github.com/sps014/BlazorML5/blob/e0f58edfa4de7950d34de0049363492bfec11bc8/SampleApp/Pages/Index.razor) how to use ML5 models with [BlazorBindGen](https://github.com/sps014/BlazorBindGen/).
  
  ### An Easy Machine Learning Library for Blazor.
 
