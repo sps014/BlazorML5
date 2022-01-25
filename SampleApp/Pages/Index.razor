@@ -5,25 +5,50 @@
 @inject IJSRuntime runtime
 
 <PageTitle>Index</PageTitle>
-<button @onclick="AddData">Add Data</button>
+<video width="400" height="300%" @ref="video"
+       crossorigin="anonymous" autoplay controls
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+</video>
 @code
-{
+{        
+    ElementReference video;
+
     protected override async Task OnInitializedAsync()
     {
         await ML5.InitAsync(runtime);
-
-        var  _sentiment =await ML5.SentimentAsync();
-
-        _sentiment.OnModelLoaded += async () =>
+        var  feature =await ML5.FeatureExtractorAsync();
+        feature.OnModelLoaded += async () =>
         {
-            Console.WriteLine("Model Loaded");
-            Console.WriteLine((await _sentiment.PredictAsync("here is some text")).Score);
+           Console.WriteLine("Model Loaded");
+            var r=await feature.RegressionAsync(video);
+            
+            r.OnVideoLoaded+=async ()=>
+            {
+                for(int i=0;i<100;i++)
+                {
+                    await r.AddImageAsync(i);
+                    Console.WriteLine($"{i}/100");
+                }
+                await r.TrainAsync();
+            };
+            r.OnTraining+=(loss)=>
+            {
+                Console.WriteLine("loss:"+loss);
+            };
+            r.OnPredict += (res) =>
+            {
+                Console.WriteLine(res.Value);
+            };
+        
+            r.OnTrainingFinished+=async ( )=>
+            {
+                Console.WriteLine("Training Finished");
+                await r.PredictAsync(video);
+            };
+            
         };
         
-    }
-    async void AddData()
-    {
-       
+
     }
 
 }

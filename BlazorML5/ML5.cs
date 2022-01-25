@@ -51,9 +51,9 @@ public static class ML5
         var fe = new FeatureExtractor();
        JObjPtr ptr;
            if(options is null)
-               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",(JSCallback)fe.OnModelLoadCallback);
+               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",model,(JSCallback)fe.OnModelLoadCallback);
            else
-               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",options,(JSCallback)fe.OnModelLoadCallback);
+               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",model,options,(JSCallback)fe.OnModelLoadCallback);
        return fe.Init(ptr);
     }
 

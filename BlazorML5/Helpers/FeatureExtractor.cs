@@ -77,24 +77,24 @@ public class FeatureExtractor
     /// </summary>
     /// <param name="input">Optional. An HTML image or video element or a p5 image or video element. If not input is provided, the video element provided in the method-type will be used.</param>
     /// <returns></returns>
-    public async Task<FeatureExtractionClassificationResult> ClassifyAsync(object input = null)
+    public async Task ClassifyAsync(object input = null)
     {
         if (input is null)
-            return await _featureExtractor.CallAwaitedAsync<FeatureExtractionClassificationResult>("classify");
+            await _featureExtractor.CallVoidAsync("classify",(JSCallback)OnClassifyCallback);
         else
-            return await _featureExtractor.CallAwaitedAsync<FeatureExtractionClassificationResult>("classify", input!);
+            await _featureExtractor.CallVoidAsync("classify", input,(JSCallback)OnClassifyCallback);
     }
     /// <summary>
     /// Get result of regression on a video
     /// </summary>
     /// <param name="input">Optional. An HTML image or video element or a p5 image or video element. If not input is provided, the video element provided in the method-type will be used.</param>
     /// <returns></returns>
-    public async Task<FeatureExtractionPredictionResult> PredictAsync(object input = null)
+    public async Task PredictAsync(object input = null)
     {
         if (input is null)
-            return await _featureExtractor.CallAwaitedAsync<FeatureExtractionPredictionResult>("predict");
+            await _featureExtractor.CallVoidAsync("predict",(JSCallback)OnPredictionCallback);
         else
-            return await _featureExtractor.CallAwaitedAsync<FeatureExtractionPredictionResult>("predict", input!);
+            await _featureExtractor.CallVoidAsync("predict", input,(JSCallback)OnPredictionCallback);
     }
     #nullable restore
     
@@ -111,7 +111,14 @@ public class FeatureExtractor
         if (name is null)
             await _featureExtractor.CallVoidAsync("load",(JSCallback)LoadCallback);
         else
-            await _featureExtractor.CallVoidAsync("load",(JSCallback)LoadCallback ,name);
+            await _featureExtractor.CallVoidAsync("load",name,(JSCallback)LoadCallback );
+    }
+    public async Task LoadAsync(string[]? name=null)
+    {
+        if (name is null)
+            await _featureExtractor.CallVoidAsync("load",(JSCallback)LoadCallback);
+        else
+            await _featureExtractor.CallVoidAsync("load",name,(JSCallback)LoadCallback );
     }
     
     public delegate void ModelLoadedHandler();
@@ -134,6 +141,11 @@ public class FeatureExtractor
     
     public delegate void LoadHandler();
     public event LoadHandler? OnLoad;
+    
+    public delegate void OnClassificationHandler(ClassificationResult[] result);
+    public event OnClassificationHandler? OnClassify;
+    public delegate void OnPredictionHandler(PredictionResult result);
+    public event OnPredictionHandler? OnPredict;
 
     private void SaveCallback(JObjPtr[] _)
     {
@@ -155,19 +167,29 @@ public class FeatureExtractor
     {
         OnModelLoaded?.Invoke();
     }
+    private void OnClassifyCallback(JObjPtr[] args)
+    {
+        if (OnClassify is null) return;
+        OnClassify?.Invoke(args[1].To<ClassificationResult[]>());
+    }
+    private void OnPredictionCallback(JObjPtr[] args)
+    {
+        if (OnPredict is null) return;
+        OnPredict?.Invoke(args[1].To<PredictionResult>());
+    }
 
     private void WhileTrainingCallback(JObjPtr[] args)
     {
         if(OnTraining is null && OnTrainingFinished is null)
             return;
-        if(args.Length==0)
+        var arg0=args[0].To<string>();
+        if(string.IsNullOrWhiteSpace(arg0))
             OnTrainingFinished?.Invoke();
         else
-            OnTraining?.Invoke(args[0].To<double>());
+        {
+            double.TryParse(arg0,out double num);
+            OnTraining?.Invoke(num);
+        }
     }
-
-    public record FeatureExtractionClassificationResult(string Label, double Confidence);
-    public record FeatureExtractionPredictionResult(double Value);
-
 
 }
