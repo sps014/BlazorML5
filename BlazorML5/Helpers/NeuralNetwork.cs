@@ -19,7 +19,7 @@ public class NeuralNetwork
     internal async Task<NeuralNetwork> InitAsync(JObjPtr neuralNetwork)
     {
         _neuralNetwork = neuralNetwork;
-        await _neuralNetwork.SetPropCallBackAsync("callback", (_) => OnModelOrDataLoaded?.Invoke(this));
+        await _neuralNetwork.SetPropCallBackAsync("callback", (_) => OnDataLoaded?.Invoke(this));
         return this;
     }
 
@@ -102,12 +102,43 @@ public class NeuralNetwork
         await _neuralNetwork.CallVoidAsync("classifyMultiple", xs,(JSCallback)OnClassifyMultipleCallback);
     }
 
+    /// <summary>
+    /// Saves the data that has been added
+    /// </summary>
+    /// <param name="path">:Optional. String. An output name you'd like your data to be called. If no input is given, then the name will be data_YYYY-MM-DD_mm-hh</param>
+    public async Task SaveDataAsync(string? path = null)
+    {
+        if(path is null)
+            await _neuralNetwork.CallVoidAsync("saveData",(JSCallback)OnDataSavedCallback);
+        else
+            await _neuralNetwork.CallVoidAsync("saveData", path,(JSCallback)OnDataSavedCallback);
+    }
+    /// <summary>
+    /// Load the data that has been saved
+    /// </summary>
+    /// <param name="path">REQUIRED. String | InputFiles. A string path to a .json data object or InputFiles from html input type="file". Must be structured for example as: {"data": [ { xs:{input0:1, input1:2}, ys:{output0:"a"},  ...]}</param>
+    public  async Task LoadDataAsync(string path)
+    {
+        await _neuralNetwork.CallVoidAsync("loadData", path,(JSCallback)OnDataLoadedCallback);
+    }
+    /// <summary>
+    /// Save trained Neural Network Model
+    /// </summary>
+    /// <param name="outputName"></param>
+    public async Task SaveAsync(string? outputName=null)
+    {
+        if(outputName is null)
+            await _neuralNetwork.CallVoidAsync("save",(JSCallback)OnModelSavedCallback);
+        else
+            await _neuralNetwork.CallVoidAsync("save", outputName,(JSCallback)OnModelSavedCallback);
+    }
+    public async Task LoadAsync(string path)
+    {
+        await _neuralNetwork.CallVoidAsync("load", path,(JSCallback)OnModelLoadCallback);
+    }
+
     public  delegate void OnLoadedHandler(NeuralNetwork neuralNetwork);
     
-    /// <summary>
-    /// Fires when data or model is loaded and ready to use.
-    /// </summary>
-    public event  OnLoadedHandler? OnModelOrDataLoaded;
 
     /// <summary>
     /// Fires when data is loaded and ready to use.
@@ -126,6 +157,12 @@ public class NeuralNetwork
     /// Fires when training is in progress.
     /// </summary>
     public event WhileTrainingHandler? OnTraining;
+
+    public delegate void OnDataSaveHandler();
+    /// <summary>
+    /// Fires when data in Neural Network is saved locally.
+    /// </summary>
+    public event OnDataSaveHandler? OnDataSaved;
     
     public  delegate void OnPredictHandler(string error,PredictionResult[] predictions);
     
@@ -138,6 +175,26 @@ public class NeuralNetwork
     /// Fires when classification is done. (Task Classification)
     /// </summary>
     public event OnClassifyHandler? OnClassify;
+    public  delegate void OnClassifyMultipleHandler(string error,ClassificationResult[][] predictions);
+    /// <summary>
+    /// FIres when result of multiple classification is available (Task Classification)
+    /// </summary>
+    public event OnClassifyMultipleHandler? OnClassifyMultiple;
+    public delegate void OnPredictMultipleHandler(string err,PredictionResult[][] predictions);
+    /// <summary>
+    /// Fires when result of multiple prediction is available (Task Regression)
+    /// </summary>
+    public event OnPredictMultipleHandler? OnPredictMultiple;
+    
+    public delegate void OnModelSavedHandler();
+    /// <summary>
+    /// Fires when model is saved.
+    /// </summary>
+    public event OnModelSavedHandler? OnModelSaved;
+    public  delegate void OnModelLoadHandler();
+    public  event  OnModelLoadHandler? OnModelLoaded;
+    
+    
     private void OnPredictCallback(JObjPtr[] result)
     {
         if(OnPredict==null) return;
@@ -145,11 +202,6 @@ public class NeuralNetwork
         var predictions=result[1].To<PredictionResult[]>();
         OnPredict?.Invoke(err,predictions);
     }
-    public delegate void OnPredictMultipleHandler(string err,PredictionResult[][] predictions);
-    /// <summary>
-    /// Fires when result of multiple prediction is available (Task Regression)
-    /// </summary>
-    public event OnPredictMultipleHandler? OnPredictMultiple;
     private void OnPredictMultipleCallback(JObjPtr[] result)
     {
         if(OnPredictMultiple==null) return;
@@ -157,16 +209,10 @@ public class NeuralNetwork
         var predictions=result[1].To<PredictionResult[][]>();
         OnPredictMultiple?.Invoke(err,predictions);
     }
-    public  delegate void OnClassifyMultipleHandler(string error,ClassificationResult[][] predictions);
-    /// <summary>
-    /// FIres when result of multiple classification is available (Task Classification)
-    /// </summary>
-    public event OnClassifyMultipleHandler? OnClassifyMultiple;
-    private async void OnClassifyMultipleCallback(JObjPtr[] result)
+    private void OnClassifyMultipleCallback(JObjPtr[] result)
     {
         if(OnClassifyMultiple==null) return;
         var err=result[0].To<string>();
-        await result[1].LogAsync();
         var predictions=result[1].To<ClassificationResult[][]>();
         OnClassifyMultiple?.Invoke(err,predictions);
     }
@@ -177,20 +223,11 @@ public class NeuralNetwork
         var predictions=result[1].To<ClassificationResult[]>();
         OnClassify?.Invoke(err,predictions);
     }
-
-    /// <summary>
-    /// Called when data is loaded and ready to use.
-    /// </summary>
-    /// <param name="_"></param>
     private  void OnDataLoadedCallback(JObjPtr[] _)
     {
         OnDataLoaded?.Invoke(this);
     }
     
-    /// <summary>
-    /// Called several time during training.
-    /// </summary>
-    /// <param name="obj">represents parameter</param>
     private async void OnTrainingCallback(JObjPtr[] obj)
     {
         if(OnTraining==null) return;
@@ -198,12 +235,20 @@ public class NeuralNetwork
         var loss = await obj[1].PropValAsync<double>("loss");
         OnTraining.Invoke(epoch,loss);
     }
-    /// <summary>
-    /// Called when finished training.
-    /// </summary>
-    /// <param name="obj">represents parameter</param>
     private void OnTrainingEndCallback(JObjPtr[] obj)
     {
         OnTrainingComplete?.Invoke();
+    }
+    private void OnDataSavedCallback(JObjPtr[] obj)
+    {
+        OnDataSaved?.Invoke();
+    }
+    private  void OnModelSavedCallback(JObjPtr[] obj)
+    {
+        OnModelSaved?.Invoke();
+    }
+    private  void OnModelLoadCallback(JObjPtr[] obj)
+    {
+        OnModelLoaded?.Invoke();
     }
 }
