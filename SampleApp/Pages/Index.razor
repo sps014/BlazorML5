@@ -5,49 +5,38 @@
 @inject IJSRuntime runtime
 
 <PageTitle>Index</PageTitle>
-<video width="400" height="300%" @ref="video"
-       crossorigin="anonymous" autoplay controls
-       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
-</video>
+@* <video width="400" height="300%" @ref="video" *@
+@*        crossorigin="anonymous" autoplay controls *@
+@*        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"> *@
+@* </video> *@
 @code
 {        
     ElementReference video;
 
     protected override async Task OnInitializedAsync()
     {
-        await ML5.InitAsync(runtime);
-        var  feature =await ML5.FeatureExtractorAsync();
-        feature.OnModelLoaded += async () =>
+        await Ml5.InitAsync(runtime);
+        var ex = await Ml5.FeatureExtractorAsync();
+        ex.OnModelLoaded += async () =>
         {
-           Console.WriteLine("Model Loaded");
-            var r=await feature.RegressionAsync(video);
-            
-            r.OnVideoLoaded+=async ()=>
+            var logits=await ex.InferAsync(video);
+            var knn = await Ml5.KnnClassifierAsync();
+            knn.OnClassify += (e) =>
             {
-                for(int i=0;i<100;i++)
-                {
-                    await r.AddImageAsync(i);
-                    Console.WriteLine($"{i}/100");
-                }
-                await r.TrainAsync();
+                Console.WriteLine(string.Join(",",e.Confidences.Keys));
+                Console.WriteLine(e.Label);
             };
-            r.OnTraining+=(loss)=>
+            for (int i = 0; i < 50; i++)
             {
-                Console.WriteLine("loss:"+loss);
-            };
-            r.OnPredict += (res) =>
-            {
-                Console.WriteLine(res.Value);
-            };
-        
-            r.OnTrainingFinished+=async ( )=>
-            {
-                Console.WriteLine("Training Finished");
-                await r.PredictAsync(video);
-            };
-            
+                Console.WriteLine($"{i}/50");
+                await knn.AddExampleAsync(logits,i>25?"good":"bad");
+            }
+            await knn.ClassifyAsync(logits);
+
+
         };
         
+
 
     }
 

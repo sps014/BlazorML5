@@ -96,8 +96,19 @@ public class FeatureExtractor
         else
             await _featureExtractor.CallVoidAsync("predict", input,(JSCallback)OnPredictionCallback);
     }
+    /// <summary>
+    /// [Undocumented] Get features image snapshots of video
+    /// </summary>
+    /// <param name="input">input video</param>
+    /// <returns>Logit object</returns>
+    public async Task<Logits> InferAsync<T>(T input)
+    {
+        JObjPtr ptr= await _featureExtractor.CallRefAsync("infer", input);
+        return new Logits(ptr);
+    }
     #nullable restore
     
+   
     public async Task SaveAsync(string? name=null)
     {
         if (name is null)
@@ -192,4 +203,16 @@ public class FeatureExtractor
         }
     }
 
+}
+
+public record Logits
+{
+    /// <summary>
+    /// Exposes raw js object that represents logits as tensor 
+    /// </summary>
+    public readonly JObjPtr _logits;
+    internal Logits(JObjPtr logits)
+    {
+        _logits = logits;
+    }
 }

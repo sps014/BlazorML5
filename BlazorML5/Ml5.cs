@@ -7,7 +7,7 @@ using Microsoft.JSInterop;
 
 namespace BlazorML5;
 
-public static class ML5
+public static class Ml5
 {
     /// <summary>
     /// Url of ML5 library
@@ -18,7 +18,7 @@ public static class ML5
     /// <summary>
     /// Represent Ml5 object pointer in js runtime
     /// </summary>
-    internal static JObjPtr Ml5Ptr { get; private set; }
+    private static JObjPtr Ml5Ptr { get; set; }
     
     #nullable restore
     /// <summary>
@@ -45,16 +45,31 @@ public static class ML5
         , (JSCallback)nn.OnDataLoadedCallback);
         return await nn.InitAsync(nnPtr);
     }
+    /// <summary>
+    /// Create a feature extractor
+    /// </summary>
+    /// <param name="model">model name or url</param>
+    /// <param name="options">configuration of model like learning rate etc.</param>
+    /// <returns></returns>
 
     public static async Task<FeatureExtractor> FeatureExtractorAsync(string model = "MobileNet", object? options=null)
     {
         var fe = new FeatureExtractor();
        JObjPtr ptr;
            if(options is null)
-               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",model,(JSCallback)fe.OnModelLoadCallback);
+               ptr=await Ml5.Ml5Ptr.CallRefAsync("featureExtractor",model,(JSCallback)fe.OnModelLoadCallback);
            else
-               ptr=await ML5.Ml5Ptr.CallRefAsync("featureExtractor",model,options,(JSCallback)fe.OnModelLoadCallback);
+               ptr=await Ml5.Ml5Ptr.CallRefAsync("featureExtractor",model,options,(JSCallback)fe.OnModelLoadCallback);
        return fe.Init(ptr);
+    }
+    /// <summary>
+    /// Create a KNN classifier
+    /// </summary>
+    /// <returns></returns>
+    public static async Task<KnnClassifier> KnnClassifierAsync()
+    {
+        var ptr = await Ml5Ptr.CallRefAsync("KNNClassifier");
+        return new KnnClassifier(ptr);
     }
 
     /// <summary>
@@ -65,7 +80,7 @@ public static class ML5
     public static async Task<Sentiment> SentimentAsync(string model = "movieReviews")
     {
         Sentiment ss = new();
-        var sPtr = await ML5.Ml5Ptr.CallRefAsync("sentiment", model, (JSCallback)ss.OnModelLoadedCallback);
+        var sPtr = await Ml5.Ml5Ptr.CallRefAsync("sentiment", model, (JSCallback)ss.OnModelLoadedCallback);
         return ss.Init(sPtr);
     }
 
