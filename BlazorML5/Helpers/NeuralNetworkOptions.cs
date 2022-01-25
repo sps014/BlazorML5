@@ -40,10 +40,8 @@ public record NeuralNetworkOptions
     /// </summary>
     public bool Debug { get; init; } = false;
     
-    [JsonPropertyName("learningRate")]
     public double LearningRate { get; init; } = 0.2;
     
-    [JsonPropertyName("hiddenUnits")]
     public int HiddenUnits { get; init; } = 16;
 
     internal async Task<JObjPtr> EliminateNullPropObject()
@@ -62,10 +60,12 @@ public record NeuralNetworkOptions
         if(this.Task!=null)
             await obj.SetPropValAsync("task",UtilHelper.FirstCharSmall(Enum.GetName(typeof(TaskType), this.Task)!));
         
+        await obj.SetPropValAsync("debug", Debug);
+        await obj.SetPropValAsync("learningRate", LearningRate);
+        await obj.SetPropValAsync("hiddenUnits", HiddenUnits);
+        
         return obj;
     }
-    
-    
 }
 
 /// <summary>
@@ -85,3 +85,6 @@ public record NeuralNetworkTrainOptions
     [JsonPropertyName("epochs")]
     public int Epochs { get; init; } = 16;
 }
+
+public record PredictionResult(double Value, string Label);
+public record ClassificationResult(double Confidence,string Label);

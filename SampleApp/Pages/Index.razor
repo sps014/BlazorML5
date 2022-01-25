@@ -24,13 +24,25 @@
         {
             Console.WriteLine($"Training: {e}%");
         };
-        _network.OnTrainingComplete+=()=>
+        _network.OnTrainingComplete+=async ()=>
         {
             Console.WriteLine($"Training Complete");
+            await _network.ClassifyMultipleAsync(new object[]{new object[]{12,13,14},new object[]{15,16,17}});
         };
         _network.OnDataLoaded+=(e)=>
         {
             Console.WriteLine($"Data Loaded");
+        };
+        _network.OnClassify+=async (l,e)=>
+        {
+            Console.WriteLine(e.Length);
+            Console.WriteLine(e[0].Label);
+        };
+        _network.OnClassifyMultiple+=async (l,e)=>
+        {
+            Console.WriteLine(e.Length);
+            Console.WriteLine(e[0].Length);
+            Console.WriteLine(e[0][0].Label);
         };
 
     }

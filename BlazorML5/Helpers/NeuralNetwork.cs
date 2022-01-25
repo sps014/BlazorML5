@@ -42,7 +42,7 @@ public class NeuralNetwork
     /// </summary>
     /// <param name="xs">features can be a array ,number objects</param>
     /// <param name="ys">labels can be array or number</param>
-    public async Task AddDataAsync<T,S>(T[] xs, S[] ys)
+    public async Task AddDataAsync<T,TS>(T[] xs, TS[] ys)
     {
         await _neuralNetwork.CallVoidAsync("addData", xs, ys );
     }
@@ -55,12 +55,51 @@ public class NeuralNetwork
         await _neuralNetwork.CallVoidAsync("normalizeData");
     }
 
+    /// <summary>
+    /// Start training on store data
+    /// </summary>
+    /// <param name="options">Specify training options like epochs etc</param>
     public async Task TrainAsync(NeuralNetworkTrainOptions? options = default)
     {
         options??=new NeuralNetworkTrainOptions();
         await _neuralNetwork.CallVoidAsync("train"
             ,options,(JSCallback)OnTrainingCallback
             ,(JSCallback)OnTrainingEndCallback);
+    }
+    /// <summary>
+    /// Start prediction on trained data,subscribe to the event to get the result
+    /// </summary>
+    /// <param name="xs">input array or object</param>
+    public async Task PredictAsync<T>(T[] xs)
+    {
+        await _neuralNetwork.CallVoidAsync("predict", xs,(JSCallback)OnPredictCallback);
+    }
+    /// <summary>
+    /// Perform multiple prediction on trained data,use only when you have more than 1 objects, subscribe to the event to get the result
+    /// </summary>
+    /// <param name="xs">array of array or array of objects</param>
+    /// <typeparam name="T"></typeparam>
+    public async Task PredictMultipleAsync<T>(T[] xs)
+    {
+        await _neuralNetwork.CallVoidAsync("predictMultiple", xs,(JSCallback)OnPredictMultipleCallback);
+    }
+    /// <summary>
+    /// Perform classification on trained data, subscribe to the event to get the result
+    /// </summary>
+    /// <param name="xs">array or object </param>
+    /// <typeparam name="T"></typeparam>
+    public  async Task ClassifyAsync<T>(T[] xs)
+    {
+        await _neuralNetwork.CallVoidAsync("classify", xs,(JSCallback)OnClassifyCallback);
+    }
+    /// <summary>
+    /// Perform multiple classification on trained data,use only when you have more than 1 objects, subscribe to the event to get the result
+    /// </summary>
+    /// <param name="xs">array of array or array of objects</param>
+    /// <typeparam name="T"></typeparam>
+    public async Task ClassifyMultipleAsync<T>(T[] xs)
+    {
+        await _neuralNetwork.CallVoidAsync("classifyMultiple", xs,(JSCallback)OnClassifyMultipleCallback);
     }
 
     public  delegate void OnLoadedHandler(NeuralNetwork neuralNetwork);
@@ -76,11 +115,73 @@ public class NeuralNetwork
     public event OnLoadedHandler? OnDataLoaded;
 
     public delegate void DoneTrainingHandler();
+    
+    /// <summary>
+    /// Fires when training is done.
+    /// </summary>
     public event DoneTrainingHandler? OnTrainingComplete;
 
     public delegate void WhileTrainingHandler(int epoch,double loss);
+    /// <summary>
+    /// Fires when training is in progress.
+    /// </summary>
     public event WhileTrainingHandler? OnTraining;
+    
+    public  delegate void OnPredictHandler(string error,PredictionResult[] predictions);
+    
+    /// <summary>
+    /// Fires when prediction is done. (Task Regression)
+    /// </summary>
+    public event OnPredictHandler? OnPredict;
+    public  delegate void OnClassifyHandler(string error,ClassificationResult[] predictions);
+    /// <summary>
+    /// Fires when classification is done. (Task Classification)
+    /// </summary>
+    public event OnClassifyHandler? OnClassify;
+    private void OnPredictCallback(JObjPtr[] result)
+    {
+        if(OnPredict==null) return;
+        var err=result[0].To<string>();
+        var predictions=result[1].To<PredictionResult[]>();
+        OnPredict?.Invoke(err,predictions);
+    }
+    public delegate void OnPredictMultipleHandler(string err,PredictionResult[][] predictions);
+    /// <summary>
+    /// Fires when result of multiple prediction is available (Task Regression)
+    /// </summary>
+    public event OnPredictMultipleHandler? OnPredictMultiple;
+    private void OnPredictMultipleCallback(JObjPtr[] result)
+    {
+        if(OnPredictMultiple==null) return;
+        var err=result[0].To<string>();
+        var predictions=result[1].To<PredictionResult[][]>();
+        OnPredictMultiple?.Invoke(err,predictions);
+    }
+    public  delegate void OnClassifyMultipleHandler(string error,ClassificationResult[][] predictions);
+    /// <summary>
+    /// FIres when result of multiple classification is available (Task Classification)
+    /// </summary>
+    public event OnClassifyMultipleHandler? OnClassifyMultiple;
+    private async void OnClassifyMultipleCallback(JObjPtr[] result)
+    {
+        if(OnClassifyMultiple==null) return;
+        var err=result[0].To<string>();
+        await result[1].LogAsync();
+        var predictions=result[1].To<ClassificationResult[][]>();
+        OnClassifyMultiple?.Invoke(err,predictions);
+    }
+    private void OnClassifyCallback(JObjPtr[] result)
+    {
+        if(OnClassify==null) return;
+        var err=result[0].To<string>();
+        var predictions=result[1].To<ClassificationResult[]>();
+        OnClassify?.Invoke(err,predictions);
+    }
 
+    /// <summary>
+    /// Called when data is loaded and ready to use.
+    /// </summary>
+    /// <param name="_"></param>
     private  void OnDataLoadedCallback(JObjPtr[] _)
     {
         OnDataLoaded?.Invoke(this);
