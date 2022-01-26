@@ -13,22 +13,23 @@
 @code
 {        
     ElementReference video;
-    PoseNet p;
+    ObjectDetector p;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        p = await Ml5.PoseNetAsync(video);
+        p = await Ml5.ObjectDetectorAsync();
+        p.OnDetect += (e, r) =>
+        {
+            Console.WriteLine(r[0].Label);
+        };
         p.OnModelLoad += async () =>
         {
             Console.WriteLine("Model loaded");
-            var r = await p.SinglePoseAsync(video);
-            Console.WriteLine(r[0].Pose.Keypoints[0].Part);
+            await p.DetectAsync((video));
         };
-        p.OnPose+= async (e) =>
-        {
-            if (e.Count>0)
-            Console.WriteLine(e[0].Pose.Score);
-        };
+        
+
+
 
     }
 

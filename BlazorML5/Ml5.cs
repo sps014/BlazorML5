@@ -115,7 +115,12 @@ public static class Ml5
     {
         return await ImageClassifierAsync(model.GetName(),video,options);
     }
-
+    /// <summary>
+    /// Create an instance of Pose detector
+    /// </summary>
+    /// <param name="video"></param>
+    /// <param name="options"></param>
+    /// <returns></returns>
     public static async Task<PoseNet> PoseNetAsync(object? video=null,PoseNetOptions? options=null)
     {
         var pn = new PoseNet();
@@ -129,5 +134,20 @@ public static class Ml5
         else
             ptr = await Ml5.Ml5Ptr.CallRefAsync("poseNet", video, options, (JSCallback)pn.OnModelLoadCallback);
         return await pn.InitAsync(ptr);
+    }
+
+    public static async Task<ObjectDetector> ObjectDetectorAsync(string modelName,ObjectDetectorOptions? options=null)
+    {
+        var od = new ObjectDetector();
+        JObjPtr ptr;
+        if (options is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("objectDetector", modelName, (JSCallback)od.OnModelLoadCallback);
+        else
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("objectDetector", modelName, options, (JSCallback)od.OnModelLoadCallback);
+        return od.Init(ptr);
+    }
+    public static async Task<ObjectDetector> ObjectDetectorAsync(ObjectDetectorModel model=ObjectDetectorModel.Yolo,ObjectDetectorOptions? options=null)
+    {
+        return await ObjectDetectorAsync(Enum.GetName(typeof(ObjectDetectorModel),model)!.ToUpper(),options);
     }
 }
