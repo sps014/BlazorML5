@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-using System.Diagnostics.CodeAnalysis;
-using BlazorBindGen;
+﻿using BlazorBindGen;
 using BlazorML5.Helpers;
 using BlazorML5.Image;
 using BlazorML5.Text;
@@ -106,11 +104,30 @@ public static class Ml5
             ptr = await Ml5.Ml5Ptr.CallRefAsync("imageClassifier", model, video, options, (JSCallback)ic.OnModelLoadCallback);
         return ic.Init(ptr);
     }
-
+    /// <summary>
+    ///  is a method to create an object that classifies an image using a pre-trained model.
+    /// </summary>
+    /// <param name="model">A String value of a valid model OR a url to a model.json that contains a pre-trained model. Case insensitive. Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet', or any image classification model trained in Teachable Machine. Below are some examples of creating a new image classifier:</param>
+    /// <param name="video"></param>
+    /// <param name="options"> An object to change the defaults (shown below). The available options are </param>
+    /// <returns></returns>
     public static async Task<ImageClassifier> ImageClassifierAsync(ImageModel model=ImageModel.MobileNet,object? video=null, ImageClassifierOptions? options=null)
     {
         return await ImageClassifierAsync(model.GetName(),video,options);
     }
 
-
+    public static async Task<PoseNet> PoseNetAsync(object? video=null,PoseNetOptions? options=null)
+    {
+        var pn = new PoseNet();
+        JObjPtr ptr;
+        if (options is null && video is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("poseNet", (JSCallback)pn.OnModelLoadCallback);
+        else if (video is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("poseNet", options!, (JSCallback)pn.OnModelLoadCallback);
+        else if (options is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("poseNet", video, (JSCallback)pn.OnModelLoadCallback);
+        else
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("poseNet", video, options, (JSCallback)pn.OnModelLoadCallback);
+        return await pn.InitAsync(ptr);
+    }
 }

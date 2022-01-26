@@ -1,36 +1,40 @@
 ﻿@page "/"
 @using BlazorML5
 @using BlazorML5.Helpers
+@using BlazorML5.Image
 @using BlazorML5.Text
 @inject IJSRuntime runtime
 
 <PageTitle>Index</PageTitle>
 <video width="400" height="300%" @ref="video"
        crossorigin="anonymous" autoplay controls
-       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
 </video>
 @code
 {        
     ElementReference video;
-
+    PoseNet p;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        var ic= await Ml5.ImageClassifierAsync();
-        ic.OnModelLoad+= async () =>
+        p = await Ml5.PoseNetAsync(video);
+        p.OnModelLoad += async () =>
         {
             Console.WriteLine("Model loaded");
-            await ic.ClassifyAsync(video);
+            var r = await p.SinglePoseAsync(video);
+            Console.WriteLine(r[0].Pose.Keypoints[0].Part);
         };
-        
-        ic.OnClassify += (s, e) =>
+        p.OnPose+= async (e) =>
         {
-            if (e.Length > 0)
-            {
-                Console.WriteLine($"{e[0].Confidence} {e[0].Label}");
-            }
+            if (e.Count>0)
+            Console.WriteLine(e[0].Pose.Score);
         };
 
+    }
+
+    async void Call()
+    {
+        Console.WriteLine("Calling");
     }
 
 }
