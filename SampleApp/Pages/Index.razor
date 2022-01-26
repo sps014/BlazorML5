@@ -5,10 +5,10 @@
 @inject IJSRuntime runtime
 
 <PageTitle>Index</PageTitle>
-@* <video width="400" height="300%" @ref="video" *@
-@*        crossorigin="anonymous" autoplay controls *@
-@*        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4"> *@
-@* </video> *@
+<video width="400" height="300%" @ref="video"
+       crossorigin="anonymous" autoplay controls
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+</video>
 @code
 {        
     ElementReference video;
@@ -16,27 +16,20 @@
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        var ex = await Ml5.FeatureExtractorAsync();
-        ex.OnModelLoaded += async () =>
+        var ic= await Ml5.ImageClassifierAsync();
+        ic.OnModelLoad+= async () =>
         {
-            var logits=await ex.InferAsync(video);
-            var knn = await Ml5.KnnClassifierAsync();
-            knn.OnClassify += (e) =>
-            {
-                Console.WriteLine(string.Join(",",e.Confidences.Keys));
-                Console.WriteLine(e.Label);
-            };
-            for (int i = 0; i < 50; i++)
-            {
-                Console.WriteLine($"{i}/50");
-                await knn.AddExampleAsync(logits,i>25?"good":"bad");
-            }
-            await knn.ClassifyAsync(logits);
-
-
+            Console.WriteLine("Model loaded");
+            await ic.ClassifyAsync(video);
         };
         
-
+        ic.OnClassify += (s, e) =>
+        {
+            if (e.Length > 0)
+            {
+                Console.WriteLine($"{e[0].Confidence} {e[0].Label}");
+            }
+        };
 
     }
 
