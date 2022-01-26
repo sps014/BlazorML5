@@ -1,0 +1,41 @@
+﻿@page "/"
+@using BlazorML5
+@using BlazorML5.Helpers
+@using BlazorML5.Image
+@using BlazorML5.Text
+@inject IJSRuntime runtime
+
+<PageTitle>Index</PageTitle>
+<video width="400" height="300%" @ref="video"
+       crossorigin="anonymous" autoplay controls
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
+</video>
+@code
+{        
+    ElementReference video;
+    ObjectDetector p;
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+        p = await Ml5.ObjectDetectorAsync();
+        p.OnDetect += (e, r) =>
+        {
+            Console.WriteLine(r[0].Label);
+        };
+        p.OnModelLoad += async () =>
+        {
+            Console.WriteLine("Model loaded");
+            await p.DetectAsync((video));
+        };
+        
+
+
+
+    }
+
+    async void Call()
+    {
+        Console.WriteLine("Calling");
+    }
+
+}
