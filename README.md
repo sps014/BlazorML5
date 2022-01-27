@@ -4,7 +4,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
  
- ### Warning
+ ### v 2.0
 To minimize the bundle size libary is rewritten with binding generator, for raw example:
 See [sample](https://github.com/sps014/BlazorML5/blob/e0f58edfa4de7950d34de0049363492bfec11bc8/SampleApp/Pages/Index.razor) how to use ML5 models with [BlazorBindGen](https://github.com/sps014/BlazorBindGen/).
  
