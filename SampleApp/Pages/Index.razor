@@ -17,16 +17,19 @@
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        var s = await Ml5.SoundClassifierAsync();
+        var s = await Ml5.FaceMeshAsync();
         s.OnModelLoad +=async () => {
                                         Console.WriteLine("Model Loaded");
-                                        await s.ClassifyAsync();
+                                        await s.PredictAsync(video);
                                         
         };
-        s.OnClassify += (e, r) =>
+        s.OnPredict += async (r) =>
         {
             if (r.Length > 0)
-                Console.WriteLine(r[0].Label);
+                Console.WriteLine(r[0].FaceInViewConfidence);
+            await Task.Delay(500);
+            await s.PredictAsync(video);
+
         };
     }
 

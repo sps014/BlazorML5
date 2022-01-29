@@ -15,13 +15,13 @@ public class SoundClassifier
         return this;
     }
     #nullable restore
-
-    public async Task ClassifyAsync(object? audio = null)
+    /// <summary>
+    /// Classify sound from the microphone.
+    /// </summary>
+    /// <param name="audio"></param>
+    public async Task ClassifyAsync()
     {
-        if(audio is null)   
-            await _soundClassifier.CallVoidAsync("classify",(JSCallback)OnClassifyCallback);
-        else                
-            await _soundClassifier.CallVoidAsync("classify", audio,(JSCallback)OnClassifyCallback);
+        await _soundClassifier.CallVoidAsync("classify",(JSCallback)OnClassifyCallback);
     }
     public delegate void OnModelLoadHandler();
     public event OnModelLoadHandler? OnModelLoad;

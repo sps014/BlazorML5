@@ -87,7 +87,9 @@ public static class Ml5
     /// <summary>
     ///  is a method to create an object that classifies an image using a pre-trained model.
     /// </summary>
-    /// <param name="model">A String value of a valid model OR a url to a model.json that contains a pre-trained model. Case insensitive. Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet', or any image classification model trained in Teachable Machine. Below are some examples of creating a new image classifier:</param>
+    /// <param name="model">A String value of a valid model OR a url to a model.json that contains a pre-trained model.
+    /// Case insensitive. Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet', or
+    /// any image classification model trained in Teachable Machine. Below are some examples of creating a new image classifier:</param>
     /// <param name="video"></param>
     /// <param name="options"> An object to change the defaults (shown below). The available options are </param>
     /// <returns></returns>
@@ -108,7 +110,10 @@ public static class Ml5
     /// <summary>
     ///  is a method to create an object that classifies an image using a pre-trained model.
     /// </summary>
-    /// <param name="model">A String value of a valid model OR a url to a model.json that contains a pre-trained model. Case insensitive. Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet', or any image classification model trained in Teachable Machine. Below are some examples of creating a new image classifier:</param>
+    /// <param name="model">A String value of a valid model OR a url to a model.json that contains a pre-trained model.
+    /// Case insensitive. Models available are: 'MobileNet', 'Darknet' and 'Darknet-tiny','DoodleNet',
+    /// or any image classification model trained in Teachable Machine. Below are some examples of creating
+    /// a new image classifier:</param>
     /// <param name="video"></param>
     /// <param name="options"> An object to change the defaults (shown below). The available options are </param>
     /// <returns></returns>
@@ -164,7 +169,11 @@ public static class Ml5
         return await ObjectDetectorAsync(Enum.GetName(typeof(ObjectDetectorModel),model)!.ToUpper(),options);
     }
     /// <summary>
-    /// allows you to classify audio. With the right pre-trained models, you can detect whether a certain noise was made (e.g. a clapping sound or a whistle) or a certain word was said (e.g. Up, Down, Yes, No). At this moment, with the ml5.soundClassifier(), you can use your own custom pre-trained speech commands or use the the "SpeechCommands18w" which can recognize "the ten digits from "zero" to "nine", "up", "down", "left", "right", "go", "stop", "yes", "no", as well as the additional categories of "unknown word" and "background noise"."
+    /// allows you to classify audio. With the right pre-trained models,
+    /// you can detect whether a certain noise was made (e.g. a clapping sound or a whistle) or a certain word was said (
+    /// e.g. Up, Down, Yes, No). At this moment, with the ml5.soundClassifier(), you can use your own custom pre-trained
+    /// speech commands or use the the "SpeechCommands18w" which can recognize "the ten digits from "zero" to "nine", "up",
+    /// "down", "left", "right", "go", "stop", "yes", "no", as well as the additional categories of "unknown word" and "background noise"."
     /// </summary>
     /// <param name="modelName"></param>
     /// <param name="options"></param>
@@ -178,5 +187,28 @@ public static class Ml5
         else
             ptr = await Ml5.Ml5Ptr.CallRefAsync("soundClassifier", modelName, options, (JSCallback)sc.OnModelLoadCallback);
         return sc.Init(ptr);
+    }
+    /// <summary>
+    /// Facemesh is a machine-learning model that allows for facial landmark detection in the browser.
+    /// It can detect multiple faces at once and provides 486 3D facial landmarks that describe the geometry of each face.
+    /// Facemesh works best when the faces in view take up a large percentage of the image or video frame and it may struggle
+    /// with small/distant faces.
+    /// </summary>
+    /// <param name="video"></param>
+    /// <param name="options"></param>
+    /// <returns></returns>
+    public static async Task<FaceMesh> FaceMeshAsync(object? video=null,FaceMeshOptions? options=null)
+    {
+        var fm = new FaceMesh();
+        JObjPtr ptr;
+        if (options is null && video is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("facemesh", (JSCallback)fm.OnModelLoadCallback);
+        else if (video is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("facemesh", options!, (JSCallback)fm.OnModelLoadCallback);
+        else if (options is null)
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("facemesh", video, (JSCallback)fm.OnModelLoadCallback);
+        else
+            ptr = await Ml5.Ml5Ptr.CallRefAsync("facemesh", video, options, (JSCallback)fm.OnModelLoadCallback);
+        return fm.Init(ptr);
     }
 }
