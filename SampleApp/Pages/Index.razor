@@ -10,27 +10,24 @@
        crossorigin="anonymous" autoplay controls
        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
 </video>
+
 @code
 {        
     ElementReference video;
-    ObjectDetector p;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        p = await Ml5.ObjectDetectorAsync();
-        p.OnDetect += (e, r) =>
-        {
-            Console.WriteLine(r[0].Label);
+        var s = await Ml5.SoundClassifierAsync();
+        s.OnModelLoad +=async () => {
+                                        Console.WriteLine("Model Loaded");
+                                        await s.ClassifyAsync();
+                                        
         };
-        p.OnModelLoad += async () =>
+        s.OnClassify += (e, r) =>
         {
-            Console.WriteLine("Model loaded");
-            await p.DetectAsync((video));
+            if (r.Length > 0)
+                Console.WriteLine(r[0].Label);
         };
-        
-
-
-
     }
 
     async void Call()
