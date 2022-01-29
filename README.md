@@ -16,7 +16,8 @@ See [sample](https://github.com/sps014/BlazorML5/blob/e0f58edfa4de7950d34de00493
 3. [Sound Classifier](https://github.com/sps014/BlazorML5/wiki/Sound-Detector)
 4. [Object Detector (YOLO and COCOSSD based)](https://github.com/sps014/BlazorML5/wiki/Object-Detector-(YOLO-CocoSSD))
 5. [PoseNet](https://github.com/sps014/BlazorML5/wiki/PoseNet)
-6. Sentiment (Docs WIP)
+6. Sentiment Analyzer
+7. FaceMesh
 
 #### Hosted Sample
 [Live Demo](https://blazor-ml5-sample.netlify.com/) 
