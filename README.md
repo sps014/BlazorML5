@@ -5,7 +5,7 @@
 
   
  ### An Easy Machine Learning Library for Blazor.
- Now supports both Blazor Server and WASM.
+ Now supports both Blazor Server and WASM and MAUI Hybrid.
 
 ## Current Features
 1. [Neural Network](https://github.com/sps014/BlazorML5/wiki/Neural-Network) 
@@ -25,6 +25,64 @@ Install Asp.Net Core payload and then follow [Installation Instructions here](ht
 Some Youtube videos are also there, you can check out [this Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
 .
 
+#### Sample Neural Network
+```cs
+@page "/nn"
+@using BlazorML5
+@using BlazorML5.Helpers
+@inject IJSRuntime runtime
 
+<PageTitle>Index</PageTitle>
+<button @onclick="AddData">Add Data and Train</button>
+@code
+{
+    NeuralNetwork _network;
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+
+        _network = await Ml5.NeuralNetworkAsync(new NeuralNetworkOptions()
+        {
+            Task = TaskType.Classification,
+            DataUrl = "https://raw.githubusercontent.com/ml5js/ml5-library/main/examples/p5js/NeuralNetwork/NeuralNetwork_color_classifier/data/colorData_small.json",
+            Debug = true,
+            Inputs = new object[]{"r", "g", "b"},
+            Outputs = new object[]{"label"}
+        });
+        _network.OnTraining+=(l,e)=>
+        {
+            Console.WriteLine($"Training: {e}%");
+        };
+        _network.OnTrainingComplete+=async ()=>
+        {
+            Console.WriteLine($"Training Complete");
+            await _network.ClassifyMultipleAsync(new object[]{new object[]{12,13,14},new object[]{15,16,17}});
+        };
+        _network.OnDataLoaded+=(e)=>
+        {
+            Console.WriteLine($"Data Loaded");
+        };
+        _network.OnClassify+=async (l,e)=>
+        {
+            Console.WriteLine(e.Length);
+            Console.WriteLine(e[0].Label);
+        };
+        _network.OnClassifyMultiple+=async (l,e)=>
+        {
+            Console.WriteLine(e.Length);
+            Console.WriteLine(e[0].Length);
+            Console.WriteLine(e[0][0].Label);
+        };
+
+    }
+    async void AddData()
+    {
+        //data fetched from .csv file no need to manually add and hence directly training 
+        //await _network.NormalizeDataAsync();
+        await _network.TrainAsync();
+    }
+
+}
+```
 
 
