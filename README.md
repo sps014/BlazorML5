@@ -8,11 +8,11 @@
  Now supports both Blazor Server and WASM and MAUI Hybrid.
 
 ## Current Features
-1. [Neural Network](https://github.com/sps014/BlazorML5/wiki/Neural-Network) 
-2. [Image Classification](https://github.com/sps014/BlazorML5/wiki/Image-Classification)
-3. [Sound Classifier](https://github.com/sps014/BlazorML5/wiki/Sound-Detector)
-4. [Object Detector (YOLO and COCOSSD based)](https://github.com/sps014/BlazorML5/wiki/Object-Detector-(YOLO-CocoSSD))
-5. [PoseNet](https://github.com/sps014/BlazorML5/wiki/PoseNet)
+1. Neural Network
+2. Image Classification
+3. Sound Classifier
+4. Object Detector (YOLO and COCOSSD based)
+5. PoseNet
 6. Sentiment Analyzer
 7. FaceMesh
 
@@ -22,7 +22,7 @@
 
 #### Documentation
 Install Asp.Net Core payload and then follow [Installation Instructions here](https://github.com/sps014/BlazorML5/wiki/BlazorML5-Installation) to configure ML5 to use it from C# Blazor app.<br>
-Some Youtube videos are also there, you can check out [this Playlist](https://www.youtube.com/watch?v=YWPRXuyYSx4&list=PL8z8Ue600vf1bVvX1uNHNs5GNC4XrSlVk) 
+API documentation can be followed from [here](https://learn.ml5js.org/#/reference/index) after lib configuration.
 .
 
 #### Sample Neural Network
@@ -85,4 +85,4 @@ Some Youtube videos are also there, you can check out [this Playlist](https://ww
 }
 ```
 
-
+More samples [here](https://github.com/sps014/BlazorML5/tree/master/SampleApp/Pages)
