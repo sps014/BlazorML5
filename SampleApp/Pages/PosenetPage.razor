@@ -1,35 +1,36 @@
-﻿@page "/"
+﻿@page "/pose"
 @using BlazorML5
 @using BlazorML5.Helpers
 @using BlazorML5.Image
 @using BlazorML5.Text
 @inject IJSRuntime runtime
 
-<PageTitle>Index</PageTitle>
+<PageTitle>PoseNet</PageTitle>
 <video width="400" height="300%" @ref="video"
        crossorigin="anonymous" autoplay controls
        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
 </video>
-
 @code
 {        
     ElementReference video;
+    PoseNet p;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        var s = await Ml5.FaceMeshAsync();
-        s.OnModelLoad +=async () => {
-          Console.WriteLine("Model Loaded");
-          await s.PredictAsync(video);                              
-        };
-        s.OnPredict += async (r) =>
+        p = await Ml5.PoseNetAsync(video);
+        p.OnModelLoad += async () =>
         {
-            if (r.Length > 0)
-                Console.WriteLine(r[0].FaceInViewConfidence);
-            await Task.Delay(500);
-            await s.PredictAsync(video);
-
+            Console.WriteLine("Model loaded");
+            await p.SinglePoseAsync(video);
         };
+        p.OnPose+= async (e) =>
+        {
+            if (e.Count>0)
+            Console.WriteLine(e[0].Pose.Score);
+            Console.WriteLine(e[0].Pose.LeftAnkle.Confidence);
+            
+        };
+
     }
 
     async void Call()

@@ -1,0 +1,41 @@
+﻿@page "/knn"
+@using BlazorML5
+@using BlazorML5.Helpers
+@using BlazorML5.Text
+@inject IJSRuntime runtime
+
+<PageTitle>KNN Classifier</PageTitle>
+ <video width="400" height="300%" @ref="video" 
+        crossorigin="anonymous" autoplay controls 
+        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+</video> 
+@code
+{        
+    ElementReference video;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+        var ex = await Ml5.FeatureExtractorAsync();
+        ex.OnModelLoaded += async () =>
+        {
+            var logits=await ex.InferAsync(video);
+            var knn = await Ml5.KnnClassifierAsync();
+            knn.OnClassify += (e) =>
+            {
+                Console.WriteLine(string.Join(",",e.Confidences.Keys));
+                Console.WriteLine(e.Label);
+            };
+            for (int i = 0; i < 50; i++)
+            {
+                Console.WriteLine($"{i}/50");
+                await knn.AddExampleAsync(logits,i>25?"good":"bad");
+            }
+            await knn.ClassifyAsync(logits);
+
+
+        };
+        
+    }
+
+}

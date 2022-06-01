@@ -1,11 +1,11 @@
-﻿@page "/"
+﻿@page "/sound"
 @using BlazorML5
 @using BlazorML5.Helpers
 @using BlazorML5.Image
 @using BlazorML5.Text
 @inject IJSRuntime runtime
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Sound Classifier</PageTitle>
 <video width="400" height="300%" @ref="video"
        crossorigin="anonymous" autoplay controls
        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
@@ -17,24 +17,17 @@
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
-        var s = await Ml5.FaceMeshAsync();
+        var s = await Ml5.SoundClassifierAsync();
         s.OnModelLoad +=async () => {
-          Console.WriteLine("Model Loaded");
-          await s.PredictAsync(video);                              
+                                        Console.WriteLine("Model Loaded");
+                                        await s.ClassifyAsync();
+                                        
         };
-        s.OnPredict += async (r) =>
+        s.OnClassify += (e, r) =>
         {
             if (r.Length > 0)
-                Console.WriteLine(r[0].FaceInViewConfidence);
-            await Task.Delay(500);
-            await s.PredictAsync(video);
-
+                Console.WriteLine(r[0].Label);
         };
-    }
-
-    async void Call()
-    {
-        Console.WriteLine("Calling");
     }
 
 }

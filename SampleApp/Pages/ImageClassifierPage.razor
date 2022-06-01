@@ -1,0 +1,36 @@
+﻿@page "/ic"
+@using BlazorML5
+@using BlazorML5.Helpers
+@using BlazorML5.Text
+@inject IJSRuntime runtime
+
+<PageTitle>Image Classifer</PageTitle>
+<video width="400" height="300%" @ref="video"
+       crossorigin="anonymous" autoplay controls
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+</video>
+@code
+{        
+    ElementReference video;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+        var ic= await Ml5.ImageClassifierAsync();
+        ic.OnModelLoad+= async () =>
+        {
+            Console.WriteLine("Model loaded");
+            await ic.ClassifyAsync(video);
+        };
+        
+        ic.OnClassify += (s, e) =>
+        {
+            if (e.Length > 0)
+            {
+                Console.WriteLine($"{e[0].Confidence} {e[0].Label}");
+            }
+        };
+
+    }
+
+}

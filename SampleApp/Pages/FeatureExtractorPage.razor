@@ -1,0 +1,54 @@
+﻿@page "/fa"
+@using BlazorML5
+@using BlazorML5.Helpers
+@using BlazorML5.Text
+@inject IJSRuntime runtime
+
+<PageTitle>Feature Extractor</PageTitle>
+<video width="400" height="300%" @ref="video"
+       crossorigin="anonymous" autoplay controls
+       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
+</video>
+@code
+{        
+    ElementReference video;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+        var  feature =await Ml5.FeatureExtractorAsync();
+        feature.OnModelLoaded += async () =>
+        {
+           Console.WriteLine("Model Loaded");
+            var r=await feature.RegressionAsync(video);
+            
+            r.OnVideoLoaded+=async ()=>
+            {
+                for(int i=0;i<100;i++)
+                {
+                    await r.AddImageAsync(i);
+                    Console.WriteLine($"{i}/100");
+                }
+                await r.TrainAsync();
+            };
+            r.OnTraining+=(loss)=>
+            {
+                Console.WriteLine("loss:"+loss);
+            };
+            r.OnPredict += (res) =>
+            {
+                Console.WriteLine(res.Value);
+            };
+        
+            r.OnTrainingFinished+=async ( )=>
+            {
+                Console.WriteLine("Training Finished");
+                await r.PredictAsync(video);
+            };
+            
+        };
+        
+
+    }
+
+}

@@ -1,11 +1,11 @@
-﻿@page "/"
+﻿@page "/facemesh"
 @using BlazorML5
 @using BlazorML5.Helpers
 @using BlazorML5.Image
 @using BlazorML5.Text
 @inject IJSRuntime runtime
 
-<PageTitle>Index</PageTitle>
+<PageTitle>FaceMesh</PageTitle>
 <video width="400" height="300%" @ref="video"
        crossorigin="anonymous" autoplay controls
        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4" onloadeddata="(e)=>Call()">
@@ -19,8 +19,9 @@
         await Ml5.InitAsync(runtime);
         var s = await Ml5.FaceMeshAsync();
         s.OnModelLoad +=async () => {
-          Console.WriteLine("Model Loaded");
-          await s.PredictAsync(video);                              
+                        Console.WriteLine("Model Loaded");
+                        await s.PredictAsync(video);
+                                        
         };
         s.OnPredict += async (r) =>
         {
@@ -31,10 +32,4 @@
 
         };
     }
-
-    async void Call()
-    {
-        Console.WriteLine("Calling");
-    }
-
 }

@@ -1,0 +1,22 @@
+﻿@page "/sa"
+@using BlazorML5
+@using BlazorML5.Text
+@inject IJSRuntime runtime
+
+<PageTitle>Sentiment</PageTitle>
+@code
+{
+    protected override async Task OnInitializedAsync()
+    {
+        await Ml5.InitAsync(runtime);
+
+       var  _sentiment =await Ml5.SentimentAsync();
+        _sentiment.OnModelLoaded += async () =>
+        {
+            Console.WriteLine("Model Loaded");
+            Console.WriteLine((await _sentiment.PredictAsync("here is some text")).Score);
+        };
+        
+    }
+
+}
