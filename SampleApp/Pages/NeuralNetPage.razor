@@ -11,24 +11,46 @@
 {
     <MudAlert Severity="Severity.Warning" class="my-8 mx-10">
         <span>
-            For training loading Dataset please wait for some time
+            loading and training on Dataset please wait for some time
         </span><br /><br />
         <MudProgressCircular Color="Color.Warning" Indeterminate="true" />
     </MudAlert>
 }
 else
 {
-    <MudPaper Class="ma-2 mx-4" Outlined="true">
+    <MudPaper Class="ma-2 mx-4 my-4" Outlined="true">
         <MudText class="mx-4 mb-4" Typo="Typo.h6">Titanic Dataset Example </MudText>
-        <MudSelect T="string" class="mb-4" Label="Gender" Variant="Variant.Outlined">
+        <MudSelect T="string" class="mb-4" Label="Gender" Variant="Variant.Outlined" @bind-Value="_gender">
             <MudSelectItem T="string" Value="@("male")" />
             <MudSelectItem T="string" Value="@("female")" />
         </MudSelect>
-        <MudSelect T="string" class="mb-4" Label="Fare Class" Variant="Variant.Outlined">
+        <MudSelect T="string" class="mb-4" Label="Fare Class" Variant="Variant.Outlined" @bind-Value="_fareClass">
             <MudSelectItem T="string" Value="@("first")" />
             <MudSelectItem T="string" Value="@("second")" />
             <MudSelectItem T="string" Value="@("third")" />
         </MudSelect>
+        <MudNumericField @bind-Value="_age" Label="Age (Yrs)" Variant="Variant.Outlined" />
+        <MudNumericField @bind-Value="_fare" Label="Fare (0-1000)" Variant="Variant.Outlined" />
+
+        <MudButton Color="Color.Success" class="my-4 mx-4" Variant="Variant.Filled" OnClick="ClassifyAsync">
+            Predict
+        </MudButton>
+
+        <div class="my-4">
+            @if(result is not null || error is not null)
+            {
+            <MudAlert Severity="IsError?Severity.Error:Severity.Normal" Variant="Variant.Outlined">
+                @if(IsError)
+                {
+                    <span>@error</span>
+                }
+                else if(result is not null)
+                {
+                    <span>Person : @result</span>
+                }
+            </MudAlert>
+            }
+        </div>
     </MudPaper>
 
 }
@@ -37,8 +59,16 @@ else
 
 @code
 {
-    private bool IsDatasetLoaded = false;
+    #nullable disable
+
+    private bool IsDatasetLoaded = false, IsError=false;
+
     private NeuralNetwork _neuralNetwork;
+
+    private string _gender, _fareClass;
+    private int _age=60, _fare=1000;
+
+    private string result,error;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
@@ -50,16 +80,60 @@ else
                 Debug = true
             };
         _neuralNetwork = await Ml5.NeuralNetworkAsync(options);
+        _neuralNetwork.OnTrainingComplete += TrainingComplete;
+        _neuralNetwork.OnClassify += OnClassification;
         await LoadDataAsync();
+        await StartTrainAsync();
     }
-    protected async Task LoadDataAsync()
+    private async Task LoadDataAsync()
     {
         var dataset = await Http.GetFromJsonAsync<Data[]>("data/titanic.json");
-        IsDatasetLoaded = true;
-        StateHasChanged();
+        foreach (var data in dataset)
+        {
+            await _neuralNetwork
+                .AddDataAsync(
+                    new object[]
+                    {
+                        data.Age, data.Fare, data.FareClass, data.Sex
+                    }
+                , new object[] { data.Survived });
+        }
+        await _neuralNetwork.NormalizeDataAsync();
+
+        Console.WriteLine("Added Dataset of size : " + dataset.Length);
+
 
     }
-#nullable disable
+    private Task StartTrainAsync()
+    {
+        NeuralNetworkTrainOptions options = new()
+            {
+                Epochs = 10,
+                BatchSize = 32
+            };
+        return _neuralNetwork.TrainAsync(options);
+    }
+
+    private void TrainingComplete()
+    {
+        IsDatasetLoaded = true;
+        StateHasChanged();
+    }
+    private Task ClassifyAsync(MouseEventArgs _)
+    {
+        _gender ??= "male";
+        _fareClass ??= "first";
+        StateHasChanged();
+        return _neuralNetwork.ClassifyAsync(new object[] { _age, _fare, _fareClass, _gender });
+    }
+
+    private void OnClassification(string error,ClassificationResult[] results)
+    {
+        result = results[0].Label;
+        if (IsError=(!string.IsNullOrWhiteSpace(error)))
+            this.error = error;
+        StateHasChanged();
+    }
     class Data
     {
         [JsonPropertyName("survived")]
