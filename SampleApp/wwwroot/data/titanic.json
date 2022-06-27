@@ -1,0 +1,9158 @@
+[
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 39,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 29,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 38,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 40,
+    "fare": 0
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 49,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 38,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 43,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 20,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 49,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 0
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 0
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 0
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 1,
+    "fare": 1
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 2,
+    "fare": 2
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 9,
+    "fare": 3
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 4
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 33,
+    "fare": 5
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 61,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 6
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 45,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 47,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 51,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 45,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 15,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 46,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 13,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 15,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 59,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 47,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 7
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 7
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 36,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 37,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 71,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 65,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 45,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 37,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 37,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 51,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 74,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 48,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 14,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 34,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 37,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 15,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 45,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 51,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 56,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 50,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 37,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 8
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 8
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 0,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 16,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 38,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 42,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 47,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 14,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 1,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 9
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 9
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 10
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 10
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 37,
+    "fare": 10
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 63,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 62,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 10
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 2,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 10
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 29,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 22,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 26,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 47,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 62,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 17,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 32,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 31,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 34,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 57,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 70,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 16,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 22,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 36,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 50,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 21,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 35,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 50,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 27,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 66,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 16,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 4,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 12,
+    "fare": 11
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 14,
+    "fare": 11
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 17,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 36,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 33,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 2,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 34,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 35,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 57,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 61,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 30,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 5,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 6,
+    "fare": 12
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 12
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 51,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 36,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 31,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 57,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 36,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 19,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 26,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 42,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 27,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 36,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 42,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 42,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 32,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 36,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 38,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 34,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 52,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 44,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 18,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 36,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 50,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 42,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 39,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 48,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 27,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 26,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 39,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 41,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 32,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 26,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 18,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 30,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 40,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 40,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 33,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 31,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 4,
+    "fare": 13
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 13
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 52,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 45,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 32,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 59,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 26,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 1,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 3,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 23,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 27,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 30,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 29,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 20,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 23,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 54,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 45,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 0,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 28,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 45,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 22,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 15,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 15,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 23,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 35,
+    "fare": 14
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 14
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 1,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 44,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 50,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 47,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 19,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 12,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 47,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 27,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 22,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 23,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 41,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 44,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 41,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 43,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 6,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 9,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 7,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 9,
+    "fare": 15
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 15
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 32,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 17,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 34,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 43,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 41,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 35,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 12,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 40,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 9,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 3,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 36,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 55,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 40,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 44,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 35,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 19,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 16
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 16
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 17
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 17
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 4,
+    "fare": 17
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 37,
+    "fare": 17
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 36,
+    "fare": 17
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 18
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 18
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 18,
+    "fare": 18
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 31,
+    "fare": 18
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 18
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 18
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 1,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 3,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 19
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 11,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 1,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 5,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 19
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 13,
+    "fare": 20
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 41,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 2,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 41,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 13,
+    "fare": 20
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 20
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 35,
+    "fare": 20
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 9,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 31,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 1,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 0,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 33,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 35,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 36,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 38,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 22,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 21,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 43,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 30,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 29,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 27,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 31,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 21
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 31,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 2,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 6,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 3,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 8,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 29,
+    "fare": 21
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 22
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 34,
+    "fare": 22
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 35,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 4,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 26,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 22
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 22
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 18,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 34,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 20,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 54,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 2,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 4,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 17,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 23
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 27,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 30,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 39,
+    "fare": 23
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 24
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 24,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 24
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 39,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 21,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 10,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 36,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 30,
+    "fare": 24
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 25,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 20,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 40,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 24,
+    "fare": 25
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 55,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 40,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 49,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 48,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 25,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 49,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 50,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 64,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 32,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 22,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 36,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 32,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 19,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 20,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 44,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 54,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 37,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 29,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 54,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 40,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 35,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 16,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 44,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 63,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 60,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 34,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 26,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 30,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 50,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 42,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 46,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 39,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 2,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 3,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 37,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 50,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 19,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 2,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 8,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 33,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 27,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 25,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 27,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 29,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 8,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 31,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 31,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 7,
+    "fare": 26
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 43,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 45,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 19,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 35,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 26
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 28,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 58,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 44,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 64,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 51,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 17,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 35,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 44,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 65,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 33,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 34,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 56,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 62,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 60,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 21,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 62,
+    "fare": 27
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 42,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 53,
+    "fare": 27
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 44,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 43,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 22,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 55,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 29,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 32,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 40,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 29,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 1,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 5,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 36,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 33,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 4,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 10,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 9,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 2,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 28
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 45,
+    "fare": 28
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 53,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 31,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 50,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 29,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 1,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 26,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 22,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 10,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 4,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 7,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 2,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 8,
+    "fare": 29
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 39,
+    "fare": 29
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 39,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 58,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 37,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 80,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 26,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 19,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 40,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 29,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 25,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 45,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 33,
+    "fare": 30
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 14,
+    "fare": 30
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 41,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 55,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 52,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 32,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 28,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 56,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 40,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 23,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 4,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 6,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 2,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 9,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 11,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 39,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 39,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 5,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 9,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 3,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 13,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 5,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 31
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 38,
+    "fare": 31
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 32
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 32
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 22,
+    "fare": 32
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 32
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 32
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 61,
+    "fare": 32
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 8,
+    "fare": 33
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 42,
+    "fare": 33
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 34,
+    "fare": 33
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 6,
+    "fare": 33
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 28,
+    "fare": 33
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 28,
+    "fare": 33
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 61,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 21,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 9,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 18,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 48,
+    "fare": 34
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 71,
+    "fare": 35
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 37,
+    "fare": 35
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 36
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 56,
+    "fare": 36
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 28,
+    "fare": 36
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 16,
+    "fare": 36
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 8,
+    "fare": 37
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 48,
+    "fare": 37
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 19,
+    "fare": 37
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 20,
+    "fare": 37
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 1,
+    "fare": 37
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 31,
+    "fare": 37
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 37
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 1,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 4,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 12,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 36,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 15,
+    "fare": 39
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 60,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 40,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 16,
+    "fare": 39
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 51,
+    "fare": 39
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 18,
+    "fare": 40
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 48,
+    "fare": 40
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 20,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 1,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 7,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 2,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 14,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 41,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 22,
+    "fare": 40
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 40
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 1,
+    "fare": 42
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 3,
+    "fare": 42
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 25,
+    "fare": 42
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 22,
+    "fare": 42
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 38,
+    "fare": 42
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 42
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 43
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 46
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 9,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 1,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 11,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 10,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 16,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 14,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 40,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 43,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 28,
+    "fare": 47
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 17,
+    "fare": 47
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 48,
+    "fare": 48
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 50
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 71,
+    "fare": 50
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 50
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 55,
+    "fare": 50
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 41,
+    "fare": 50
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 48,
+    "fare": 50
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 31,
+    "fare": 50
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 53,
+    "fare": 51
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 59,
+    "fare": 51
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 19,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 41,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 38,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 54,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 17,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 31,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 27,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 52
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 48,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 52
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 37,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 47,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 42,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 45,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 53
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 37,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 53
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 19,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 18,
+    "fare": 53
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 55
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 55
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 25,
+    "fare": 55
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 25,
+    "fare": 55
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 54,
+    "fare": 55
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 43,
+    "fare": 55
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 50,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 20,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 56
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 25,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 26,
+    "fare": 56
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 56
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 49,
+    "fare": 57
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 57
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 31,
+    "fare": 57
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 17,
+    "fare": 57
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 30,
+    "fare": 58
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 58
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 16,
+    "fare": 58
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 44,
+    "fare": 58
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 59
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 45,
+    "fare": 59
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 55,
+    "fare": 59
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 54,
+    "fare": 59
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 24,
+    "fare": 60
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 18,
+    "fare": 60
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 61
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 47,
+    "fare": 61
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 51,
+    "fare": 61
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 21,
+    "fare": 61
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 62
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 65,
+    "fare": 62
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 63,
+    "fare": 63
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 23,
+    "fare": 63
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 45,
+    "fare": 63
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 65
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 24,
+    "fare": 65
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 49,
+    "fare": 65
+  },
+  {
+    "survived": "lived",
+    "fare_class": "second",
+    "sex": "female",
+    "age": 48,
+    "fare": 65
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 14,
+    "fare": 65
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 29,
+    "fare": 67
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 67
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 69
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 69
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 32,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 15,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 28,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 27,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 35,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 33,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 28,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 29,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "male",
+    "age": 16,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "third",
+    "sex": "female",
+    "age": 36,
+    "fare": 70
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 70,
+    "fare": 71
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 71
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 39,
+    "fare": 71
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 38,
+    "fare": 71
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 17,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 18,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 24,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 32,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "second",
+    "sex": "male",
+    "age": 21,
+    "fare": 74
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 75
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 75
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 64,
+    "fare": 75
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 60,
+    "fare": 75
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 32,
+    "fare": 76
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 60,
+    "fare": 76
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 48,
+    "fare": 77
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 49,
+    "fare": 77
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 77
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 54,
+    "fare": 77
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 21,
+    "fare": 77
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 51,
+    "fare": 78
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 21,
+    "fare": 78
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 54,
+    "fare": 78
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 52,
+    "fare": 78
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 26,
+    "fare": 79
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 79
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 76,
+    "fare": 79
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 60,
+    "fare": 79
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 48,
+    "fare": 79
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 24,
+    "fare": 79
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 79
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 46,
+    "fare": 79
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 25,
+    "fare": 79
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 18,
+    "fare": 80
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 52,
+    "fare": 80
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 80
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 38,
+    "fare": 80
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 62,
+    "fare": 80
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 53,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 4,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 54,
+    "fare": 82
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 28,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 25,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 24,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 23,
+    "fare": 82
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 83
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 37,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 64,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 23,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 56,
+    "fare": 83
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 83
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 87
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 16,
+    "fare": 87
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 87
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 49,
+    "fare": 89
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 43,
+    "fare": 89
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 38,
+    "fare": 90
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 90
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 44,
+    "fare": 90
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 90
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 37,
+    "fare": 90
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 25,
+    "fare": 91
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 19,
+    "fare": 91
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 55,
+    "fare": 94
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 52,
+    "fare": 94
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 23,
+    "fare": 94
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 94
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 50,
+    "fare": 106
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 48,
+    "fare": 106
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 106
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 109
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 18,
+    "fare": 109
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 17,
+    "fare": 109
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 32,
+    "fare": 111
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 49,
+    "fare": 111
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 17,
+    "fare": 111
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 111
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 31,
+    "fare": 113
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 23,
+    "fare": 113
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 58,
+    "fare": 113
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 11,
+    "fare": 120
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 14,
+    "fare": 120
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 120
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 120
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 50,
+    "fare": 134
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 31,
+    "fare": 134
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 41,
+    "fare": 135
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 6,
+    "fare": 135
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 45,
+    "fare": 135
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 40,
+    "fare": 135
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 31,
+    "fare": 135
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 136
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 22,
+    "fare": 136
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 55,
+    "fare": 136
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 136
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 137
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 26,
+    "fare": 137
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 58,
+    "fare": 147
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 57,
+    "fare": 147
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 147
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 22,
+    "fare": 152
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 33,
+    "fare": 152
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 38,
+    "fare": 153
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 58,
+    "fare": 153
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 40,
+    "fare": 153
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 30,
+    "fare": 165
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 31,
+    "fare": 165
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 57,
+    "fare": 165
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 45,
+    "fare": 165
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 39,
+    "fare": 211
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 15,
+    "fare": 211
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 43,
+    "fare": 211
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 212
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 33,
+    "fare": 212
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 50,
+    "fare": 212
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 27,
+    "fare": 212
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 50,
+    "fare": 212
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 29,
+    "fare": 222
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 17,
+    "fare": 222
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 67,
+    "fare": 222
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 63,
+    "fare": 222
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 47,
+    "fare": 228
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 18,
+    "fare": 228
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 42,
+    "fare": 228
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 38,
+    "fare": 228
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 41,
+    "fare": 228
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 24,
+    "fare": 248
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 50,
+    "fare": 248
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 27,
+    "fare": 248
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 45,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 36,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 13,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 18,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 21,
+    "fare": 262
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 61,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 48,
+    "fare": 262
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 24,
+    "fare": 263
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 28,
+    "fare": 263
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 23,
+    "fare": 263
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 19,
+    "fare": 263
+  },
+  {
+    "survived": "died",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 64,
+    "fare": 263
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 60,
+    "fare": 263
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 36,
+    "fare": 512
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 58,
+    "fare": 512
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "male",
+    "age": 35,
+    "fare": 512
+  },
+  {
+    "survived": "lived",
+    "fare_class": "first",
+    "sex": "female",
+    "age": 35,
+    "fare": 512
+  }
+]
