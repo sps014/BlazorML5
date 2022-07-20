@@ -1,18 +1,39 @@
-﻿@page "/ic"
+﻿@page "/imageclassifier"
 @using BlazorML5
 @using BlazorML5.Helpers
 @using BlazorML5.Text
 @inject IJSRuntime runtime
 
 <PageTitle>Image Classifer</PageTitle>
-<video width="400" height="300%" @ref="video"
+<MudText Color="Color.Success" class="mx-10 my-8" Typo="Typo.h4">Image Classifier</MudText>
+
+@if (result is not null)
+{
+    <MudText class="mx-10 my-8"> @result.Label wtith confidence of @result.Confidence</MudText>
+}
+else if(modelLoaded)
+{
+    <MudAlert class="mx-10 my-8"  Severity="Severity.Warning">
+        Fetching Image Classfier Model
+    </MudAlert>
+}
+else 
+{
+    <MudAlert class="mx-10 my-8"  Severity="Severity.Info">
+        Initiaing model
+    </MudAlert>
+}
+
+
+<video class="mx-10 my-8"  width="400" height="300%" @ref="video"
        crossorigin="anonymous" autoplay controls
        src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4">
 </video>
 @code
 {        
     ElementReference video;
-
+    ClassificationResult? result;
+    bool modelLoaded;
     protected override async Task OnInitializedAsync()
     {
         await Ml5.InitAsync(runtime);
@@ -20,6 +41,7 @@
         ic.OnModelLoad+= async () =>
         {
             Console.WriteLine("Model loaded");
+            modelLoaded = true;
             await ic.ClassifyAsync(video);
         };
         
@@ -27,7 +49,8 @@
         {
             if (e.Length > 0)
             {
-                Console.WriteLine($"{e[0].Confidence} {e[0].Label}");
+                result = e[0];
+                StateHasChanged();
             }
         };
 
